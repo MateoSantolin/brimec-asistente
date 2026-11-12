@@ -1,0 +1,531 @@
+<link rel="stylesheet" href="./fuentes.css" />
+<style>
+  :root {
+    --tinta:#1D2433; --tenue:#5A6478; --borde:#DDE3EC;
+    --fondo:#F5F7F9; --panel:#FFFFFF; --papel:#FFFFFF;
+    --navy:#243673; --primario:#0084D6; --suave:#BFD1FF;
+    --ok:#059669; --okf:#D1FAE5; --sim:#D97706; --simf:#FEF3C7;
+    --no:#64748B; --nof:#E2E8F0;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --tinta:#E6EBF4; --tenue:#98A3B8; --borde:#2C3754;
+      --fondo:#0F1526; --panel:#171F36; --papel:#FFFFFF;
+      --navy:#BFD1FF; --primario:#4FA8E8; --suave:#2A3A66;
+      --ok:#34D399; --okf:#10341F; --sim:#FBBF24; --simf:#3A2A08;
+      --no:#94A3B8; --nof:#232D45;
+    }
+  }
+  :root[data-theme="dark"] {
+    --tinta:#E6EBF4; --tenue:#98A3B8; --borde:#2C3754;
+    --fondo:#0F1526; --panel:#171F36; --papel:#FFFFFF;
+    --navy:#BFD1FF; --primario:#4FA8E8; --suave:#2A3A66;
+    --ok:#34D399; --okf:#10341F; --sim:#FBBF24; --simf:#3A2A08;
+    --no:#94A3B8; --nof:#232D45;
+  }
+  :root[data-theme="light"] {
+    --tinta:#1D2433; --tenue:#5A6478; --borde:#DDE3EC;
+    --fondo:#F5F7F9; --panel:#FFFFFF; --papel:#FFFFFF;
+    --navy:#243673; --primario:#0084D6; --suave:#BFD1FF;
+    --ok:#059669; --okf:#D1FAE5; --sim:#D97706; --simf:#FEF3C7;
+    --no:#64748B; --nof:#E2E8F0;
+  }
+
+  body {
+    margin:0; background:var(--fondo); color:var(--tinta);
+    font-family:Inter,system-ui,sans-serif; font-size:15px; line-height:1.65;
+    -webkit-font-smoothing:antialiased;
+  }
+  .hoja { max-width:1040px; margin:0 auto; padding:40px 20px 80px; }
+  h1,h2,h3 { font-family:Oswald,Impact,sans-serif; letter-spacing:.02em; text-wrap:balance; margin:0; }
+  h1 { font-size:clamp(28px,5vw,40px); line-height:1.1; color:var(--navy); }
+  h2 { font-size:23px; color:var(--navy); margin:56px 0 6px; }
+  h3 { font-size:16px; text-transform:uppercase; letter-spacing:.1em; color:var(--tenue); margin:28px 0 10px; }
+  p { margin:10px 0; max-width:72ch; }
+  code { font-family:ui-monospace,Consolas,monospace; font-size:.88em;
+          background:var(--nof); padding:1px 5px; border-radius:4px; }
+  a { color:var(--primario); }
+  small { color:var(--tenue); }
+
+  .cabecera { border-bottom:2px solid var(--borde); padding-bottom:26px; }
+  .sello { display:inline-flex; align-items:center; gap:8px; font-family:Oswald,sans-serif;
+            font-size:11px; letter-spacing:.18em; color:var(--tenue); text-transform:uppercase; }
+  .enlaces { display:flex; flex-wrap:wrap; gap:10px; margin-top:20px; }
+  .enlaces a { display:inline-flex; align-items:center; gap:7px; text-decoration:none;
+    border:1px solid var(--borde); background:var(--panel); color:var(--tinta);
+    padding:8px 14px; border-radius:9px; font-size:13px; font-weight:600; transition:.15s; }
+  .enlaces a:hover { border-color:var(--primario); color:var(--primario); }
+  .enlaces a svg { width:15px; height:15px; }
+
+  .leyenda { display:flex; flex-wrap:wrap; gap:8px; margin:22px 0 0; padding:0; list-style:none; }
+  .leyenda li { display:inline-flex; align-items:center; gap:7px; font-size:12.5px;
+                 padding:5px 11px; border-radius:999px; font-weight:600; }
+  .leyenda .v { background:var(--okf); color:var(--ok); }
+  .leyenda .a { background:var(--simf); color:var(--sim); }
+  .leyenda .g { background:var(--nof); color:var(--no); }
+
+  /* Los diagramas van sobre papel blanco en ambos temas: sus colores estan
+     definidos en el propio Mermaid y asi se leen igual de bien siempre. */
+  .lienzo { background:var(--papel); border:1px solid var(--borde); border-radius:14px;
+    padding:22px 16px; margin:18px 0 6px; overflow-x:auto;
+    box-shadow:0 1px 2px rgba(36,54,115,.05), 0 10px 30px -18px rgba(36,54,115,.25); }
+  .lienzo .mermaid { margin:0; display:flex; justify-content:center; min-width:min-content; }
+
+  .nota { border-left:3px solid var(--primario); background:var(--panel);
+    padding:12px 16px; border-radius:0 10px 10px 0; margin:16px 0; font-size:14px; }
+  .alerta { border-left-color:var(--sim); }
+
+  ul.herramientas { list-style:none; padding:0; margin:14px 0 0;
+    display:grid; gap:12px; grid-template-columns:repeat(auto-fill,minmax(310px,1fr)); }
+  .herramienta { display:flex; gap:14px; align-items:flex-start;
+    background:var(--panel); border:1px solid var(--borde); border-radius:12px; padding:14px 16px; }
+  .herramienta .marca { flex:0 0 30px; }
+  .herramienta .marca svg { width:30px; height:30px; display:block; }
+  .herramienta b { font-size:14.5px; display:block; }
+  .herramienta p { margin:3px 0 0; font-size:13px; color:var(--tenue); line-height:1.5; }
+
+  table { border-collapse:collapse; width:100%; margin:14px 0; font-size:13.5px; }
+  th,td { text-align:left; padding:9px 12px; border-bottom:1px solid var(--borde); vertical-align:top; }
+  th { font-family:Oswald,sans-serif; font-weight:500; font-size:11.5px;
+        text-transform:uppercase; letter-spacing:.1em; color:var(--tenue); }
+  .tabla-envoltorio { overflow-x:auto; }
+
+  footer { margin-top:64px; padding-top:22px; border-top:1px solid var(--borde);
+            font-size:12.5px; color:var(--tenue); }
+
+  .l-react .marca { color: #087EA4; }
+  .l-vite .marca { color: #646CFF; }
+  .l-typescript .marca { color: #3178C6; }
+  .l-tailwindcss .marca { color: #0891B2; }
+  .l-nodedotjs .marca { color: #5FA04E; }
+  .l-npm .marca { color: #CB3837; }
+  .l-github .marca { color: #181717; }
+  .l-githubactions .marca { color: #2088FF; }
+  .l-githubpages .marca { color: #181717; }
+  .l-fastapi .marca { color: #009688; }
+  .l-odoo .marca { color: #714B67; }
+  .l-postgresql .marca { color: #4169E1; }
+  .l-openai .marca { color: #412991; }
+  .l-python .marca { color: #3776AB; }
+  .l-googlechrome .marca { color: #1A73E8; }
+  .l-lucide .marca { color: #E05252; }
+  .l-reactrouter .marca { color: #CA4245; }
+  .l-eslint .marca { color: #4B32C3; }
+  .l-markdown .marca { color: #333333; }
+  @media (prefers-color-scheme: dark) {
+  .l-react .marca { color: #61DAFB; }
+  .l-vite .marca { color: #A78BFA; }
+  .l-typescript .marca { color: #6CA9E8; }
+  .l-tailwindcss .marca { color: #38BDF8; }
+  .l-nodedotjs .marca { color: #8CC474; }
+  .l-npm .marca { color: #F87171; }
+  .l-github .marca { color: #E6EDF3; }
+  .l-githubactions .marca { color: #6CB6FF; }
+  .l-githubpages .marca { color: #E6EDF3; }
+  .l-fastapi .marca { color: #2DD4BF; }
+  .l-odoo .marca { color: #C4A3BC; }
+  .l-postgresql .marca { color: #8FA6F0; }
+  .l-openai .marca { color: #B39DDB; }
+  .l-python .marca { color: #6CA9E8; }
+  .l-googlechrome .marca { color: #8AB4F8; }
+  .l-lucide .marca { color: #F87171; }
+  .l-reactrouter .marca { color: #F87171; }
+  .l-eslint .marca { color: #A78BFA; }
+  .l-markdown .marca { color: #D1D5DB; }
+  }
+  :root[data-theme="dark"] {
+  .l-react .marca { color: #61DAFB; }
+  .l-vite .marca { color: #A78BFA; }
+  .l-typescript .marca { color: #6CA9E8; }
+  .l-tailwindcss .marca { color: #38BDF8; }
+  .l-nodedotjs .marca { color: #8CC474; }
+  .l-npm .marca { color: #F87171; }
+  .l-github .marca { color: #E6EDF3; }
+  .l-githubactions .marca { color: #6CB6FF; }
+  .l-githubpages .marca { color: #E6EDF3; }
+  .l-fastapi .marca { color: #2DD4BF; }
+  .l-odoo .marca { color: #C4A3BC; }
+  .l-postgresql .marca { color: #8FA6F0; }
+  .l-openai .marca { color: #B39DDB; }
+  .l-python .marca { color: #6CA9E8; }
+  .l-googlechrome .marca { color: #8AB4F8; }
+  .l-lucide .marca { color: #F87171; }
+  .l-reactrouter .marca { color: #F87171; }
+  .l-eslint .marca { color: #A78BFA; }
+  .l-markdown .marca { color: #D1D5DB; }
+  }
+  :root[data-theme="light"] {
+  .l-react .marca { color: #087EA4; }
+  .l-vite .marca { color: #646CFF; }
+  .l-typescript .marca { color: #3178C6; }
+  .l-tailwindcss .marca { color: #0891B2; }
+  .l-nodedotjs .marca { color: #5FA04E; }
+  .l-npm .marca { color: #CB3837; }
+  .l-github .marca { color: #181717; }
+  .l-githubactions .marca { color: #2088FF; }
+  .l-githubpages .marca { color: #181717; }
+  .l-fastapi .marca { color: #009688; }
+  .l-odoo .marca { color: #714B67; }
+  .l-postgresql .marca { color: #4169E1; }
+  .l-openai .marca { color: #412991; }
+  .l-python .marca { color: #3776AB; }
+  .l-googlechrome .marca { color: #1A73E8; }
+  .l-lucide .marca { color: #E05252; }
+  .l-reactrouter .marca { color: #CA4245; }
+  .l-eslint .marca { color: #4B32C3; }
+  .l-markdown .marca { color: #333333; }
+  }
+  @media (prefers-reduced-motion: reduce) { * { transition:none !important; } }
+</style>
+
+<div class="hoja">
+
+  <header class="cabecera">
+    <span class="sello">BRIMEC · Calderería · Industria Argentina</span>
+    <h1>Asistente conversacional integrado al ERP</h1>
+    <p style="font-size:16.5px; color:var(--tenue); margin-top:10px;">
+      Arquitectura, stack y límites del prototipo. Oportunidad 3 de T-09:
+      <i>Asistente Conversacional para Operaciones de Producción y Taller</i>, diseñada en T-10.
+    </p>
+    <div class="enlaces">
+      <a href="https://MateoSantolin.github.io/brimec-asistente/" target="_blank" rel="noopener">
+        <svg fill="currentColor" aria-hidden="true" focusable="false" role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><title>Google Chrome</title><path d="M12 0C8.21 0 4.831 1.757 2.632 4.501l3.953 6.848A5.454 5.454 0 0 1 12 6.545h10.691A12 12 0 0 0 12 0zM1.931 5.47A11.943 11.943 0 0 0 0 12c0 6.012 4.42 10.991 10.189 11.864l3.953-6.847a5.45 5.45 0 0 1-6.865-2.29zm13.342 2.166a5.446 5.446 0 0 1 1.45 7.09l.002.001h-.002l-5.344 9.257c.206.01.413.016.621.016 6.627 0 12-5.373 12-12 0-1.54-.29-3.011-.818-4.364zM12 16.364a4.364 4.364 0 1 1 0-8.728 4.364 4.364 0 0 1 0 8.728Z"/></svg> Ver la demo</a>
+      <a href="https://github.com/MateoSantolin/brimec-asistente" target="_blank" rel="noopener">
+        <svg fill="currentColor" aria-hidden="true" focusable="false" role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><title>GitHub</title><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/></svg> Código fuente</a>
+      <a href="https://github.com/MateoSantolin/brimec-asistente/blob/main/docs/ARQUITECTURA.md" target="_blank" rel="noopener">
+        <svg fill="currentColor" aria-hidden="true" focusable="false" role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><title>Markdown</title><path d="M22.27 19.385H1.73A1.73 1.73 0 010 17.655V6.345a1.73 1.73 0 011.73-1.73h20.54A1.73 1.73 0 0124 6.345v11.308a1.73 1.73 0 01-1.73 1.731zM5.769 15.923v-4.5l2.308 2.885 2.307-2.885v4.5h2.308V8.078h-2.308l-2.307 2.885-2.308-2.885H3.46v7.847zM21.232 12h-2.309V8.077h-2.307V12h-2.308l3.461 4.039z"/></svg> Diagramas en el repo</a>
+    </div>
+    <ul class="leyenda">
+      <li class="v">Funciona en el prototipo</li>
+      <li class="a">Simulado</li>
+      <li class="g">No implementado</li>
+    </ul>
+  </header>
+
+  <h2>1 · Arquitectura conceptual</h2>
+  <p>Patrón <b>agente con herramientas</b> sobre una arquitectura <b>desacoplada</b>. El modelo
+     generativo se usa solo para comprender lenguaje natural y redactar respuestas: la autorización,
+     la ejecución de transacciones y el acceso a los datos quedan bajo control del middleware y del
+     ERP. Esa separación es la que acota el riesgo de modificaciones indebidas.</p>
+  <div class="lienzo"><pre class="mermaid">flowchart TD
+    U[&quot;👤 Usuarios&lt;br/&gt;Administración · Operarios · Jefe de Producción&quot;]
+    W[&quot;💬 Widget conversacional del ERP&lt;br/&gt;texto y voz&quot;]
+    S[&quot;🎙️ Speech-to-Text&lt;br/&gt;transcripción del dictado&quot;]
+    L[&quot;✨ Modelo de IA generativa&lt;br/&gt;interpreta la intención&lt;br/&gt;y elige la herramienta&quot;]
+
+    subgraph MW[&quot;🛡️ API agente / Middleware · FastAPI&quot;]
+        direction LR
+        A1[&quot;Autenticación&quot;] --&gt; A2[&quot;Autorización&lt;br/&gt;RBAC&quot;]
+        A2 --&gt; A3[&quot;Reglas de&lt;br/&gt;negocio&quot;]
+        A3 --&gt; A4[&quot;Confirmación&lt;br/&gt;de operaciones&quot;]
+        A4 --&gt; A5[&quot;Auditoría&quot;]
+    end
+
+    C[&quot;🔌 Conector ERP&lt;br/&gt;API REST&quot;]
+    E[&quot;🗄️ ERP SaaS · Odoo&quot;]
+    D[(&quot;Base de datos&lt;br/&gt;del ERP&quot;)]
+
+    U --&gt; W --&gt; S --&gt; L --&gt; MW --&gt; C --&gt; E --&gt; D
+
+    classDef ok fill:#D1FAE5,stroke:#059669,stroke-width:2px,color:#065F46
+    classDef sim fill:#FEF3C7,stroke:#D97706,stroke-width:2px,color:#92400E
+    classDef prop fill:#E2E8F0,stroke:#64748B,stroke-width:2px,color:#334155
+    classDef ctrl fill:#FFFFFF,stroke:#0084D6,stroke-width:1px,color:#243673
+
+    class U,W ok
+    class S,L sim
+    class C,E,D prop
+    class A1,A2,A3,A4,A5 ctrl
+    style MW fill:#EEF2FF,stroke:#0084D6,stroke-width:2px,color:#243673</pre></div>
+
+  <h2>2 · Flujo de una operación de escritura</h2>
+  <p>Las cuatro barreras que atraviesa cualquier cambio, en orden. Ninguna es opcional.</p>
+  <div class="lienzo"><pre class="mermaid">sequenceDiagram
+    autonumber
+    actor U as Jefe de Producción
+    participant W as Widget
+    participant L as Modelo (NLU)
+    participant M as Middleware
+    participant E as ERP
+
+    U-&gt;&gt;W: «Pasá el ítem 333 a tratamiento» 🎙️
+    W-&gt;&gt;L: transcripción
+    L-&gt;&gt;L: intención + extracción de parámetros
+
+    rect rgb(254, 243, 199)
+        note right of M: 1 · AUTORIZACIÓN
+        L-&gt;&gt;M: actualizar_estado_item(333, Tratamiento)
+        M-&gt;&gt;M: ¿el rol tiene la capacidad?
+        alt no la tiene
+            M--&gt;&gt;U: rechazo + motivo
+            M-&gt;&gt;E: AUDITORIA · resultado RECHAZADA
+        end
+    end
+
+    rect rgb(224, 242, 254)
+        note right of M: 2 · DATOS COMPLETOS
+        M-&gt;&gt;M: ¿falta algún identificador?
+        alt falta
+            M--&gt;&gt;U: repregunta — no infiere
+        end
+    end
+
+    rect rgb(237, 233, 254)
+        note right of M: 3 · REGLA DE NEGOCIO
+        M-&gt;&gt;E: consultar catálogo ETAPA_PRODUCCION
+        E--&gt;&gt;M: etapas y transiciones válidas
+        M-&gt;&gt;M: ¿la transición está permitida?
+        alt no permitida
+            M--&gt;&gt;U: rechazo + transiciones habilitadas
+        end
+    end
+
+    rect rgb(209, 250, 229)
+        note right of M: 4 · CONFIRMACIÓN HUMANA
+        M--&gt;&gt;U: estado actual → cambio propuesto
+        U-&gt;&gt;M: Confirmar
+    end
+
+    M-&gt;&gt;E: ejecutar cambio
+    E-&gt;&gt;E: OF_DETALLE.estado · SEGUIMIENTO_ETAPA
+    E-&gt;&gt;E: recalcular ORDEN_FABRICACION.estado
+    E-&gt;&gt;E: AUDITORIA · resultado OK · canal voz
+    E--&gt;&gt;U: confirmación del registro</pre></div>
+  <div class="nota">Confirmar, cancelar y rechazar quedan <b>los tres</b> registrados en auditoría.
+     Cancelar no es «no pasó nada»: es evidencia de que el control funcionó.</div>
+
+  <h2>3 · Matriz de permisos</h2>
+  <p>Los tres recuadros rojos son las <b>operaciones de escritura</b>, y cada una pertenece a un
+     único perfil. Administración crea OF pero no actualiza etapas ni comenta; el operario comenta
+     pero no actualiza; solo el Jefe de Producción cambia etapas.</p>
+  <div class="lienzo"><pre class="mermaid">flowchart LR
+    ADM[&quot;🗂️ Administración&quot;]
+    OPE[&quot;🦺 Operario&quot;]
+    JEF[&quot;🏭 Jefe de Producción&quot;]
+
+    CC[&quot;Consultar clientes&lt;br/&gt;y pedidos&quot;]
+    CO[&quot;Consultar OF,&lt;br/&gt;ítems y artículos&quot;]
+    CR[&quot;Crear OF&quot;]
+    AC[&quot;Actualizar etapa&lt;br/&gt;de ítems&quot;]
+    CM[&quot;Registrar comentario&lt;br/&gt;de taller&quot;]
+    AU[&quot;Ver auditoría&quot;]
+    PR[&quot;Ver precios&lt;br/&gt;y montos&quot;]
+
+    ADM --&gt; CC
+    ADM --&gt; CO
+    ADM --&gt; CR
+    ADM --&gt; AU
+    ADM --&gt; PR
+
+    OPE --&gt; CO
+    OPE --&gt; CM
+
+    JEF --&gt; CO
+    JEF --&gt; AC
+    JEF --&gt; CM
+    JEF --&gt; AU
+
+    classDef rol fill:#243673,stroke:#1A2854,color:#FFFFFF,stroke-width:2px
+    classDef cap fill:#FFFFFF,stroke:#CBD5E1,color:#334155
+    classDef esc fill:#FEE2E2,stroke:#DC2626,color:#991B1B,stroke-width:2px
+
+    class ADM,OPE,JEF rol
+    class CC,CO,AU,PR cap
+    class CR,AC,CM esc</pre></div>
+
+  <h2>4 · Modelo de datos</h2>
+  <p>11 de las 28 tablas del modelo destino: exactamente las que T-09 lista en
+     <i>«Datos e información necesaria»</i>.</p>
+  <div class="lienzo"><pre class="mermaid">erDiagram
+    CLIENTE ||--o{ PEDIDO : realiza
+    PEDIDO ||--|{ PEDIDO_DETALLE : contiene
+    ARTICULO ||--o{ PEDIDO_DETALLE : &quot;se solicita en&quot;
+    PEDIDO ||--o{ ORDEN_FABRICACION : genera
+    ORDEN_FABRICACION ||--|{ OF_DETALLE : incluye
+    PEDIDO_DETALLE ||--o{ OF_DETALLE : &quot;se traza en&quot;
+    ARTICULO ||--o{ OF_DETALLE : &quot;se fabrica como&quot;
+    OF_DETALLE ||--o{ SEGUIMIENTO_ETAPA : registra
+    ETAPA_PRODUCCION ||--o{ SEGUIMIENTO_ETAPA : compone
+    OF_DETALLE ||--o{ COMENTARIO_TALLER : documenta
+    EMPLEADO ||--o{ SEGUIMIENTO_ETAPA : asigna
+    EMPLEADO ||--o{ COMENTARIO_TALLER : escribe
+    EMPLEADO ||--o{ AUDITORIA : ejecuta
+
+    CLIENTE {
+        int cliente_id PK
+        string razon_social
+        string cuit UK
+    }
+    PEDIDO {
+        int pedido_id PK
+        int cliente_id FK
+        date fecha_entrega_pactada
+        string estado
+    }
+    PEDIDO_DETALLE {
+        int pedido_detalle_id PK
+        int articulo_id FK
+        decimal cantidad
+        decimal precio_unitario
+    }
+    ARTICULO {
+        int articulo_id PK
+        string codigo UK
+        string material
+        string norma
+    }
+    ORDEN_FABRICACION {
+        int of_id PK
+        int pedido_id FK
+        string numero UK
+        datetime fecha_estimada_fin
+        string estado &quot;derivado&quot;
+    }
+    OF_DETALLE {
+        int of_detalle_id PK
+        int of_id FK
+        int pedido_detalle_id FK
+        string estado &quot;etapa actual&quot;
+    }
+    ETAPA_PRODUCCION {
+        int etapa_id PK
+        string nombre
+        int orden
+        boolean requiere_aprobacion
+    }
+    SEGUIMIENTO_ETAPA {
+        int seguimiento_id PK
+        int of_detalle_id FK
+        int etapa_id FK
+        datetime inicio
+        datetime fin
+    }
+    COMENTARIO_TALLER {
+        int comentario_id PK
+        int of_detalle_id FK
+        string texto
+        string archivo_audio
+    }
+    EMPLEADO {
+        int empleado_id PK
+        string rol
+        boolean activo
+    }
+    AUDITORIA {
+        int auditoria_id PK
+        string entidad
+        int registro_id
+        string operacion
+        string resultado &quot;EXT&quot;
+        string canal &quot;EXT&quot;
+    }</pre></div>
+  <div class="nota"><b>Dos decisiones que se leen en el diagrama.</b>
+     <code>ORDEN_FABRICACION</code> no tiene <code>cliente_id</code>: el cliente se alcanza por
+     <code>PEDIDO</code>. Y <code>COMENTARIO_TALLER</code> y <code>SEGUIMIENTO_ETAPA</code> cuelgan
+     de <code>OF_DETALLE</code>, no de la OF — los comentarios y los cambios de etapa son
+     <b>por ítem</b>, y el estado de la OF es derivado.</div>
+
+  <h3>Lo que el modelo todavía no cubre</h3>
+  <div class="tabla-envoltorio"><table>
+    <tr><th>Falta</th><th>Por qué hace falta</th></tr>
+    <tr><td><code>AUDITORIA.resultado</code></td>
+        <td>T-09 exige registrar «Usuario, Fecha, Acción, <b>Resultado</b>». Sin esa columna no hay
+            dónde anotar un rechazo por permisos ni una cancelación.</td></tr>
+    <tr><td><code>AUDITORIA.canal</code> / <code>origen</code></td>
+        <td>Sin ellos no se puede medir la adopción del asistente frente a las pantallas del ERP —
+            que es la hipótesis a validar.</td></tr>
+    <tr><td>Transiciones entre etapas</td>
+        <td><code>ETAPA_PRODUCCION</code> no las modela. Haría falta una <code>ETAPA_TRANSICION</code>.</td></tr>
+    <tr><td><code>CONVERSACION</code> / <code>MENSAJE</code></td>
+        <td>No existen. Las consultas de solo lectura no dejan rastro en ninguna tabla.</td></tr>
+  </table></div>
+
+  <h2>5 · Qué está construido y qué no</h2>
+  <div class="lienzo"><pre class="mermaid">flowchart TB
+    subgraph REAL[&quot;🟩 Funciona en el prototipo&quot;]
+        direction TB
+        R1[&quot;7 pantallas navegables&lt;br/&gt;3 perfiles con RBAC&quot;]
+        R2[&quot;Chat con dictado por voz&lt;br/&gt;Web Speech API&quot;]
+        R3[&quot;Consultas, filtros&lt;br/&gt;y ordenamientos&quot;]
+        R4[&quot;Confirmación previa&lt;br/&gt;a cada escritura&quot;]
+        R5[&quot;Catálogo de etapas&lt;br/&gt;configurable + transiciones&quot;]
+        R6[&quot;Auditoría con resultado,&lt;br/&gt;canal y origen&quot;]
+        R7[&quot;41 casos de prueba&lt;br/&gt;automatizados&quot;]
+    end
+
+    subgraph SIM[&quot;🟨 Simulado&quot;]
+        direction TB
+        S1[&quot;Comprensión del lenguaje:&lt;br/&gt;analizador por reglas,&lt;br/&gt;no un LLM&quot;]
+        S2[&quot;Transcripción:&lt;br/&gt;la hace el navegador&quot;]
+        S3[&quot;Persistencia:&lt;br/&gt;LocalStorage&quot;]
+    end
+
+    subgraph NO[&quot;⬜ No implementado&quot;]
+        direction TB
+        N1[&quot;Middleware FastAPI&quot;]
+        N2[&quot;Conector REST del ERP&quot;]
+        N3[&quot;ERP y base de datos&quot;]
+        N4[&quot;Seguridad del lado servidor&quot;]
+    end
+
+    REAL -.-&gt;|&quot;siguiente paso&quot;| SIM -.-&gt;|&quot;requiere el ERP&quot;| NO
+
+    style REAL fill:#D1FAE5,stroke:#059669,stroke-width:2px,color:#065F46
+    style SIM fill:#FEF3C7,stroke:#D97706,stroke-width:2px,color:#92400E
+    style NO fill:#E2E8F0,stroke:#64748B,stroke-width:2px,color:#334155</pre></div>
+
+  <h3>Construido · el prototipo navegable</h3>
+  <ul class="herramientas">
+    <li class="herramienta l-react"><span class="marca"><svg fill="currentColor" aria-hidden="true" focusable="false" role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><title>React</title><path d="M14.23 12.004a2.236 2.236 0 0 1-2.235 2.236 2.236 2.236 0 0 1-2.236-2.236 2.236 2.236 0 0 1 2.235-2.236 2.236 2.236 0 0 1 2.236 2.236zm2.648-10.69c-1.346 0-3.107.96-4.888 2.622-1.78-1.653-3.542-2.602-4.887-2.602-.41 0-.783.093-1.106.278-1.375.793-1.683 3.264-.973 6.365C1.98 8.917 0 10.42 0 12.004c0 1.59 1.99 3.097 5.043 4.03-.704 3.113-.39 5.588.988 6.38.32.187.69.275 1.102.275 1.345 0 3.107-.96 4.888-2.624 1.78 1.654 3.542 2.603 4.887 2.603.41 0 .783-.09 1.106-.275 1.374-.792 1.683-3.263.973-6.365C22.02 15.096 24 13.59 24 12.004c0-1.59-1.99-3.097-5.043-4.032.704-3.11.39-5.587-.988-6.38-.318-.184-.688-.277-1.092-.278zm-.005 1.09v.006c.225 0 .406.044.558.127.666.382.955 1.835.73 3.704-.054.46-.142.945-.25 1.44-.96-.236-2.006-.417-3.107-.534-.66-.905-1.345-1.727-2.035-2.447 1.592-1.48 3.087-2.292 4.105-2.295zm-9.77.02c1.012 0 2.514.808 4.11 2.28-.686.72-1.37 1.537-2.02 2.442-1.107.117-2.154.298-3.113.538-.112-.49-.195-.964-.254-1.42-.23-1.868.054-3.32.714-3.707.19-.09.4-.127.563-.132zm4.882 3.05c.455.468.91.992 1.36 1.564-.44-.02-.89-.034-1.345-.034-.46 0-.915.01-1.36.034.44-.572.895-1.096 1.345-1.565zM12 8.1c.74 0 1.477.034 2.202.093.406.582.802 1.203 1.183 1.86.372.64.71 1.29 1.018 1.946-.308.655-.646 1.31-1.013 1.95-.38.66-.773 1.288-1.18 1.87-.728.063-1.466.098-2.21.098-.74 0-1.477-.035-2.202-.093-.406-.582-.802-1.204-1.183-1.86-.372-.64-.71-1.29-1.018-1.946.303-.657.646-1.313 1.013-1.954.38-.66.773-1.286 1.18-1.868.728-.064 1.466-.098 2.21-.098zm-3.635.254c-.24.377-.48.763-.704 1.16-.225.39-.435.782-.635 1.174-.265-.656-.49-1.31-.676-1.947.64-.15 1.315-.283 2.015-.386zm7.26 0c.695.103 1.365.23 2.006.387-.18.632-.405 1.282-.66 1.933-.2-.39-.41-.783-.64-1.174-.225-.392-.465-.774-.705-1.146zm3.063.675c.484.15.944.317 1.375.498 1.732.74 2.852 1.708 2.852 2.476-.005.768-1.125 1.74-2.857 2.475-.42.18-.88.342-1.355.493-.28-.958-.646-1.956-1.1-2.98.45-1.017.81-2.01 1.085-2.964zm-13.395.004c.278.96.645 1.957 1.1 2.98-.45 1.017-.812 2.01-1.086 2.964-.484-.15-.944-.318-1.37-.5-1.732-.737-2.852-1.706-2.852-2.474 0-.768 1.12-1.742 2.852-2.476.42-.18.88-.342 1.356-.494zm11.678 4.28c.265.657.49 1.312.676 1.948-.64.157-1.316.29-2.016.39.24-.375.48-.762.705-1.158.225-.39.435-.788.636-1.18zm-9.945.02c.2.392.41.783.64 1.175.23.39.465.772.705 1.143-.695-.102-1.365-.23-2.006-.386.18-.63.406-1.282.66-1.933zM17.92 16.32c.112.493.2.968.254 1.423.23 1.868-.054 3.32-.714 3.708-.147.09-.338.128-.563.128-1.012 0-2.514-.807-4.11-2.28.686-.72 1.37-1.536 2.02-2.44 1.107-.118 2.154-.3 3.113-.54zm-11.83.01c.96.234 2.006.415 3.107.532.66.905 1.345 1.727 2.035 2.446-1.595 1.483-3.092 2.295-4.11 2.295-.22-.005-.406-.05-.553-.132-.666-.38-.955-1.834-.73-3.703.054-.46.142-.944.25-1.438zm4.56.64c.44.02.89.034 1.345.034.46 0 .915-.01 1.36-.034-.44.572-.895 1.095-1.345 1.565-.455-.47-.91-.993-1.36-1.565z"/></svg></span><div><b>React 18</b><p>Las 7 pantallas. Estado por Context, sin librería externa: el alcance no la justifica.</p></div></li><li class="herramienta l-vite"><span class="marca"><svg fill="currentColor" aria-hidden="true" focusable="false" role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><title>Vite</title><path d="m8.286 10.578.512-8.657a.306.306 0 0 1 .247-.282L17.377.006a.306.306 0 0 1 .353.385l-1.558 5.403a.306.306 0 0 0 .352.385l2.388-.46a.306.306 0 0 1 .332.438l-6.79 13.55-.123.19a.294.294 0 0 1-.252.14c-.177 0-.35-.152-.305-.369l1.095-5.301a.306.306 0 0 0-.388-.355l-1.433.435a.306.306 0 0 1-.389-.354l.69-3.375a.306.306 0 0 0-.37-.36l-2.32.536a.306.306 0 0 1-.374-.316zm14.976-7.926L17.284 3.74l-.544 1.887 2.077-.4a.8.8 0 0 1 .84.369.8.8 0 0 1 .034.783L12.9 19.93l-.013.025-.015.023-.122.19a.801.801 0 0 1-.672.37.826.826 0 0 1-.634-.302.8.8 0 0 1-.16-.67l1.029-4.981-1.12.34a.81.81 0 0 1-.86-.262.802.802 0 0 1-.165-.67l.63-3.08-2.027.468a.808.808 0 0 1-.768-.233.81.81 0 0 1-.217-.6l.389-6.57-7.44-1.33a.612.612 0 0 0-.64.906L11.58 23.691a.612.612 0 0 0 1.066-.004l11.26-20.135a.612.612 0 0 0-.644-.9z"/></svg></span><div><b>Vite 5</b><p>Build y servidor de desarrollo. <code>base: './'</code> para que funcione en cualquier subruta.</p></div></li><li class="herramienta l-typescript"><span class="marca"><svg fill="currentColor" aria-hidden="true" focusable="false" role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><title>TypeScript</title><path d="M1.125 0C.502 0 0 .502 0 1.125v21.75C0 23.498.502 24 1.125 24h21.75c.623 0 1.125-.502 1.125-1.125V1.125C24 .502 23.498 0 22.875 0zm17.363 9.75c.612 0 1.154.037 1.627.111a6.38 6.38 0 0 1 1.306.34v2.458a3.95 3.95 0 0 0-.643-.361 5.093 5.093 0 0 0-.717-.26 5.453 5.453 0 0 0-1.426-.2c-.3 0-.573.028-.819.086a2.1 2.1 0 0 0-.623.242c-.17.104-.3.229-.393.374a.888.888 0 0 0-.14.49c0 .196.053.373.156.529.104.156.252.304.443.444s.423.276.696.41c.273.135.582.274.926.416.47.197.892.407 1.266.628.374.222.695.473.963.753.268.279.472.598.614.957.142.359.214.776.214 1.253 0 .657-.125 1.21-.373 1.656a3.033 3.033 0 0 1-1.012 1.085 4.38 4.38 0 0 1-1.487.596c-.566.12-1.163.18-1.79.18a9.916 9.916 0 0 1-1.84-.164 5.544 5.544 0 0 1-1.512-.493v-2.63a5.033 5.033 0 0 0 3.237 1.2c.333 0 .624-.03.872-.09.249-.06.456-.144.623-.25.166-.108.29-.234.373-.38a1.023 1.023 0 0 0-.074-1.089 2.12 2.12 0 0 0-.537-.5 5.597 5.597 0 0 0-.807-.444 27.72 27.72 0 0 0-1.007-.436c-.918-.383-1.602-.852-2.053-1.405-.45-.553-.676-1.222-.676-2.005 0-.614.123-1.141.369-1.582.246-.441.58-.804 1.004-1.089a4.494 4.494 0 0 1 1.47-.629 7.536 7.536 0 0 1 1.77-.201zm-15.113.188h9.563v2.166H9.506v9.646H6.789v-9.646H3.375z"/></svg></span><div><b>TypeScript</b><p>Las interfaces replican el modelo de datos destino en <code>snake_case</code>, campo por campo.</p></div></li><li class="herramienta l-tailwindcss"><span class="marca"><svg fill="currentColor" aria-hidden="true" focusable="false" role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><title>Tailwind CSS</title><path d="M12.001,4.8c-3.2,0-5.2,1.6-6,4.8c1.2-1.6,2.6-2.2,4.2-1.8c0.913,0.228,1.565,0.89,2.288,1.624 C13.666,10.618,15.027,12,18.001,12c3.2,0,5.2-1.6,6-4.8c-1.2,1.6-2.6,2.2-4.2,1.8c-0.913-0.228-1.565-0.89-2.288-1.624 C16.337,6.182,14.976,4.8,12.001,4.8z M6.001,12c-3.2,0-5.2,1.6-6,4.8c1.2-1.6,2.6-2.2,4.2-1.8c0.913,0.228,1.565,0.89,2.288,1.624 c1.177,1.194,2.538,2.576,5.512,2.576c3.2,0,5.2-1.6,6-4.8c-1.2,1.6-2.6,2.2-4.2,1.8c-0.913-0.228-1.565-0.89-2.288-1.624 C10.337,13.382,8.976,12,6.001,12z"/></svg></span><div><b>Tailwind CSS</b><p>Sistema visual con los tokens de color reales de brimec.com.ar.</p></div></li><li class="herramienta l-reactrouter"><span class="marca"><svg fill="currentColor" aria-hidden="true" focusable="false" role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><title>React Router</title><path d="M12.118 5.466a2.306 2.306 0 00-.623.08c-.278.067-.702.332-.953.583-.41.423-.49.609-.662 1.469-.08.423.41 1.43.847 1.734.45.317 1.085.502 2.065.608 1.429.16 1.84.636 1.84 2.197 0 1.377-.385 1.747-1.96 1.906-1.707.172-2.58.834-2.765 2.117-.106.781.41 1.76 1.125 2.091 1.627.768 3.15-.198 3.467-2.196.211-1.284.622-1.642 1.998-1.747 1.588-.133 2.409-.675 2.713-1.787.278-1.02-.304-2.157-1.297-2.554-.264-.106-.873-.238-1.35-.291-1.495-.16-1.879-.424-2.038-1.39-.225-1.337-.317-1.562-.794-2.09a2.174 2.174 0 00-1.613-.73zm-4.785 4.36a2.145 2.145 0 00-.497.048c-1.469.318-2.17 2.051-1.35 3.295 1.178 1.774 3.944.953 3.97-1.177.012-1.193-.98-2.143-2.123-2.166zM2.089 14.19a2.22 2.22 0 00-.427.052c-2.158.476-2.237 3.626-.106 4.182.53.145.582.145 1.111.013 1.191-.318 1.866-1.456 1.549-2.607-.278-1.02-1.144-1.664-2.127-1.64zm19.824.008c-.233.002-.477.058-.784.162-1.39.477-1.866 2.092-.98 3.336.557.794 1.96 1.058 2.82.516 1.416-.874 1.363-3.057-.093-3.746-.38-.186-.663-.271-.963-.268z"/></svg></span><div><b>React Router</b><p>Enrutado por hash: recargar una pantalla interna no devuelve 404.</p></div></li><li class="herramienta l-lucide"><span class="marca"><svg fill="currentColor" aria-hidden="true" focusable="false" role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><title>Lucide</title><path d="M18.483 1.123a1.09 1.09 0 0 0-.752.362 1.09 1.09 0 0 0 .088 1.54 11.956 11.956 0 0 1 4 8.946 7.62 7.62 0 0 1-7.637 7.636 7.62 7.62 0 0 1-7.637-7.636 3.255 3.255 0 0 1 3.273-3.273c1.82 0 3.273 1.45 3.273 3.273a1.09 1.09 0 0 0 1.09 1.09 1.09 1.09 0 0 0 1.092-1.09c0-3-2.455-5.455-5.455-5.455s-5.454 2.455-5.454 5.455c0 5.408 4.408 9.818 9.818 9.818 5.41 0 9.818-4.41 9.818-9.818A14.16 14.16 0 0 0 19.272 1.4a1.09 1.09 0 0 0-.789-.277ZM9.818 2.15C4.408 2.151 0 6.561 0 11.97a14.16 14.16 0 0 0 4.8 10.637 1.09 1.09 0 0 0 1.54-.096 1.09 1.09 0 0 0-.095-1.54 11.957 11.957 0 0 1-4.063-9 7.62 7.62 0 0 1 7.636-7.637 7.62 7.62 0 0 1 7.637 7.636 3.256 3.256 0 0 1-3.273 3.273 3.256 3.256 0 0 1-3.273-3.273 1.09 1.09 0 0 0-1.09-1.09 1.09 1.09 0 0 0-1.092 1.09c0 3 2.455 5.455 5.455 5.455s5.454-2.455 5.454-5.455c0-5.408-4.408-9.818-9.818-9.818z"/></svg></span><div><b>Lucide</b><p>Iconografía. Única dependencia de interfaz más allá de React.</p></div></li><li class="herramienta l-googlechrome"><span class="marca"><svg fill="currentColor" aria-hidden="true" focusable="false" role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><title>Google Chrome</title><path d="M12 0C8.21 0 4.831 1.757 2.632 4.501l3.953 6.848A5.454 5.454 0 0 1 12 6.545h10.691A12 12 0 0 0 12 0zM1.931 5.47A11.943 11.943 0 0 0 0 12c0 6.012 4.42 10.991 10.189 11.864l3.953-6.847a5.45 5.45 0 0 1-6.865-2.29zm13.342 2.166a5.446 5.446 0 0 1 1.45 7.09l.002.001h-.002l-5.344 9.257c.206.01.413.016.621.016 6.627 0 12-5.373 12-12 0-1.54-.29-3.011-.818-4.364zM12 16.364a4.364 4.364 0 1 1 0-8.728 4.364 4.364 0 0 1 0 8.728Z"/></svg></span><div><b>Web Speech API</b><p><b>Dictado por voz.</b> T-09 lo define como canal principal: el operario tiene las manos ocupadas.</p></div></li>
+  </ul>
+
+  <h3>Herramientas de soporte</h3>
+  <ul class="herramientas">
+    <li class="herramienta l-nodedotjs"><span class="marca"><svg fill="currentColor" aria-hidden="true" focusable="false" role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><title>Node.js</title><path d="M11.998,24c-0.321,0-0.641-0.084-0.922-0.247l-2.936-1.737c-0.438-0.245-0.224-0.332-0.08-0.383 c0.585-0.203,0.703-0.25,1.328-0.604c0.065-0.037,0.151-0.023,0.218,0.017l2.256,1.339c0.082,0.045,0.197,0.045,0.272,0l8.795-5.076 c0.082-0.047,0.134-0.141,0.134-0.238V6.921c0-0.099-0.053-0.192-0.137-0.242l-8.791-5.072c-0.081-0.047-0.189-0.047-0.271,0 L3.075,6.68C2.99,6.729,2.936,6.825,2.936,6.921v10.15c0,0.097,0.054,0.189,0.139,0.235l2.409,1.392 c1.307,0.654,2.108-0.116,2.108-0.89V7.787c0-0.142,0.114-0.253,0.256-0.253h1.115c0.139,0,0.255,0.112,0.255,0.253v10.021 c0,1.745-0.95,2.745-2.604,2.745c-0.508,0-0.909,0-2.026-0.551L2.28,18.675c-0.57-0.329-0.922-0.945-0.922-1.604V6.921 c0-0.659,0.353-1.275,0.922-1.603l8.795-5.082c0.557-0.315,1.296-0.315,1.848,0l8.794,5.082c0.57,0.329,0.924,0.944,0.924,1.603 v10.15c0,0.659-0.354,1.273-0.924,1.604l-8.794,5.078C12.643,23.916,12.324,24,11.998,24z M19.099,13.993 c0-1.9-1.284-2.406-3.987-2.763c-2.731-0.361-3.009-0.548-3.009-1.187c0-0.528,0.235-1.233,2.258-1.233 c1.807,0,2.473,0.389,2.747,1.607c0.024,0.115,0.129,0.199,0.247,0.199h1.141c0.071,0,0.138-0.031,0.186-0.081 c0.048-0.054,0.074-0.123,0.067-0.196c-0.177-2.098-1.571-3.076-4.388-3.076c-2.508,0-4.004,1.058-4.004,2.833 c0,1.925,1.488,2.457,3.895,2.695c2.88,0.282,3.103,0.703,3.103,1.269c0,0.983-0.789,1.402-2.642,1.402 c-2.327,0-2.839-0.584-3.011-1.742c-0.02-0.124-0.126-0.215-0.253-0.215h-1.137c-0.141,0-0.254,0.112-0.254,0.253 c0,1.482,0.806,3.248,4.655,3.248C17.501,17.007,19.099,15.91,19.099,13.993z"/></svg></span><div><b>Node.js 20</b><p>Entorno de build y del banco de pruebas.</p></div></li><li class="herramienta l-python"><span class="marca"><svg fill="currentColor" aria-hidden="true" focusable="false" role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><title>Python</title><path d="M14.25.18l.9.2.73.26.59.3.45.32.34.34.25.34.16.33.1.3.04.26.02.2-.01.13V8.5l-.05.63-.13.55-.21.46-.26.38-.3.31-.33.25-.35.19-.35.14-.33.1-.3.07-.26.04-.21.02H8.77l-.69.05-.59.14-.5.22-.41.27-.33.32-.27.35-.2.36-.15.37-.1.35-.07.32-.04.27-.02.21v3.06H3.17l-.21-.03-.28-.07-.32-.12-.35-.18-.36-.26-.36-.36-.35-.46-.32-.59-.28-.73-.21-.88-.14-1.05-.05-1.23.06-1.22.16-1.04.24-.87.32-.71.36-.57.4-.44.42-.33.42-.24.4-.16.36-.1.32-.05.24-.01h.16l.06.01h8.16v-.83H6.18l-.01-2.75-.02-.37.05-.34.11-.31.17-.28.25-.26.31-.23.38-.2.44-.18.51-.15.58-.12.64-.1.71-.06.77-.04.84-.02 1.27.05zm-6.3 1.98l-.23.33-.08.41.08.41.23.34.33.22.41.09.41-.09.33-.22.23-.34.08-.41-.08-.41-.23-.33-.33-.22-.41-.09-.41.09zm13.09 3.95l.28.06.32.12.35.18.36.27.36.35.35.47.32.59.28.73.21.88.14 1.04.05 1.23-.06 1.23-.16 1.04-.24.86-.32.71-.36.57-.4.45-.42.33-.42.24-.4.16-.36.09-.32.05-.24.02-.16-.01h-8.22v.82h5.84l.01 2.76.02.36-.05.34-.11.31-.17.29-.25.25-.31.24-.38.2-.44.17-.51.15-.58.13-.64.09-.71.07-.77.04-.84.01-1.27-.04-1.07-.14-.9-.2-.73-.25-.59-.3-.45-.33-.34-.34-.25-.34-.16-.33-.1-.3-.04-.25-.02-.2.01-.13v-5.34l.05-.64.13-.54.21-.46.26-.38.3-.32.33-.24.35-.2.35-.14.33-.1.3-.06.26-.04.21-.02.13-.01h5.84l.69-.05.59-.14.5-.21.41-.28.33-.32.27-.35.2-.36.15-.36.1-.35.07-.32.04-.28.02-.21V6.07h2.09l.14.01zm-6.47 14.25l-.23.33-.08.41.08.41.23.33.33.23.41.08.41-.08.33-.23.23-.33.08-.41-.08-.41-.23-.33-.33-.23-.41-.08-.41.08z"/></svg></span><div><b>Python</b><p>Generación determinista de los datos sintéticos y corrección de los <code>.docx</code>.</p></div></li><li class="herramienta l-githubactions"><span class="marca"><svg fill="currentColor" aria-hidden="true" focusable="false" role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><title>GitHub Actions</title><path d="M10.984 13.836a.5.5 0 0 1-.353-.146l-.745-.743a.5.5 0 1 1 .706-.708l.392.391 1.181-1.18a.5.5 0 0 1 .708.707l-1.535 1.533a.504.504 0 0 1-.354.146zm9.353-.147l1.534-1.532a.5.5 0 0 0-.707-.707l-1.181 1.18-.392-.391a.5.5 0 1 0-.706.708l.746.743a.497.497 0 0 0 .706-.001zM4.527 7.452l2.557-1.585A1 1 0 0 0 7.09 4.17L4.533 2.56A1 1 0 0 0 3 3.406v3.196a1.001 1.001 0 0 0 1.527.85zm2.03-2.436L4 6.602V3.406l2.557 1.61zM24 12.5c0 1.93-1.57 3.5-3.5 3.5a3.503 3.503 0 0 1-3.46-3h-2.08a3.503 3.503 0 0 1-3.46 3 3.502 3.502 0 0 1-3.46-3h-.558c-.972 0-1.85-.399-2.482-1.042V17c0 1.654 1.346 3 3 3h.04c.244-1.693 1.7-3 3.46-3 1.93 0 3.5 1.57 3.5 3.5S13.43 24 11.5 24a3.502 3.502 0 0 1-3.46-3H8c-2.206 0-4-1.794-4-4V9.899A5.008 5.008 0 0 1 0 5c0-2.757 2.243-5 5-5s5 2.243 5 5a5.005 5.005 0 0 1-4.952 4.998A2.482 2.482 0 0 0 7.482 12h.558c.244-1.693 1.7-3 3.46-3a3.502 3.502 0 0 1 3.46 3h2.08a3.503 3.503 0 0 1 3.46-3c1.93 0 3.5 1.57 3.5 3.5zm-15 8c0 1.378 1.122 2.5 2.5 2.5s2.5-1.122 2.5-2.5-1.122-2.5-2.5-2.5S9 19.122 9 20.5zM5 9c2.206 0 4-1.794 4-4S7.206 1 5 1 1 2.794 1 5s1.794 4 4 4zm9 3.5c0-1.378-1.122-2.5-2.5-2.5S9 11.122 9 12.5s1.122 2.5 2.5 2.5 2.5-1.122 2.5-2.5zm9 0c0-1.378-1.122-2.5-2.5-2.5S18 11.122 18 12.5s1.122 2.5 2.5 2.5 2.5-1.122 2.5-2.5zm-13 8a.5.5 0 1 0 1 0 .5.5 0 0 0-1 0zm2 0a.5.5 0 1 0 1 0 .5.5 0 0 0-1 0zm12 0c0 1.93-1.57 3.5-3.5 3.5a3.503 3.503 0 0 1-3.46-3.002c-.007.001-.013.005-.021.005l-.506.017h-.017a.5.5 0 0 1-.016-.999l.506-.017c.018-.002.035.006.052.007A3.503 3.503 0 0 1 20.5 17c1.93 0 3.5 1.57 3.5 3.5zm-1 0c0-1.378-1.122-2.5-2.5-2.5S18 19.122 18 20.5s1.122 2.5 2.5 2.5 2.5-1.122 2.5-2.5z"/></svg></span><div><b>GitHub Actions</b><p>Instala, corre los <b>41 casos</b>, compila y publica. Si un test falla, no publica.</p></div></li><li class="herramienta l-githubpages"><span class="marca"><svg fill="currentColor" aria-hidden="true" focusable="false" role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><title>GitHub Pages</title><path d="M14.088 13.126h-.296V9.858h.998c.815 0 1.094.47 1.094.98s-.28.98-1.094.98h-.701v1.308zm0-1.582h.74a.642.642 0 0 0 .733-.705.642.642 0 0 0-.732-.706h-.741zm2.881-.37a1.913 1.913 0 0 0-.653.11v-.262a1.756 1.756 0 0 1 .653-.118c.654 0 .824.297.824.732v1.49h-.17l-.066-.174a1.143 1.143 0 0 1-.657.218.663.663 0 0 1-.763-.702c0-.37.205-.645.776-.68l.575-.035v-.122c0-.318-.113-.457-.519-.457zm-.078.85c-.31.03-.445.192-.445.445 0 .196.048.431.462.431a1.056 1.056 0 0 0 .58-.174v-.758zm1.86.493a.252.252 0 0 0-.083.16c0 .11.053.158.166.17l.74.088c.41.044.598.205.598.584 0 .532-.532.74-1.133.74-.61 0-.976-.178-.976-.657a.609.609 0 0 1 .449-.575v-.005a.321.321 0 0 1-.14-.287.392.392 0 0 1 .166-.297.746.746 0 0 1-.349-.714c0-.449.192-.82.85-.82a1.36 1.36 0 0 1 .349.044h.74v.165l-.365.105a.908.908 0 0 1 .126.505c0 .449-.192.82-.85.82a1.397 1.397 0 0 1-.288-.027zm.127.588c-.288.065-.532.2-.532.48 0 .322.244.413.693.413.435 0 .845-.109.845-.48 0-.221-.105-.309-.37-.34zm.727-1.381c0-.288-.056-.554-.566-.554-.51 0-.567.266-.567.554 0 .288.057.553.567.553.51 0 .566-.266.566-.554zm1.637-.82c.74 0 .828.506.828 1.133v.14h-1.438c.018.379.118.723.61.723a1.665 1.665 0 0 0 .719-.122v.261a1.765 1.765 0 0 1-.719.131c-.736 0-.915-.505-.915-1.133s.179-1.133.915-1.133zm-.61 1.024h1.133c0-.387-.022-.753-.523-.753-.506 0-.597.36-.61.753zm2.601-.052c.619.057.767.266.767.623 0 .336-.213.671-.876.671a2.147 2.147 0 0 1-.649-.109V12.8a1.924 1.924 0 0 0 .654.1c.453 0 .575-.192.575-.397 0-.2-.061-.34-.492-.374-.632-.057-.763-.28-.763-.58 0-.31.2-.645.815-.645a1.627 1.627 0 0 1 .627.11v.26a1.799 1.799 0 0 0-.631-.1c-.432 0-.523.162-.523.376 0 .19.078.29.496.326zm-20.787-.659H1.38a.05.05 0 0 0-.05.05v.522a.05.05 0 0 0 .05.05h.416v.649a1.267 1.267 0 0 1-.351.032c-.305 0-.731-.112-.731-1.048s.443-1.06.86-1.06a1.69 1.69 0 0 1 .614.094.05.05 0 0 0 .06-.05l.12-.504a.047.047 0 0 0-.02-.039 1.715 1.715 0 0 0-.903-.165C.73 9.748 0 10.05 0 11.508s.837 1.675 1.542 1.675a1.736 1.736 0 0 0 .938-.25.043.043 0 0 0 .016-.038v-1.628a.05.05 0 0 0-.05-.05zm5.545-1.294a.05.05 0 0 0-.05-.05H7.34a.05.05 0 0 0-.05.05v1.161h-.936V9.923a.05.05 0 0 0-.05-.05h-.6a.05.05 0 0 0-.05.05v3.145a.05.05 0 0 0 .05.05h.6a.05.05 0 0 0 .05-.05v-1.345h.937l-.002 1.345a.05.05 0 0 0 .05.05h.603a.05.05 0 0 0 .05-.05zm-4.389.412a.388.388 0 1 0-.387.392.39.39 0 0 0 .387-.392zm-.042 2.068v-1.451a.05.05 0 0 0-.05-.05h-.6a.057.057 0 0 0-.051.056v2.08c0 .06.038.079.087.079h.54c.06 0 .074-.03.074-.08zm6.764-1.497h-.597a.05.05 0 0 0-.05.05v1.542a.673.673 0 0 1-.367.11c-.215 0-.272-.097-.272-.307v-1.344a.05.05 0 0 0-.05-.05h-.604a.05.05 0 0 0-.05.05v1.446c0 .626.348.779.828.779a1.398 1.398 0 0 0 .71-.217 1.274 1.274 0 0 0 .022.128.052.052 0 0 0 .044.027l.385-.002a.05.05 0 0 0 .05-.05v-2.112a.05.05 0 0 0-.05-.05zm1.662-.07a1.121 1.121 0 0 0-.569.15V9.923a.05.05 0 0 0-.05-.05h-.602a.05.05 0 0 0-.05.05v3.145a.05.05 0 0 0 .05.05h.418a.05.05 0 0 0 .044-.027.973.973 0 0 0 .025-.144 1.08 1.08 0 0 0 .713.233c.548 0 .862-.278.862-1.248s-.502-1.095-.841-1.095zm-.235 1.771a.716.716 0 0 1-.347-.1v-.996a.793.793 0 0 1 .308-.1c.215-.019.422.046.422.558 0 .54-.094.647-.383.639zm-6.475-1.706h-.45l-.002-.595c0-.023-.011-.034-.037-.034h-.615c-.024 0-.036.01-.036.033v.615l-.33.08a.05.05 0 0 0-.035.048v.387a.05.05 0 0 0 .05.05h.315v.93c0 .692.484.76.812.76a1.375 1.375 0 0 0 .357-.06.046.046 0 0 0 .028-.044l.001-.426a.05.05 0 0 0-.05-.05c-.026 0-.094.01-.163.01-.221 0-.296-.102-.296-.236v-.884h.451a.05.05 0 0 0 .05-.05v-.484a.05.05 0 0 0-.05-.05z"/></svg></span><div><b>GitHub Pages</b><p>Hosting estático con HTTPS — que el micrófono exige.</p></div></li>
+  </ul>
+
+  <h3>Propuesto para producción · nada de esto está conectado</h3>
+  <ul class="herramientas">
+    <li class="herramienta l-openai"><span class="marca"><svg fill="currentColor" aria-hidden="true" focusable="false" role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><title>OpenAI</title><path d="M22.2819 9.8211a5.9847 5.9847 0 0 0-.5157-4.9108 6.0462 6.0462 0 0 0-6.5098-2.9A6.0651 6.0651 0 0 0 4.9807 4.1818a5.9847 5.9847 0 0 0-3.9977 2.9 6.0462 6.0462 0 0 0 .7427 7.0966 5.98 5.98 0 0 0 .511 4.9107 6.051 6.051 0 0 0 6.5146 2.9001A5.9847 5.9847 0 0 0 13.2599 24a6.0557 6.0557 0 0 0 5.7718-4.2058 5.9894 5.9894 0 0 0 3.9977-2.9001 6.0557 6.0557 0 0 0-.7475-7.0729zm-9.022 12.6081a4.4755 4.4755 0 0 1-2.8764-1.0408l.1419-.0804 4.7783-2.7582a.7948.7948 0 0 0 .3927-.6813v-6.7369l2.02 1.1686a.071.071 0 0 1 .038.052v5.5826a4.504 4.504 0 0 1-4.4945 4.4944zm-9.6607-4.1254a4.4708 4.4708 0 0 1-.5346-3.0137l.142.0852 4.783 2.7582a.7712.7712 0 0 0 .7806 0l5.8428-3.3685v2.3324a.0804.0804 0 0 1-.0332.0615L9.74 19.9502a4.4992 4.4992 0 0 1-6.1408-1.6464zM2.3408 7.8956a4.485 4.485 0 0 1 2.3655-1.9728V11.6a.7664.7664 0 0 0 .3879.6765l5.8144 3.3543-2.0201 1.1685a.0757.0757 0 0 1-.071 0l-4.8303-2.7865A4.504 4.504 0 0 1 2.3408 7.872zm16.5963 3.8558L13.1038 8.364 15.1192 7.2a.0757.0757 0 0 1 .071 0l4.8303 2.7913a4.4944 4.4944 0 0 1-.6765 8.1042v-5.6772a.79.79 0 0 0-.407-.667zm2.0107-3.0231l-.142-.0852-4.7735-2.7818a.7759.7759 0 0 0-.7854 0L9.409 9.2297V6.8974a.0662.0662 0 0 1 .0284-.0615l4.8303-2.7866a4.4992 4.4992 0 0 1 6.6802 4.66zM8.3065 12.863l-2.02-1.1638a.0804.0804 0 0 1-.038-.0567V6.0742a4.4992 4.4992 0 0 1 7.3757-3.4537l-.142.0805L8.704 5.459a.7948.7948 0 0 0-.3927.6813zm1.0976-2.3654l2.602-1.4998 2.6069 1.4998v2.9994l-2.5974 1.4997-2.6067-1.4997Z"/></svg></span><div><b>LLM con tool calling</b><p>Interpreta la intención y elige la herramienta. <b>Proveedor por evaluar</b>: precisión, latencia, costo y condiciones de tratamiento de datos.</p></div></li><li class="herramienta l-fastapi"><span class="marca"><svg fill="currentColor" aria-hidden="true" focusable="false" role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><title>FastAPI</title><path d="M12 .0387C5.3729.0384.0003 5.3931 0 11.9988c-.001 6.6066 5.372 11.9628 12 11.9625 6.628.0003 12.001-5.3559 12-11.9625-.0003-6.6057-5.3729-11.9604-12-11.96m-.829 5.4153h7.55l-7.5805 5.3284h5.1828L5.279 18.5436q2.9466-6.5444 5.892-13.0896"/></svg></span><div><b>FastAPI</b><p>Middleware. Autenticación, RBAC, reglas, confirmación y auditoría. Única vía de escritura.</p></div></li><li class="herramienta l-odoo"><span class="marca"><svg fill="currentColor" aria-hidden="true" focusable="false" role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><title>Odoo</title><path d="M21.1002 15.7957c-1.6015 0-2.8997-1.2983-2.8997-2.8998s1.2983-2.8997 2.8997-2.8997c1.6015 0 2.8998 1.2982 2.8998 2.8997 0 1.5999-1.2979 2.8998-2.8998 2.8998zm0-1.2c.9388.0006 1.7003-.7601 1.7008-1.6989.0004-.9388-.7602-1.7003-1.699-1.7007h-.0018c-.9388.0004-1.6994.7619-1.699 1.7007.0005.9381.761 1.6985 1.699 1.699zm-6.0655 1.2c-1.6014 0-2.8997-1.2983-2.8997-2.8998s1.2983-2.8997 2.8997-2.8997c1.6015 0 2.8998 1.2982 2.8998 2.8997 0 1.5999-1.2999 2.8998-2.8998 2.8998zm0-1.2c.9389.0006 1.7003-.7601 1.7008-1.6989.0005-.9388-.7602-1.7003-1.699-1.7007h-.0018c-.9388.0004-1.6994.7619-1.699 1.7007.0005.9381.761 1.6985 1.699 1.699zM11.865 12.858c0 1.6199-1.2979 2.9378-2.8977 2.9378s-2.8998-1.314-2.8998-2.9358 1.1799-2.8597 2.8998-2.8597c.6359 0 1.2239.134 1.6998.484v-1.68a.6.6 0 0 1 1.2 0v4.0537h-.002zm-2.8977 1.7399c.9388.0005 1.7002-.7602 1.7007-1.699.0005-.9388-.7602-1.7003-1.699-1.7007h-.0017c-.9389.0004-1.6995.7619-1.699 1.7007.0004.9381.7608 1.6985 1.699 1.699zm-6.0675 1.1979C1.2983 15.7957 0 14.4974 0 12.8959s1.2983-2.8997 2.8998-2.8997 2.8997 1.2982 2.8997 2.8997c0 1.5999-1.2999 2.8998-2.8997 2.8998zm0-1.2c.9388.0006 1.7002-.7601 1.7007-1.699.0005-.9387-.7602-1.7002-1.699-1.7006h-.0017c-.9388.0004-1.6995.7619-1.699 1.7007.0004.9381.7608 1.6985 1.699 1.699z"/></svg></span><div><b>ERP SaaS (Odoo)</b><p>Sistema transaccional: maestros, catálogo de etapas, reglas y auditoría. <b>Dependencia número uno.</b></p></div></li><li class="herramienta l-postgresql"><span class="marca"><svg fill="currentColor" aria-hidden="true" focusable="false" role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><title>PostgreSQL</title><path d="M23.5594 14.7228a.5269.5269 0 0 0-.0563-.1191c-.139-.2632-.4768-.3418-1.0074-.2321-1.6533.3411-2.2935.1312-2.5256-.0191 1.342-2.0482 2.445-4.522 3.0411-6.8297.2714-1.0507.7982-3.5237.1222-4.7316a1.5641 1.5641 0 0 0-.1509-.235C21.6931.9086 19.8007.0248 17.5099.0005c-1.4947-.0158-2.7705.3461-3.1161.4794a9.449 9.449 0 0 0-.5159-.0816 8.044 8.044 0 0 0-1.3114-.1278c-1.1822-.0184-2.2038.2642-3.0498.8406-.8573-.3211-4.7888-1.645-7.2219.0788C.9359 2.1526.3086 3.8733.4302 6.3043c.0409.818.5069 3.334 1.2423 5.7436.4598 1.5065.9387 2.7019 1.4334 3.582.553.9942 1.1259 1.5933 1.7143 1.7895.4474.1491 1.1327.1441 1.8581-.7279.8012-.9635 1.5903-1.8258 1.9446-2.2069.4351.2355.9064.3625 1.39.3772a.0569.0569 0 0 0 .0004.0041 11.0312 11.0312 0 0 0-.2472.3054c-.3389.4302-.4094.5197-1.5002.7443-.3102.064-1.1344.2339-1.1464.8115-.0025.1224.0329.2309.0919.3268.2269.4231.9216.6097 1.015.6331 1.3345.3335 2.5044.092 3.3714-.6787-.017 2.231.0775 4.4174.3454 5.0874.2212.5529.7618 1.9045 2.4692 1.9043.2505 0 .5263-.0291.8296-.0941 1.7819-.3821 2.5557-1.1696 2.855-2.9059.1503-.8707.4016-2.8753.5388-4.1012.0169-.0703.0357-.1207.057-.1362.0007-.0005.0697-.0471.4272.0307a.3673.3673 0 0 0 .0443.0068l.2539.0223.0149.001c.8468.0384 1.9114-.1426 2.5312-.4308.6438-.2988 1.8057-1.0323 1.5951-1.6698zM2.371 11.8765c-.7435-2.4358-1.1779-4.8851-1.2123-5.5719-.1086-2.1714.4171-3.6829 1.5623-4.4927 1.8367-1.2986 4.8398-.5408 6.108-.13-.0032.0032-.0066.0061-.0098.0094-2.0238 2.044-1.9758 5.536-1.9708 5.7495-.0002.0823.0066.1989.0162.3593.0348.5873.0996 1.6804-.0735 2.9184-.1609 1.1504.1937 2.2764.9728 3.0892.0806.0841.1648.1631.2518.2374-.3468.3714-1.1004 1.1926-1.9025 2.1576-.5677.6825-.9597.5517-1.0886.5087-.3919-.1307-.813-.5871-1.2381-1.3223-.4796-.839-.9635-2.0317-1.4155-3.5126zm6.0072 5.0871c-.1711-.0428-.3271-.1132-.4322-.1772.0889-.0394.2374-.0902.4833-.1409 1.2833-.2641 1.4815-.4506 1.9143-1.0002.0992-.126.2116-.2687.3673-.4426a.3549.3549 0 0 0 .0737-.1298c.1708-.1513.2724-.1099.4369-.0417.156.0646.3078.26.3695.4752.0291.1016.0619.2945-.0452.4444-.9043 1.2658-2.2216 1.2494-3.1676 1.0128zm2.094-3.988-.0525.141c-.133.3566-.2567.6881-.3334 1.003-.6674-.0021-1.3168-.2872-1.8105-.8024-.6279-.6551-.9131-1.5664-.7825-2.5004.1828-1.3079.1153-2.4468.079-3.0586-.005-.0857-.0095-.1607-.0122-.2199.2957-.2621 1.6659-.9962 2.6429-.7724.4459.1022.7176.4057.8305.928.5846 2.7038.0774 3.8307-.3302 4.7363-.084.1866-.1633.3629-.2311.5454zm7.3637 4.5725c-.0169.1768-.0358.376-.0618.5959l-.146.4383a.3547.3547 0 0 0-.0182.1077c-.0059.4747-.054.6489-.115.8693-.0634.2292-.1353.4891-.1794 1.0575-.11 1.4143-.8782 2.2267-2.4172 2.5565-1.5155.3251-1.7843-.4968-2.0212-1.2217a6.5824 6.5824 0 0 0-.0769-.2266c-.2154-.5858-.1911-1.4119-.1574-2.5551.0165-.5612-.0249-1.9013-.3302-2.6462.0044-.2932.0106-.5909.019-.8918a.3529.3529 0 0 0-.0153-.1126 1.4927 1.4927 0 0 0-.0439-.208c-.1226-.4283-.4213-.7866-.7797-.9351-.1424-.059-.4038-.1672-.7178-.0869.067-.276.1831-.5875.309-.9249l.0529-.142c.0595-.16.134-.3257.213-.5012.4265-.9476 1.0106-2.2453.3766-5.1772-.2374-1.0981-1.0304-1.6343-2.2324-1.5098-.7207.0746-1.3799.3654-1.7088.5321a5.6716 5.6716 0 0 0-.1958.1041c.0918-1.1064.4386-3.1741 1.7357-4.4823a4.0306 4.0306 0 0 1 .3033-.276.3532.3532 0 0 0 .1447-.0644c.7524-.5706 1.6945-.8506 2.802-.8325.4091.0067.8017.0339 1.1742.081 1.939.3544 3.2439 1.4468 4.0359 2.3827.8143.9623 1.2552 1.9315 1.4312 2.4543-1.3232-.1346-2.2234.1268-2.6797.779-.9926 1.4189.543 4.1729 1.2811 5.4964.1353.2426.2522.4522.2889.5413.2403.5825.5515.9713.7787 1.2552.0696.087.1372.1714.1885.245-.4008.1155-1.1208.3825-1.0552 1.717-.0123.1563-.0423.4469-.0834.8148-.0461.2077-.0702.4603-.0994.7662zm.8905-1.6211c-.0405-.8316.2691-.9185.5967-1.0105a2.8566 2.8566 0 0 0 .135-.0406 1.202 1.202 0 0 0 .1342.103c.5703.3765 1.5823.4213 3.0068.1344-.2016.1769-.5189.3994-.9533.6011-.4098.1903-1.0957.333-1.7473.3636-.7197.0336-1.0859-.0807-1.1721-.151zm.5695-9.2712c-.0059.3508-.0542.6692-.1054 1.0017-.055.3576-.112.7274-.1264 1.1762-.0142.4368.0404.8909.0932 1.3301.1066.887.216 1.8003-.2075 2.7014a3.5272 3.5272 0 0 1-.1876-.3856c-.0527-.1276-.1669-.3326-.3251-.6162-.6156-1.1041-2.0574-3.6896-1.3193-4.7446.3795-.5427 1.3408-.5661 2.1781-.463zm.2284 7.0137a12.3762 12.3762 0 0 0-.0853-.1074l-.0355-.0444c.7262-1.1995.5842-2.3862.4578-3.4385-.0519-.4318-.1009-.8396-.0885-1.2226.0129-.4061.0666-.7543.1185-1.0911.0639-.415.1288-.8443.1109-1.3505.0134-.0531.0188-.1158.0118-.1902-.0457-.4855-.5999-1.938-1.7294-3.253-.6076-.7073-1.4896-1.4972-2.6889-2.0395.5251-.1066 1.2328-.2035 2.0244-.1859 2.0515.0456 3.6746.8135 4.8242 2.2824a.908.908 0 0 1 .0667.1002c.7231 1.3556-.2762 6.2751-2.9867 10.5405zm-8.8166-6.1162c-.025.1794-.3089.4225-.6211.4225a.5821.5821 0 0 1-.0809-.0056c-.1873-.026-.3765-.144-.5059-.3156-.0458-.0605-.1203-.178-.1055-.2844.0055-.0401.0261-.0985.0925-.1488.1182-.0894.3518-.1226.6096-.0867.3163.0441.6426.1938.6113.4186zm7.9305-.4114c.0111.0792-.049.201-.1531.3102-.0683.0717-.212.1961-.4079.2232a.5456.5456 0 0 1-.075.0052c-.2935 0-.5414-.2344-.5607-.3717-.024-.1765.2641-.3106.5611-.352.297-.0414.6111.0088.6356.1851z"/></svg></span><div><b>Base de datos</b><p>Persistencia del ERP. El modelo nunca la toca: ni accede directo ni ejecuta SQL.</p></div></li>
+  </ul>
+
+  <div class="nota alerta"><b>Los controles de permisos del prototipo corren en el navegador.</b>
+     Representan el flujo; no son un control de seguridad. Un usuario con la consola abierta podría
+     saltearlos. Por eso T-10 insiste en que la autorización debe vivir en el backend.</div>
+
+  <h2>6 · El límite honesto del prototipo</h2>
+  <p>T-09 descarta la automatización por reglas por rígida. El prototipo usa reglas —pero
+     tolerantes— y documenta dónde se rompen.</p>
+  <div class="lienzo"><pre class="mermaid">flowchart LR
+    I[&quot;«pasá el ítem 333&lt;br/&gt;al torno»&quot;] --&gt; N{&quot;Analizador&lt;br/&gt;por reglas&quot;}
+    I2[&quot;«mostrame las of&lt;br/&gt;de petro sur»&quot;] --&gt; N
+    I3[&quot;«che, fijate si lo de la semana&lt;br/&gt;pasada ya salió del horno&lt;br/&gt;así le aviso al tipo»&quot;] --&gt; N
+
+    N --&gt;|&quot;sinónimo de taller&lt;br/&gt;torno → Mecanizado&quot;| OK1[&quot;✅ resuelve&quot;]
+    N --&gt;|&quot;coincidencia difusa&lt;br/&gt;petro sur → Petrosur&quot;| OK2[&quot;✅ resuelve&quot;]
+    N --&gt;|&quot;sin plantilla que encaje&quot;| KO[&quot;❌ no interpreta&lt;br/&gt;y lo informa&quot;]
+
+    KO --&gt; LLM[&quot;✨ Esto es lo que&lt;br/&gt;aportaría el LLM&quot;]
+
+    classDef inp fill:#FFFFFF,stroke:#CBD5E1,color:#334155
+    classDef nlu fill:#243673,stroke:#1A2854,color:#FFFFFF
+    classDef bien fill:#D1FAE5,stroke:#059669,color:#065F46
+    classDef mal fill:#FEE2E2,stroke:#DC2626,color:#991B1B
+    classDef llm fill:#BFD1FF,stroke:#0084D6,color:#243673,stroke-width:2px
+
+    class I,I2,I3 inp
+    class N nlu
+    class OK1,OK2 bien
+    class KO mal
+    class LLM llm</pre></div>
+  <div class="nota">El caso de la derecha está cubierto por el test <code>LIM-01</code> y
+     documentado como <b>CP-10</b> en T-10. El template advierte que «si el equipo no encontró
+     ningún caso en el que la solución falle, probablemente no probó suficiente». Ese es el caso.</div>
+
+  <footer>
+    Demo académica — T-09 / T-10. Datos sintéticos; sin LLM ni ERP reales.<br>
+    Logotipos de <a href="https://simpleicons.org" target="_blank" rel="noopener">Simple Icons</a>,
+    licencia CC0 1.0 (dominio público). Las marcas pertenecen a sus titulares y se usan de forma
+    nominativa para identificar las herramientas empleadas.
+  </footer>
+</div>

@@ -5,6 +5,11 @@
 Prototipo académico de la **Oportunidad 3** de T-09: *Asistente Conversacional para Operaciones de
 Producción y Taller*. Representa la solución diseñada en T-10 como una aplicación web navegable.
 
+| Documento | Contenido |
+|---|---|
+| [`docs/ARQUITECTURA.md`](docs/ARQUITECTURA.md) | 6 diagramas Mermaid: arquitectura conceptual, flujo de una escritura, matriz de permisos, modelo de datos, estado de construcción y límites del analizador |
+| [`docs/STACK.md`](docs/STACK.md) | Las herramientas con sus logotipos, separando lo construido de lo propuesto |
+
 > **No es un producto.** No hay LLM, ni middleware, ni ERP, ni base de datos conectados.
 > Los datos son sintéticos y los controles de permisos corren en el navegador: **no son seguridad real**.
 
