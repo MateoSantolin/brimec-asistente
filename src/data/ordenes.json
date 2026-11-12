@@ -1,0 +1,1178 @@
+{
+  "_tabla": "ORDEN_FABRICACION + OF_DETALLE",
+  "_nota": "Datos SINTETICOS. Los campos con prefijo 'off_' son OFFSETS EN DIAS respecto del momento de ejecucion (0 = ahora, negativo = pasado). Se convierten a fechas reales en src/data/seed.ts para que la demo no envejezca. ORDEN_FABRICACION.estado es DERIVADO: es la etapa minima de sus OF_DETALLE.",
+  "ordenes": [
+    {
+      "of_id": 201,
+      "pedido_id": 1001,
+      "numero": "OF-201",
+      "off_fecha_emision": -30,
+      "off_fecha_estimada_fin": 16,
+      "off_fecha_real_fin": null,
+      "prioridad": "Alta",
+      "estado": "Pendiente"
+    },
+    {
+      "of_id": 202,
+      "pedido_id": 1001,
+      "numero": "OF-202",
+      "off_fecha_emision": -42,
+      "off_fecha_estimada_fin": 4,
+      "off_fecha_real_fin": null,
+      "prioridad": "Media",
+      "estado": "Mecanizado"
+    },
+    {
+      "of_id": 203,
+      "pedido_id": 1002,
+      "numero": "OF-203",
+      "off_fecha_emision": -4,
+      "off_fecha_estimada_fin": 66,
+      "off_fecha_real_fin": null,
+      "prioridad": "Media",
+      "estado": "Tratamiento"
+    },
+    {
+      "of_id": 204,
+      "pedido_id": 1002,
+      "numero": "OF-204",
+      "off_fecha_emision": -4,
+      "off_fecha_estimada_fin": 76,
+      "off_fecha_real_fin": null,
+      "prioridad": "Baja",
+      "estado": "Corte"
+    },
+    {
+      "of_id": 205,
+      "pedido_id": 1003,
+      "numero": "OF-205",
+      "off_fecha_emision": -28,
+      "off_fecha_estimada_fin": 0,
+      "off_fecha_real_fin": null,
+      "prioridad": "Baja",
+      "estado": "Calidad"
+    },
+    {
+      "of_id": 206,
+      "pedido_id": 1003,
+      "numero": "OF-206",
+      "off_fecha_emision": -59,
+      "off_fecha_estimada_fin": -5,
+      "off_fecha_real_fin": null,
+      "prioridad": "Media",
+      "estado": "Tratamiento"
+    },
+    {
+      "of_id": 207,
+      "pedido_id": 1004,
+      "numero": "OF-207",
+      "off_fecha_emision": -31,
+      "off_fecha_estimada_fin": 4,
+      "off_fecha_real_fin": null,
+      "prioridad": "Media",
+      "estado": "Corte"
+    },
+    {
+      "of_id": 208,
+      "pedido_id": 1004,
+      "numero": "OF-208",
+      "off_fecha_emision": -12,
+      "off_fecha_estimada_fin": 36,
+      "off_fecha_real_fin": null,
+      "prioridad": "Baja",
+      "estado": "Pendiente"
+    },
+    {
+      "of_id": 209,
+      "pedido_id": 1005,
+      "numero": "OF-209",
+      "off_fecha_emision": -4,
+      "off_fecha_estimada_fin": 51,
+      "off_fecha_real_fin": null,
+      "prioridad": "Media",
+      "estado": "Pendiente"
+    },
+    {
+      "of_id": 210,
+      "pedido_id": 1005,
+      "numero": "OF-210",
+      "off_fecha_emision": -4,
+      "off_fecha_estimada_fin": 79,
+      "off_fecha_real_fin": null,
+      "prioridad": "Alta",
+      "estado": "Corte"
+    },
+    {
+      "of_id": 211,
+      "pedido_id": 1006,
+      "numero": "OF-211",
+      "off_fecha_emision": -52,
+      "off_fecha_estimada_fin": 6,
+      "off_fecha_real_fin": null,
+      "prioridad": "Media",
+      "estado": "Pendiente"
+    },
+    {
+      "of_id": 212,
+      "pedido_id": 1006,
+      "numero": "OF-212",
+      "off_fecha_emision": -57,
+      "off_fecha_estimada_fin": -19,
+      "off_fecha_real_fin": -19,
+      "prioridad": "Baja",
+      "estado": "Finalizado"
+    },
+    {
+      "of_id": 213,
+      "pedido_id": 1007,
+      "numero": "OF-213",
+      "off_fecha_emision": -49,
+      "off_fecha_estimada_fin": -14,
+      "off_fecha_real_fin": -13,
+      "prioridad": "Media",
+      "estado": "Finalizado"
+    },
+    {
+      "of_id": 214,
+      "pedido_id": 1007,
+      "numero": "OF-214",
+      "off_fecha_emision": -4,
+      "off_fecha_estimada_fin": 41,
+      "off_fecha_real_fin": null,
+      "prioridad": "Media",
+      "estado": "Tratamiento"
+    },
+    {
+      "of_id": 215,
+      "pedido_id": 1008,
+      "numero": "OF-215",
+      "off_fecha_emision": -45,
+      "off_fecha_estimada_fin": 0,
+      "off_fecha_real_fin": null,
+      "prioridad": "Media",
+      "estado": "Calidad"
+    },
+    {
+      "of_id": 216,
+      "pedido_id": 1008,
+      "numero": "OF-216",
+      "off_fecha_emision": -77,
+      "off_fecha_estimada_fin": -21,
+      "off_fecha_real_fin": -21,
+      "prioridad": "Baja",
+      "estado": "Finalizado"
+    },
+    {
+      "of_id": 217,
+      "pedido_id": 1009,
+      "numero": "OF-217",
+      "off_fecha_emision": -4,
+      "off_fecha_estimada_fin": 79,
+      "off_fecha_real_fin": null,
+      "prioridad": "Media",
+      "estado": "Mecanizado"
+    },
+    {
+      "of_id": 218,
+      "pedido_id": 1009,
+      "numero": "OF-218",
+      "off_fecha_emision": -34,
+      "off_fecha_estimada_fin": -8,
+      "off_fecha_real_fin": null,
+      "prioridad": "Media",
+      "estado": "Pendiente"
+    },
+    {
+      "of_id": 219,
+      "pedido_id": 1010,
+      "numero": "OF-219",
+      "off_fecha_emision": -15,
+      "off_fecha_estimada_fin": 60,
+      "off_fecha_real_fin": null,
+      "prioridad": "Alta",
+      "estado": "Mecanizado"
+    },
+    {
+      "of_id": 220,
+      "pedido_id": 1010,
+      "numero": "OF-220",
+      "off_fecha_emision": -61,
+      "off_fecha_estimada_fin": -15,
+      "off_fecha_real_fin": null,
+      "prioridad": "Media",
+      "estado": "Mecanizado"
+    },
+    {
+      "of_id": 221,
+      "pedido_id": 1011,
+      "numero": "OF-221",
+      "off_fecha_emision": -4,
+      "off_fecha_estimada_fin": 38,
+      "off_fecha_real_fin": null,
+      "prioridad": "Media",
+      "estado": "Calidad"
+    },
+    {
+      "of_id": 222,
+      "pedido_id": 1012,
+      "numero": "OF-222",
+      "off_fecha_emision": -55,
+      "off_fecha_estimada_fin": 6,
+      "off_fecha_real_fin": null,
+      "prioridad": "Baja",
+      "estado": "Pendiente"
+    },
+    {
+      "of_id": 223,
+      "pedido_id": 1013,
+      "numero": "OF-223",
+      "off_fecha_emision": -82,
+      "off_fecha_estimada_fin": -14,
+      "off_fecha_real_fin": null,
+      "prioridad": "Baja",
+      "estado": "Tratamiento"
+    },
+    {
+      "of_id": 224,
+      "pedido_id": 1014,
+      "numero": "OF-224",
+      "off_fecha_emision": -18,
+      "off_fecha_estimada_fin": 23,
+      "off_fecha_real_fin": null,
+      "prioridad": "Media",
+      "estado": "Corte"
+    },
+    {
+      "of_id": 225,
+      "pedido_id": 1015,
+      "numero": "OF-225",
+      "off_fecha_emision": -39,
+      "off_fecha_estimada_fin": 24,
+      "off_fecha_real_fin": null,
+      "prioridad": "Alta",
+      "estado": "Calidad"
+    },
+    {
+      "of_id": 226,
+      "pedido_id": 1016,
+      "numero": "OF-226",
+      "off_fecha_emision": -7,
+      "off_fecha_estimada_fin": 33,
+      "off_fecha_real_fin": null,
+      "prioridad": "Media",
+      "estado": "Mecanizado"
+    },
+    {
+      "of_id": 227,
+      "pedido_id": 1017,
+      "numero": "OF-227",
+      "off_fecha_emision": -43,
+      "off_fecha_estimada_fin": -12,
+      "off_fecha_real_fin": -12,
+      "prioridad": "Media",
+      "estado": "Finalizado"
+    },
+    {
+      "of_id": 228,
+      "pedido_id": 1018,
+      "numero": "OF-228",
+      "off_fecha_emision": -4,
+      "off_fecha_estimada_fin": 44,
+      "off_fecha_real_fin": null,
+      "prioridad": "Alta",
+      "estado": "Mecanizado"
+    },
+    {
+      "of_id": 229,
+      "pedido_id": 1019,
+      "numero": "OF-229",
+      "off_fecha_emision": -75,
+      "off_fecha_estimada_fin": -24,
+      "off_fecha_real_fin": -24,
+      "prioridad": "Media",
+      "estado": "Finalizado"
+    },
+    {
+      "of_id": 230,
+      "pedido_id": 1020,
+      "numero": "OF-230",
+      "off_fecha_emision": -13,
+      "off_fecha_estimada_fin": 17,
+      "off_fecha_real_fin": null,
+      "prioridad": "Baja",
+      "estado": "Corte"
+    }
+  ],
+  "of_detalle": [
+    {
+      "of_detalle_id": 301,
+      "of_id": 201,
+      "pedido_detalle_id": 5004,
+      "articulo_id": 8,
+      "numero_item": "001",
+      "cantidad": 1,
+      "partida": "COL-74989",
+      "estado": "Corte"
+    },
+    {
+      "of_detalle_id": 302,
+      "of_id": 201,
+      "pedido_detalle_id": 5003,
+      "articulo_id": 6,
+      "numero_item": "002",
+      "cantidad": 6,
+      "partida": "COL-79036",
+      "estado": "Pendiente"
+    },
+    {
+      "of_detalle_id": 303,
+      "of_id": 201,
+      "pedido_detalle_id": 5001,
+      "articulo_id": 3,
+      "numero_item": "003",
+      "cantidad": 4,
+      "partida": "COL-82879",
+      "estado": "Pendiente"
+    },
+    {
+      "of_detalle_id": 304,
+      "of_id": 202,
+      "pedido_detalle_id": 5004,
+      "articulo_id": 8,
+      "numero_item": "001",
+      "cantidad": 1,
+      "partida": "COL-94826",
+      "estado": "Tratamiento"
+    },
+    {
+      "of_detalle_id": 305,
+      "of_id": 202,
+      "pedido_detalle_id": 5002,
+      "articulo_id": 5,
+      "numero_item": "002",
+      "cantidad": 24,
+      "partida": "COL-28596",
+      "estado": "Mecanizado"
+    },
+    {
+      "of_detalle_id": 306,
+      "of_id": 202,
+      "pedido_detalle_id": 5003,
+      "articulo_id": 6,
+      "numero_item": "003",
+      "cantidad": 6,
+      "partida": "COL-44461",
+      "estado": "Mecanizado"
+    },
+    {
+      "of_detalle_id": 307,
+      "of_id": 203,
+      "pedido_detalle_id": 5005,
+      "articulo_id": 13,
+      "numero_item": "001",
+      "cantidad": 1,
+      "partida": "COL-84932",
+      "estado": "Tratamiento"
+    },
+    {
+      "of_detalle_id": 308,
+      "of_id": 203,
+      "pedido_detalle_id": 5008,
+      "articulo_id": 16,
+      "numero_item": "002",
+      "cantidad": 8,
+      "partida": "COL-79090",
+      "estado": "Calidad"
+    },
+    {
+      "of_detalle_id": 309,
+      "of_id": 203,
+      "pedido_detalle_id": 5009,
+      "articulo_id": 17,
+      "numero_item": "003",
+      "cantidad": 1,
+      "partida": "COL-98548",
+      "estado": "Tratamiento"
+    },
+    {
+      "of_detalle_id": 310,
+      "of_id": 203,
+      "pedido_detalle_id": 5007,
+      "articulo_id": 15,
+      "numero_item": "004",
+      "cantidad": 24,
+      "partida": "COL-58630",
+      "estado": "Tratamiento"
+    },
+    {
+      "of_detalle_id": 311,
+      "of_id": 204,
+      "pedido_detalle_id": 5008,
+      "articulo_id": 16,
+      "numero_item": "001",
+      "cantidad": 12,
+      "partida": "COL-50092",
+      "estado": "Corte"
+    },
+    {
+      "of_detalle_id": 312,
+      "of_id": 204,
+      "pedido_detalle_id": 5006,
+      "articulo_id": 14,
+      "numero_item": "002",
+      "cantidad": 8,
+      "partida": "COL-76886",
+      "estado": "Corte"
+    },
+    {
+      "of_detalle_id": 313,
+      "of_id": 204,
+      "pedido_detalle_id": 5009,
+      "articulo_id": 17,
+      "numero_item": "003",
+      "cantidad": 8,
+      "partida": "COL-31591",
+      "estado": "Corte"
+    },
+    {
+      "of_detalle_id": 314,
+      "of_id": 205,
+      "pedido_detalle_id": 5013,
+      "articulo_id": 6,
+      "numero_item": "001",
+      "cantidad": 20,
+      "partida": "COL-87164",
+      "estado": "Calidad"
+    },
+    {
+      "of_detalle_id": 315,
+      "of_id": 205,
+      "pedido_detalle_id": 5012,
+      "articulo_id": 5,
+      "numero_item": "002",
+      "cantidad": 24,
+      "partida": "COL-23729",
+      "estado": "Finalizado"
+    },
+    {
+      "of_detalle_id": 316,
+      "of_id": 205,
+      "pedido_detalle_id": 5011,
+      "articulo_id": 4,
+      "numero_item": "003",
+      "cantidad": 6,
+      "partida": "COL-64162",
+      "estado": "Calidad"
+    },
+    {
+      "of_detalle_id": 317,
+      "of_id": 206,
+      "pedido_detalle_id": 5014,
+      "articulo_id": 8,
+      "numero_item": "001",
+      "cantidad": 4,
+      "partida": "COL-31514",
+      "estado": "Tratamiento"
+    },
+    {
+      "of_detalle_id": 318,
+      "of_id": 206,
+      "pedido_detalle_id": 5010,
+      "articulo_id": 1,
+      "numero_item": "002",
+      "cantidad": 1,
+      "partida": "COL-70127",
+      "estado": "Calidad"
+    },
+    {
+      "of_detalle_id": 319,
+      "of_id": 207,
+      "pedido_detalle_id": 5015,
+      "articulo_id": 1,
+      "numero_item": "001",
+      "cantidad": 24,
+      "partida": "COL-77890",
+      "estado": "Corte"
+    },
+    {
+      "of_detalle_id": 320,
+      "of_id": 207,
+      "pedido_detalle_id": 5020,
+      "articulo_id": 10,
+      "numero_item": "002",
+      "cantidad": 24,
+      "partida": "COL-13822",
+      "estado": "Corte"
+    },
+    {
+      "of_detalle_id": 321,
+      "of_id": 207,
+      "pedido_detalle_id": 5019,
+      "articulo_id": 8,
+      "numero_item": "003",
+      "cantidad": 12,
+      "partida": "COL-95474",
+      "estado": "Corte"
+    },
+    {
+      "of_detalle_id": 322,
+      "of_id": 208,
+      "pedido_detalle_id": 5018,
+      "articulo_id": 4,
+      "numero_item": "001",
+      "cantidad": 4,
+      "partida": "COL-16493",
+      "estado": "Pendiente"
+    },
+    {
+      "of_detalle_id": 323,
+      "of_id": 208,
+      "pedido_detalle_id": 5015,
+      "articulo_id": 1,
+      "numero_item": "002",
+      "cantidad": 6,
+      "partida": "COL-47207",
+      "estado": "Pendiente"
+    },
+    {
+      "of_detalle_id": 324,
+      "of_id": 208,
+      "pedido_detalle_id": 5017,
+      "articulo_id": 3,
+      "numero_item": "003",
+      "cantidad": 6,
+      "partida": "COL-51968",
+      "estado": "Pendiente"
+    },
+    {
+      "of_detalle_id": 325,
+      "of_id": 208,
+      "pedido_detalle_id": 5016,
+      "articulo_id": 2,
+      "numero_item": "004",
+      "cantidad": 20,
+      "partida": "COL-92875",
+      "estado": "Corte"
+    },
+    {
+      "of_detalle_id": 326,
+      "of_id": 209,
+      "pedido_detalle_id": 5025,
+      "articulo_id": 20,
+      "numero_item": "001",
+      "cantidad": 6,
+      "partida": "COL-93621",
+      "estado": "Pendiente"
+    },
+    {
+      "of_detalle_id": 327,
+      "of_id": 209,
+      "pedido_detalle_id": 5024,
+      "articulo_id": 16,
+      "numero_item": "002",
+      "cantidad": 24,
+      "partida": "COL-77855",
+      "estado": "Pendiente"
+    },
+    {
+      "of_detalle_id": 328,
+      "of_id": 210,
+      "pedido_detalle_id": 5022,
+      "articulo_id": 12,
+      "numero_item": "001",
+      "cantidad": 1,
+      "partida": "COL-15203",
+      "estado": "Corte"
+    },
+    {
+      "of_detalle_id": 329,
+      "of_id": 210,
+      "pedido_detalle_id": 5024,
+      "articulo_id": 16,
+      "numero_item": "002",
+      "cantidad": 8,
+      "partida": "COL-20221",
+      "estado": "Mecanizado"
+    },
+    {
+      "of_detalle_id": 330,
+      "of_id": 210,
+      "pedido_detalle_id": 5023,
+      "articulo_id": 13,
+      "numero_item": "003",
+      "cantidad": 8,
+      "partida": "COL-11526",
+      "estado": "Corte"
+    },
+    {
+      "of_detalle_id": 331,
+      "of_id": 210,
+      "pedido_detalle_id": 5021,
+      "articulo_id": 11,
+      "numero_item": "004",
+      "cantidad": 2,
+      "partida": "COL-90735",
+      "estado": "Corte"
+    },
+    {
+      "of_detalle_id": 332,
+      "of_id": 211,
+      "pedido_detalle_id": 5026,
+      "articulo_id": 1,
+      "numero_item": "001",
+      "cantidad": 12,
+      "partida": "COL-60941",
+      "estado": "Pendiente"
+    },
+    {
+      "of_detalle_id": 333,
+      "of_id": 211,
+      "pedido_detalle_id": 5028,
+      "articulo_id": 4,
+      "numero_item": "002",
+      "cantidad": 4,
+      "partida": "COL-28372",
+      "estado": "Mecanizado"
+    },
+    {
+      "of_detalle_id": 334,
+      "of_id": 211,
+      "pedido_detalle_id": 5029,
+      "articulo_id": 5,
+      "numero_item": "003",
+      "cantidad": 1,
+      "partida": "COL-72974",
+      "estado": "Pendiente"
+    },
+    {
+      "of_detalle_id": 335,
+      "of_id": 212,
+      "pedido_detalle_id": 5027,
+      "articulo_id": 2,
+      "numero_item": "001",
+      "cantidad": 20,
+      "partida": "COL-12575",
+      "estado": "Finalizado"
+    },
+    {
+      "of_detalle_id": 336,
+      "of_id": 212,
+      "pedido_detalle_id": 5030,
+      "articulo_id": 19,
+      "numero_item": "002",
+      "cantidad": 12,
+      "partida": "COL-68333",
+      "estado": "Finalizado"
+    },
+    {
+      "of_detalle_id": 337,
+      "of_id": 213,
+      "pedido_detalle_id": 5031,
+      "articulo_id": 11,
+      "numero_item": "001",
+      "cantidad": 6,
+      "partida": "COL-11038",
+      "estado": "Finalizado"
+    },
+    {
+      "of_detalle_id": 338,
+      "of_id": 213,
+      "pedido_detalle_id": 5032,
+      "articulo_id": 12,
+      "numero_item": "002",
+      "cantidad": 24,
+      "partida": "COL-67493",
+      "estado": "Finalizado"
+    },
+    {
+      "of_detalle_id": 339,
+      "of_id": 213,
+      "pedido_detalle_id": 5035,
+      "articulo_id": 16,
+      "numero_item": "003",
+      "cantidad": 24,
+      "partida": "COL-62682",
+      "estado": "Finalizado"
+    },
+    {
+      "of_detalle_id": 340,
+      "of_id": 214,
+      "pedido_detalle_id": 5035,
+      "articulo_id": 16,
+      "numero_item": "001",
+      "cantidad": 2,
+      "partida": "COL-51272",
+      "estado": "Tratamiento"
+    },
+    {
+      "of_detalle_id": 341,
+      "of_id": 214,
+      "pedido_detalle_id": 5033,
+      "articulo_id": 13,
+      "numero_item": "002",
+      "cantidad": 12,
+      "partida": "COL-19655",
+      "estado": "Tratamiento"
+    },
+    {
+      "of_detalle_id": 342,
+      "of_id": 214,
+      "pedido_detalle_id": 5034,
+      "articulo_id": 14,
+      "numero_item": "003",
+      "cantidad": 20,
+      "partida": "COL-35065",
+      "estado": "Tratamiento"
+    },
+    {
+      "of_detalle_id": 343,
+      "of_id": 215,
+      "pedido_detalle_id": 5036,
+      "articulo_id": 7,
+      "numero_item": "001",
+      "cantidad": 20,
+      "partida": "COL-17716",
+      "estado": "Calidad"
+    },
+    {
+      "of_detalle_id": 344,
+      "of_id": 215,
+      "pedido_detalle_id": 5037,
+      "articulo_id": 9,
+      "numero_item": "002",
+      "cantidad": 6,
+      "partida": "COL-52323",
+      "estado": "Calidad"
+    },
+    {
+      "of_detalle_id": 345,
+      "of_id": 216,
+      "pedido_detalle_id": 5036,
+      "articulo_id": 7,
+      "numero_item": "001",
+      "cantidad": 12,
+      "partida": "COL-12292",
+      "estado": "Finalizado"
+    },
+    {
+      "of_detalle_id": 346,
+      "of_id": 216,
+      "pedido_detalle_id": 5037,
+      "articulo_id": 9,
+      "numero_item": "002",
+      "cantidad": 24,
+      "partida": "COL-69157",
+      "estado": "Finalizado"
+    },
+    {
+      "of_detalle_id": 347,
+      "of_id": 217,
+      "pedido_detalle_id": 5041,
+      "articulo_id": 17,
+      "numero_item": "001",
+      "cantidad": 6,
+      "partida": "COL-73944",
+      "estado": "Mecanizado"
+    },
+    {
+      "of_detalle_id": 348,
+      "of_id": 217,
+      "pedido_detalle_id": 5040,
+      "articulo_id": 10,
+      "numero_item": "002",
+      "cantidad": 1,
+      "partida": "COL-70212",
+      "estado": "Mecanizado"
+    },
+    {
+      "of_detalle_id": 349,
+      "of_id": 217,
+      "pedido_detalle_id": 5039,
+      "articulo_id": 9,
+      "numero_item": "003",
+      "cantidad": 1,
+      "partida": "COL-44700",
+      "estado": "Mecanizado"
+    },
+    {
+      "of_detalle_id": 350,
+      "of_id": 218,
+      "pedido_detalle_id": 5038,
+      "articulo_id": 1,
+      "numero_item": "001",
+      "cantidad": 8,
+      "partida": "COL-79686",
+      "estado": "Pendiente"
+    },
+    {
+      "of_detalle_id": 351,
+      "of_id": 218,
+      "pedido_detalle_id": 5039,
+      "articulo_id": 9,
+      "numero_item": "002",
+      "cantidad": 1,
+      "partida": "COL-62679",
+      "estado": "Pendiente"
+    },
+    {
+      "of_detalle_id": 352,
+      "of_id": 219,
+      "pedido_detalle_id": 5046,
+      "articulo_id": 9,
+      "numero_item": "001",
+      "cantidad": 8,
+      "partida": "COL-70174",
+      "estado": "Tratamiento"
+    },
+    {
+      "of_detalle_id": 353,
+      "of_id": 219,
+      "pedido_detalle_id": 5044,
+      "articulo_id": 7,
+      "numero_item": "002",
+      "cantidad": 2,
+      "partida": "COL-16486",
+      "estado": "Mecanizado"
+    },
+    {
+      "of_detalle_id": 354,
+      "of_id": 220,
+      "pedido_detalle_id": 5045,
+      "articulo_id": 8,
+      "numero_item": "001",
+      "cantidad": 12,
+      "partida": "COL-91880",
+      "estado": "Mecanizado"
+    },
+    {
+      "of_detalle_id": 355,
+      "of_id": 220,
+      "pedido_detalle_id": 5047,
+      "articulo_id": 10,
+      "numero_item": "002",
+      "cantidad": 20,
+      "partida": "COL-86097",
+      "estado": "Mecanizado"
+    },
+    {
+      "of_detalle_id": 356,
+      "of_id": 220,
+      "pedido_detalle_id": 5043,
+      "articulo_id": 6,
+      "numero_item": "003",
+      "cantidad": 24,
+      "partida": "COL-87385",
+      "estado": "Tratamiento"
+    },
+    {
+      "of_detalle_id": 357,
+      "of_id": 220,
+      "pedido_detalle_id": 5042,
+      "articulo_id": 2,
+      "numero_item": "004",
+      "cantidad": 24,
+      "partida": "COL-61118",
+      "estado": "Mecanizado"
+    },
+    {
+      "of_detalle_id": 358,
+      "of_id": 221,
+      "pedido_detalle_id": 5051,
+      "articulo_id": 17,
+      "numero_item": "001",
+      "cantidad": 8,
+      "partida": "COL-93444",
+      "estado": "Calidad"
+    },
+    {
+      "of_detalle_id": 359,
+      "of_id": 221,
+      "pedido_detalle_id": 5048,
+      "articulo_id": 7,
+      "numero_item": "002",
+      "cantidad": 8,
+      "partida": "COL-59087",
+      "estado": "Calidad"
+    },
+    {
+      "of_detalle_id": 360,
+      "of_id": 221,
+      "pedido_detalle_id": 5049,
+      "articulo_id": 12,
+      "numero_item": "003",
+      "cantidad": 12,
+      "partida": "COL-14417",
+      "estado": "Calidad"
+    },
+    {
+      "of_detalle_id": 361,
+      "of_id": 221,
+      "pedido_detalle_id": 5050,
+      "articulo_id": 13,
+      "numero_item": "004",
+      "cantidad": 20,
+      "partida": "COL-80515",
+      "estado": "Calidad"
+    },
+    {
+      "of_detalle_id": 362,
+      "of_id": 222,
+      "pedido_detalle_id": 5052,
+      "articulo_id": 11,
+      "numero_item": "001",
+      "cantidad": 6,
+      "partida": "COL-52743",
+      "estado": "Pendiente"
+    },
+    {
+      "of_detalle_id": 363,
+      "of_id": 222,
+      "pedido_detalle_id": 5053,
+      "articulo_id": 13,
+      "numero_item": "002",
+      "cantidad": 12,
+      "partida": "COL-34608",
+      "estado": "Pendiente"
+    },
+    {
+      "of_detalle_id": 364,
+      "of_id": 223,
+      "pedido_detalle_id": 5054,
+      "articulo_id": 5,
+      "numero_item": "001",
+      "cantidad": 12,
+      "partida": "COL-85434",
+      "estado": "Tratamiento"
+    },
+    {
+      "of_detalle_id": 365,
+      "of_id": 223,
+      "pedido_detalle_id": 5055,
+      "articulo_id": 11,
+      "numero_item": "002",
+      "cantidad": 1,
+      "partida": "COL-61305",
+      "estado": "Calidad"
+    },
+    {
+      "of_detalle_id": 366,
+      "of_id": 223,
+      "pedido_detalle_id": 5056,
+      "articulo_id": 12,
+      "numero_item": "003",
+      "cantidad": 6,
+      "partida": "COL-73696",
+      "estado": "Tratamiento"
+    },
+    {
+      "of_detalle_id": 367,
+      "of_id": 223,
+      "pedido_detalle_id": 5057,
+      "articulo_id": 16,
+      "numero_item": "004",
+      "cantidad": 1,
+      "partida": "COL-27779",
+      "estado": "Tratamiento"
+    },
+    {
+      "of_detalle_id": 368,
+      "of_id": 224,
+      "pedido_detalle_id": 5059,
+      "articulo_id": 15,
+      "numero_item": "001",
+      "cantidad": 8,
+      "partida": "COL-77788",
+      "estado": "Corte"
+    },
+    {
+      "of_detalle_id": 369,
+      "of_id": 224,
+      "pedido_detalle_id": 5058,
+      "articulo_id": 11,
+      "numero_item": "002",
+      "cantidad": 4,
+      "partida": "COL-16860",
+      "estado": "Corte"
+    },
+    {
+      "of_detalle_id": 370,
+      "of_id": 224,
+      "pedido_detalle_id": 5060,
+      "articulo_id": 17,
+      "numero_item": "003",
+      "cantidad": 24,
+      "partida": "COL-69037",
+      "estado": "Corte"
+    },
+    {
+      "of_detalle_id": 371,
+      "of_id": 225,
+      "pedido_detalle_id": 5061,
+      "articulo_id": 3,
+      "numero_item": "001",
+      "cantidad": 1,
+      "partida": "COL-37946",
+      "estado": "Finalizado"
+    },
+    {
+      "of_detalle_id": 372,
+      "of_id": 225,
+      "pedido_detalle_id": 5062,
+      "articulo_id": 6,
+      "numero_item": "002",
+      "cantidad": 2,
+      "partida": "COL-25618",
+      "estado": "Calidad"
+    },
+    {
+      "of_detalle_id": 373,
+      "of_id": 226,
+      "pedido_detalle_id": 5063,
+      "articulo_id": 2,
+      "numero_item": "001",
+      "cantidad": 12,
+      "partida": "COL-21491",
+      "estado": "Mecanizado"
+    },
+    {
+      "of_detalle_id": 374,
+      "of_id": 226,
+      "pedido_detalle_id": 5064,
+      "articulo_id": 4,
+      "numero_item": "002",
+      "cantidad": 6,
+      "partida": "COL-19003",
+      "estado": "Mecanizado"
+    },
+    {
+      "of_detalle_id": 375,
+      "of_id": 227,
+      "pedido_detalle_id": 5065,
+      "articulo_id": 2,
+      "numero_item": "001",
+      "cantidad": 6,
+      "partida": "COL-63790",
+      "estado": "Finalizado"
+    },
+    {
+      "of_detalle_id": 376,
+      "of_id": 227,
+      "pedido_detalle_id": 5066,
+      "articulo_id": 3,
+      "numero_item": "002",
+      "cantidad": 6,
+      "partida": "COL-17393",
+      "estado": "Finalizado"
+    },
+    {
+      "of_detalle_id": 377,
+      "of_id": 227,
+      "pedido_detalle_id": 5067,
+      "articulo_id": 10,
+      "numero_item": "003",
+      "cantidad": 8,
+      "partida": "COL-22198",
+      "estado": "Finalizado"
+    },
+    {
+      "of_detalle_id": 378,
+      "of_id": 227,
+      "pedido_detalle_id": 5068,
+      "articulo_id": 17,
+      "numero_item": "004",
+      "cantidad": 8,
+      "partida": "COL-94034",
+      "estado": "Finalizado"
+    },
+    {
+      "of_detalle_id": 379,
+      "of_id": 228,
+      "pedido_detalle_id": 5071,
+      "articulo_id": 19,
+      "numero_item": "001",
+      "cantidad": 8,
+      "partida": "COL-42171",
+      "estado": "Mecanizado"
+    },
+    {
+      "of_detalle_id": 380,
+      "of_id": 228,
+      "pedido_detalle_id": 5069,
+      "articulo_id": 3,
+      "numero_item": "002",
+      "cantidad": 20,
+      "partida": "COL-11993",
+      "estado": "Tratamiento"
+    },
+    {
+      "of_detalle_id": 381,
+      "of_id": 228,
+      "pedido_detalle_id": 5070,
+      "articulo_id": 18,
+      "numero_item": "003",
+      "cantidad": 1,
+      "partida": "COL-97381",
+      "estado": "Tratamiento"
+    },
+    {
+      "of_detalle_id": 382,
+      "of_id": 229,
+      "pedido_detalle_id": 5073,
+      "articulo_id": 9,
+      "numero_item": "001",
+      "cantidad": 8,
+      "partida": "COL-70736",
+      "estado": "Finalizado"
+    },
+    {
+      "of_detalle_id": 383,
+      "of_id": 229,
+      "pedido_detalle_id": 5072,
+      "articulo_id": 2,
+      "numero_item": "002",
+      "cantidad": 20,
+      "partida": "COL-49404",
+      "estado": "Finalizado"
+    },
+    {
+      "of_detalle_id": 384,
+      "of_id": 230,
+      "pedido_detalle_id": 5077,
+      "articulo_id": 10,
+      "numero_item": "001",
+      "cantidad": 24,
+      "partida": "COL-75792",
+      "estado": "Mecanizado"
+    },
+    {
+      "of_detalle_id": 385,
+      "of_id": 230,
+      "pedido_detalle_id": 5074,
+      "articulo_id": 7,
+      "numero_item": "002",
+      "cantidad": 2,
+      "partida": "COL-30768",
+      "estado": "Corte"
+    },
+    {
+      "of_detalle_id": 386,
+      "of_id": 230,
+      "pedido_detalle_id": 5076,
+      "articulo_id": 9,
+      "numero_item": "003",
+      "cantidad": 12,
+      "partida": "COL-77005",
+      "estado": "Mecanizado"
+    },
+    {
+      "of_detalle_id": 387,
+      "of_id": 230,
+      "pedido_detalle_id": 5075,
+      "articulo_id": 8,
+      "numero_item": "004",
+      "cantidad": 1,
+      "partida": "COL-29736",
+      "estado": "Corte"
+    }
+  ]
+}

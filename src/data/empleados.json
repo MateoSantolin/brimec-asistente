@@ -1,0 +1,71 @@
+{
+  "_tabla": "EMPLEADO",
+  "_nota": "Perfiles de DEMOSTRACION. En la solucion real la identidad y el rol provienen del mecanismo de autenticacion del ERP (T-10). El campo 'rol' gobierna la matriz RBAC del middleware.",
+  "empleados": [
+    {
+      "empleado_id": 1,
+      "nombre": "Carolina Vera",
+      "sector": "Administracion",
+      "rol": "ADMINISTRACION",
+      "email": "cvera@brimec.com.ar",
+      "activo": true
+    },
+    {
+      "empleado_id": 2,
+      "nombre": "Nicolas Brizuela",
+      "sector": "Produccion - Mecanizado",
+      "rol": "OPERARIO",
+      "email": "nbrizuela@brimec.com.ar",
+      "activo": true
+    },
+    {
+      "empleado_id": 3,
+      "nombre": "Ramiro Aguirre",
+      "sector": "Produccion",
+      "rol": "JEFE_PRODUCCION",
+      "email": "raguirre@brimec.com.ar",
+      "activo": true
+    },
+    {
+      "empleado_id": 4,
+      "nombre": "Javier Ocampo",
+      "sector": "Produccion - Corte",
+      "rol": "OPERARIO",
+      "email": "jocampo@brimec.com.ar",
+      "activo": true
+    },
+    {
+      "empleado_id": 5,
+      "nombre": "Marta Diaz",
+      "sector": "Produccion - Tratamiento",
+      "rol": "OPERARIO",
+      "email": "mdiaz@brimec.com.ar",
+      "activo": true
+    },
+    {
+      "empleado_id": 6,
+      "nombre": "Sergio Peralta",
+      "sector": "Produccion - Calidad",
+      "rol": "OPERARIO",
+      "email": "speralta@brimec.com.ar",
+      "activo": true
+    },
+    {
+      "empleado_id": 7,
+      "nombre": "Lucia Benitez",
+      "sector": "Administracion",
+      "rol": "ADMINISTRACION",
+      "email": "lbenitez@brimec.com.ar",
+      "activo": true
+    },
+    {
+      "empleado_id": 8,
+      "nombre": "Oscar Maldonado",
+      "sector": "Produccion",
+      "rol": "OPERARIO",
+      "email": "omaldonado@brimec.com.ar",
+      "activo": false
+    }
+  ],
+  "_perfilesDemo": [1, 2, 3]
+}

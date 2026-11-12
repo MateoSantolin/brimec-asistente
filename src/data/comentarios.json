@@ -1,0 +1,168 @@
+{
+  "_tabla": "COMENTARIO_TALLER",
+  "_nota": "Datos SINTETICOS. Los campos con prefijo 'off_' son OFFSETS EN DIAS respecto del momento de ejecucion (0 = ahora, negativo = pasado). Se convierten a fechas reales en src/data/seed.ts para que la demo no envejezca. archivo_audio != null indica que el comentario fue dictado por voz.",
+  "comentarios": [
+    {
+      "comentario_id": 1,
+      "of_detalle_id": 352,
+      "empleado_id": 4,
+      "off_fecha_hora": -25.3,
+      "tipo": "Observacion",
+      "texto": "Cliente confirmo entrega parcial de la primera mitad del lote.",
+      "archivo_audio": null
+    },
+    {
+      "comentario_id": 2,
+      "of_detalle_id": 368,
+      "empleado_id": 4,
+      "off_fecha_hora": -23.35,
+      "tipo": "Avance",
+      "texto": "Inspeccion dimensional conforme, pasa a certificacion.",
+      "archivo_audio": null
+    },
+    {
+      "comentario_id": 3,
+      "of_detalle_id": 382,
+      "empleado_id": 6,
+      "off_fecha_hora": -17.88,
+      "tipo": "Incidencia",
+      "texto": "Falta material para continuar, se frena hasta recibir la colada.",
+      "archivo_audio": "dictado-001.webm"
+    },
+    {
+      "comentario_id": 4,
+      "of_detalle_id": 369,
+      "empleado_id": 2,
+      "off_fecha_hora": -17.54,
+      "tipo": "Observacion",
+      "texto": "Se recomienda revisar la fijacion, hubo vibracion en el mecanizado.",
+      "archivo_audio": null
+    },
+    {
+      "comentario_id": 5,
+      "of_detalle_id": 354,
+      "empleado_id": 2,
+      "off_fecha_hora": -16.85,
+      "tipo": "Observacion",
+      "texto": "La rosca no entra con el calibre pasa-no pasa, revisar plano.",
+      "archivo_audio": null
+    },
+    {
+      "comentario_id": 6,
+      "of_detalle_id": 319,
+      "empleado_id": 4,
+      "off_fecha_hora": -13.82,
+      "tipo": "Incidencia",
+      "texto": "Medida fuera de tolerancia en el diametro interior, se reprocesa.",
+      "archivo_audio": null
+    },
+    {
+      "comentario_id": 7,
+      "of_detalle_id": 386,
+      "empleado_id": 3,
+      "off_fecha_hora": -13.5,
+      "tipo": "Avance",
+      "texto": "Dos piezas listas, faltan cuatro del lote.",
+      "archivo_audio": null
+    },
+    {
+      "comentario_id": 8,
+      "of_detalle_id": 361,
+      "empleado_id": 5,
+      "off_fecha_hora": -12.15,
+      "tipo": "Avance",
+      "texto": "Terminado el desbaste, queda el acabado para manana.",
+      "archivo_audio": "dictado-003.webm"
+    },
+    {
+      "comentario_id": 9,
+      "of_detalle_id": 307,
+      "empleado_id": 5,
+      "off_fecha_hora": -11.53,
+      "tipo": "Incidencia",
+      "texto": "Falta el certificado del proveedor para liberar el material.",
+      "archivo_audio": "dictado-012.webm"
+    },
+    {
+      "comentario_id": 10,
+      "of_detalle_id": 337,
+      "empleado_id": 3,
+      "off_fecha_hora": -8.95,
+      "tipo": "Observacion",
+      "texto": "Cliente pidio marcar el numero de colada en bajo relieve.",
+      "archivo_audio": "dictado-007.webm"
+    },
+    {
+      "comentario_id": 11,
+      "of_detalle_id": 374,
+      "empleado_id": 4,
+      "off_fecha_hora": -8.4,
+      "tipo": "Avance",
+      "texto": "Granallado terminado, se envia a pintura.",
+      "archivo_audio": "dictado-017.webm"
+    },
+    {
+      "comentario_id": 12,
+      "of_detalle_id": 360,
+      "empleado_id": 5,
+      "off_fecha_hora": -5.24,
+      "tipo": "Incidencia",
+      "texto": "Diferencia de espesor respecto del plano rev. B, consultar ingenieria.",
+      "archivo_audio": "dictado-008.webm"
+    },
+    {
+      "comentario_id": 13,
+      "of_detalle_id": 378,
+      "empleado_id": 2,
+      "off_fecha_hora": -5.08,
+      "tipo": "Avance",
+      "texto": "Arranque de corte demorado por espera de puente grua.",
+      "archivo_audio": "dictado-014.webm"
+    },
+    {
+      "comentario_id": 14,
+      "of_detalle_id": 384,
+      "empleado_id": 4,
+      "off_fecha_hora": -4.47,
+      "tipo": "Incidencia",
+      "texto": "Torno CNC 3 fuera de servicio, se reasigna a CNC 1.",
+      "archivo_audio": null
+    },
+    {
+      "comentario_id": 15,
+      "of_detalle_id": 306,
+      "empleado_id": 5,
+      "off_fecha_hora": -3.47,
+      "tipo": "Observacion",
+      "texto": "Se detecto porosidad en la cara de sello, se rectifica.",
+      "archivo_audio": "dictado-004.webm"
+    },
+    {
+      "comentario_id": 16,
+      "of_detalle_id": 320,
+      "empleado_id": 4,
+      "off_fecha_hora": -2.15,
+      "tipo": "Avance",
+      "texto": "Tratamiento termico completo, enfriando en horno.",
+      "archivo_audio": null
+    },
+    {
+      "comentario_id": 17,
+      "of_detalle_id": 344,
+      "empleado_id": 4,
+      "off_fecha_hora": -1.75,
+      "tipo": "Observacion",
+      "texto": "Pieza identificada y embalada, lista para remito.",
+      "archivo_audio": null
+    },
+    {
+      "comentario_id": 18,
+      "of_detalle_id": 321,
+      "empleado_id": 6,
+      "off_fecha_hora": -1.46,
+      "tipo": "Observacion",
+      "texto": "Se cambio la herramienta de corte por desgaste prematuro.",
+      "archivo_audio": null
+    }
+  ]
+}

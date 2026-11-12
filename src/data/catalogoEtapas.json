@@ -1,0 +1,60 @@
+{
+  "_tabla": "ETAPA_PRODUCCION",
+  "_nota": "Catalogo de etapas provisto por el ERP SaaS (Odoo). El asistente lo CONSULTA en tiempo de ejecucion: no hay una lista de estados fijada en el prompt del modelo (T-10, regla de operacion 3). Editar este archivo cambia los estados validos de toda la demo sin tocar codigo.",
+  "_origen": "ERP SaaS (Odoo) - catalogo simulado",
+
+  "etapas": [
+    { "etapa_id": 1, "nombre": "Pendiente",   "orden": 1, "requiere_aprobacion": false },
+    { "etapa_id": 2, "nombre": "Corte",       "orden": 2, "requiere_aprobacion": false },
+    { "etapa_id": 3, "nombre": "Mecanizado",  "orden": 3, "requiere_aprobacion": false },
+    { "etapa_id": 4, "nombre": "Tratamiento", "orden": 4, "requiere_aprobacion": false },
+    { "etapa_id": 5, "nombre": "Calidad",     "orden": 5, "requiere_aprobacion": true  },
+    { "etapa_id": 6, "nombre": "Finalizado",  "orden": 6, "requiere_aprobacion": true  }
+  ],
+
+  "_notaMetadatos": "Lo que sigue NO pertenece a la tabla ETAPA_PRODUCCION. Son reglas de negocio y metadatos de presentacion que en la arquitectura de T-10 viven en el middleware. Se mantienen separados a proposito: el ERD no modela transiciones entre etapas (hueco detectado, ver README).",
+  "metadatos": [
+    {
+      "etapa_id": 1,
+      "color": "#64748B",
+      "descripcion": "OF emitida y liberada a planta, sin iniciar.",
+      "sinonimos": ["pendiente", "sin iniciar", "no iniciada", "no iniciado", "en espera", "a iniciar", "sin arrancar"],
+      "transiciones": [2]
+    },
+    {
+      "etapa_id": 2,
+      "color": "#0EA5E9",
+      "descripcion": "Corte y preparacion de material en bruto.",
+      "sinonimos": ["corte", "cortado", "cortada", "cortando", "oxicorte", "en corte"],
+      "transiciones": [3, 1]
+    },
+    {
+      "etapa_id": 3,
+      "color": "#0084D6",
+      "descripcion": "Mecanizado CNC, torneado y fresado.",
+      "sinonimos": ["mecanizado", "mecanizada", "torno", "torneado", "cnc", "fresado", "maquinado", "en maquina"],
+      "transiciones": [4, 2]
+    },
+    {
+      "etapa_id": 4,
+      "color": "#7C3AED",
+      "descripcion": "Tratamiento termico y de superficie.",
+      "sinonimos": ["tratamiento", "tratamiento termico", "termico", "temple", "granallado", "pintura", "galvanizado"],
+      "transiciones": [5, 3]
+    },
+    {
+      "etapa_id": 5,
+      "color": "#D97706",
+      "descripcion": "Inspeccion dimensional, ensayos y emision de certificado.",
+      "sinonimos": ["calidad", "control de calidad", "inspeccion", "ensayo", "ensayos", "cq", "control"],
+      "transiciones": [6, 4]
+    },
+    {
+      "etapa_id": 6,
+      "color": "#059669",
+      "descripcion": "Pieza aprobada y liberada para entrega.",
+      "sinonimos": ["finalizado", "finalizada", "terminado", "terminada", "listo", "lista", "completo", "completa", "cerrado"],
+      "transiciones": []
+    }
+  ]
+}

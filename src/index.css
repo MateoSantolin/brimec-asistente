@@ -1,0 +1,67 @@
+@import './fuentes.css';
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    -webkit-font-smoothing: antialiased;
+  }
+  body {
+    @apply bg-brimec-surface text-brimec-ink font-sans antialiased;
+  }
+  h1, h2, h3, h4 {
+    font-family: theme('fontFamily.display');
+    letter-spacing: 0.025em;
+  }
+  ::selection {
+    @apply bg-brimec-soft text-brimec-navy;
+  }
+  /* Scrollbar discreta, estilo panel industrial */
+  *::-webkit-scrollbar { width: 10px; height: 10px; }
+  *::-webkit-scrollbar-track { background: transparent; }
+  *::-webkit-scrollbar-thumb {
+    background: #CBD5E1; border-radius: 999px; border: 3px solid transparent; background-clip: content-box;
+  }
+  *::-webkit-scrollbar-thumb:hover { background: #94A3B8; background-clip: content-box; }
+}
+
+@layer components {
+  .card {
+    @apply bg-white rounded-xl border border-brimec-border/70 shadow-card;
+  }
+  .label-ui {
+    @apply font-display text-[11px] uppercase tracking-[.14em] text-slate-500;
+  }
+  .btn {
+    @apply inline-flex items-center justify-center gap-2 rounded-lg px-4 py-2 text-sm font-semibold
+           transition-all duration-150 disabled:opacity-40 disabled:cursor-not-allowed
+           focus:outline-none focus-visible:ring-2 focus-visible:ring-brimec-primary/50 focus-visible:ring-offset-2;
+  }
+  .btn-primary {
+    @apply btn bg-brimec-primary text-white hover:bg-brimec-primary-dark active:scale-[.98] shadow-sm;
+  }
+  .btn-navy {
+    @apply btn bg-brimec-navy text-white hover:bg-brimec-navy-deep active:scale-[.98];
+  }
+  .btn-ghost {
+    @apply btn bg-white text-brimec-ink border border-brimec-border hover:bg-brimec-surface active:scale-[.98];
+  }
+  .btn-danger {
+    @apply btn bg-white text-rose-600 border border-rose-200 hover:bg-rose-50 active:scale-[.98];
+  }
+  .input {
+    @apply w-full rounded-lg border border-brimec-border bg-white px-3 py-2 text-sm
+           placeholder:text-slate-400 focus:outline-none focus:ring-2 focus:ring-brimec-primary/40 focus:border-brimec-primary;
+  }
+  .th {
+    @apply px-3 py-2 text-left font-display text-[11px] uppercase tracking-[.12em] text-slate-500 whitespace-nowrap;
+  }
+  .td {
+    @apply px-3 py-2.5 text-sm align-middle;
+  }
+  .row-hover {
+    @apply hover:bg-brimec-soft/20 transition-colors;
+  }
+}

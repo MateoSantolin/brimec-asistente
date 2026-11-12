@@ -1,0 +1,3036 @@
+{
+  "_tabla": "SEGUIMIENTO_ETAPA",
+  "_nota": "Datos SINTETICOS. Los campos con prefijo 'off_' son OFFSETS EN DIAS respecto del momento de ejecucion (0 = ahora, negativo = pasado). Se convierten a fechas reales en src/data/seed.ts para que la demo no envejezca. La fila con fin = null y estado 'En curso' marca la etapa actual del item.",
+  "seguimiento_etapa": [
+    {
+      "seguimiento_id": 1,
+      "of_detalle_id": 301,
+      "etapa_id": 1,
+      "empleado_id": 3,
+      "off_inicio": -26.75,
+      "off_fin": -20.76,
+      "estado": "Finalizada",
+      "observaciones": ""
+    },
+    {
+      "seguimiento_id": 2,
+      "of_detalle_id": 301,
+      "etapa_id": 2,
+      "empleado_id": 4,
+      "off_inicio": -15.78,
+      "off_fin": null,
+      "estado": "En curso",
+      "observaciones": ""
+    },
+    {
+      "seguimiento_id": 3,
+      "of_detalle_id": 302,
+      "etapa_id": 1,
+      "empleado_id": 3,
+      "off_inicio": -26.22,
+      "off_fin": null,
+      "estado": "En curso",
+      "observaciones": "Documentacion entregada al sector."
+    },
+    {
+      "seguimiento_id": 4,
+      "of_detalle_id": 303,
+      "etapa_id": 1,
+      "empleado_id": 3,
+      "off_inicio": -29.56,
+      "off_fin": null,
+      "estado": "En curso",
+      "observaciones": ""
+    },
+    {
+      "seguimiento_id": 5,
+      "of_detalle_id": 304,
+      "etapa_id": 1,
+      "empleado_id": 3,
+      "off_inicio": -39.73,
+      "off_fin": -33.45,
+      "estado": "Finalizada",
+      "observaciones": "OF liberada a planta."
+    },
+    {
+      "seguimiento_id": 6,
+      "of_detalle_id": 304,
+      "etapa_id": 2,
+      "empleado_id": 4,
+      "off_inicio": -32.56,
+      "off_fin": -24.19,
+      "estado": "Finalizada",
+      "observaciones": "Material cortado segun plano."
+    },
+    {
+      "seguimiento_id": 7,
+      "of_detalle_id": 304,
+      "etapa_id": 3,
+      "empleado_id": 2,
+      "off_inicio": -23.28,
+      "off_fin": -15.92,
+      "estado": "Finalizada",
+      "observaciones": "Cambio de herramienta por desgaste."
+    },
+    {
+      "seguimiento_id": 8,
+      "of_detalle_id": 304,
+      "etapa_id": 4,
+      "empleado_id": 5,
+      "off_inicio": -15.18,
+      "off_fin": null,
+      "estado": "En curso",
+      "observaciones": ""
+    },
+    {
+      "seguimiento_id": 9,
+      "of_detalle_id": 305,
+      "etapa_id": 1,
+      "empleado_id": 3,
+      "off_inicio": -40.81,
+      "off_fin": -30.67,
+      "estado": "Finalizada",
+      "observaciones": "OF liberada a planta."
+    },
+    {
+      "seguimiento_id": 10,
+      "of_detalle_id": 305,
+      "etapa_id": 2,
+      "empleado_id": 4,
+      "off_inicio": -29.36,
+      "off_fin": -19.65,
+      "estado": "Finalizada",
+      "observaciones": ""
+    },
+    {
+      "seguimiento_id": 11,
+      "of_detalle_id": 305,
+      "etapa_id": 3,
+      "empleado_id": 2,
+      "off_inicio": -16.87,
+      "off_fin": null,
+      "estado": "En curso",
+      "observaciones": "Primera pieza verificada."
+    },
+    {
+      "seguimiento_id": 12,
+      "of_detalle_id": 306,
+      "etapa_id": 1,
+      "empleado_id": 3,
+      "off_inicio": -39.8,
+      "off_fin": -31.06,
+      "estado": "Finalizada",
+      "observaciones": "Documentacion entregada al sector."
+    },
+    {
+      "seguimiento_id": 13,
+      "of_detalle_id": 306,
+      "etapa_id": 2,
+      "empleado_id": 4,
+      "off_inicio": -28.78,
+      "off_fin": -21.27,
+      "estado": "Finalizada",
+      "observaciones": "Material cortado segun plano."
+    },
+    {
+      "seguimiento_id": 14,
+      "of_detalle_id": 306,
+      "etapa_id": 3,
+      "empleado_id": 2,
+      "off_inicio": -17.8,
+      "off_fin": null,
+      "estado": "En curso",
+      "observaciones": "Mecanizado en torno CNC 3."
+    },
+    {
+      "seguimiento_id": 15,
+      "of_detalle_id": 307,
+      "etapa_id": 1,
+      "empleado_id": 3,
+      "off_inicio": -3.66,
+      "off_fin": -2.8,
+      "estado": "Finalizada",
+      "observaciones": ""
+    },
+    {
+      "seguimiento_id": 16,
+      "of_detalle_id": 307,
+      "etapa_id": 2,
+      "empleado_id": 4,
+      "off_inicio": -2.31,
+      "off_fin": -1.49,
+      "estado": "Finalizada",
+      "observaciones": "Despunte dentro de tolerancia."
+    },
+    {
+      "seguimiento_id": 17,
+      "of_detalle_id": 307,
+      "etapa_id": 3,
+      "empleado_id": 2,
+      "off_inicio": -1.21,
+      "off_fin": -0.09,
+      "estado": "Finalizada",
+      "observaciones": "Mecanizado en torno CNC 3."
+    },
+    {
+      "seguimiento_id": 18,
+      "of_detalle_id": 307,
+      "etapa_id": 4,
+      "empleado_id": 5,
+      "off_inicio": -0.04,
+      "off_fin": null,
+      "estado": "En curso",
+      "observaciones": "Tratamiento termico completo."
+    },
+    {
+      "seguimiento_id": 19,
+      "of_detalle_id": 308,
+      "etapa_id": 1,
+      "empleado_id": 3,
+      "off_inicio": -3.77,
+      "off_fin": -2.67,
+      "estado": "Finalizada",
+      "observaciones": "OF liberada a planta."
+    },
+    {
+      "seguimiento_id": 20,
+      "of_detalle_id": 308,
+      "etapa_id": 2,
+      "empleado_id": 4,
+      "off_inicio": -2.27,
+      "off_fin": -1.43,
+      "estado": "Finalizada",
+      "observaciones": ""
+    },
+    {
+      "seguimiento_id": 21,
+      "of_detalle_id": 308,
+      "etapa_id": 3,
+      "empleado_id": 2,
+      "off_inicio": -1.21,
+      "off_fin": -0.08,
+      "estado": "Finalizada",
+      "observaciones": "Cambio de herramienta por desgaste."
+    },
+    {
+      "seguimiento_id": 22,
+      "of_detalle_id": 308,
+      "etapa_id": 4,
+      "empleado_id": 5,
+      "off_inicio": 0.06,
+      "off_fin": -0.05,
+      "estado": "Finalizada",
+      "observaciones": "Tratamiento termico completo."
+    },
+    {
+      "seguimiento_id": 23,
+      "of_detalle_id": 308,
+      "etapa_id": 5,
+      "empleado_id": 6,
+      "off_inicio": 1.45,
+      "off_fin": null,
+      "estado": "En curso",
+      "observaciones": "Ensayo PT sin indicaciones."
+    },
+    {
+      "seguimiento_id": 24,
+      "of_detalle_id": 309,
+      "etapa_id": 1,
+      "empleado_id": 3,
+      "off_inicio": -3.75,
+      "off_fin": -2.78,
+      "estado": "Finalizada",
+      "observaciones": "Documentacion entregada al sector."
+    },
+    {
+      "seguimiento_id": 25,
+      "of_detalle_id": 309,
+      "etapa_id": 2,
+      "empleado_id": 4,
+      "off_inicio": -2.68,
+      "off_fin": -1.51,
+      "estado": "Finalizada",
+      "observaciones": "Despunte dentro de tolerancia."
+    },
+    {
+      "seguimiento_id": 26,
+      "of_detalle_id": 309,
+      "etapa_id": 3,
+      "empleado_id": 2,
+      "off_inicio": -1.28,
+      "off_fin": -0.14,
+      "estado": "Finalizada",
+      "observaciones": "Mecanizado en torno CNC 3."
+    },
+    {
+      "seguimiento_id": 27,
+      "of_detalle_id": 309,
+      "etapa_id": 4,
+      "empleado_id": 5,
+      "off_inicio": -0.0,
+      "off_fin": null,
+      "estado": "En curso",
+      "observaciones": ""
+    },
+    {
+      "seguimiento_id": 28,
+      "of_detalle_id": 310,
+      "etapa_id": 1,
+      "empleado_id": 3,
+      "off_inicio": -3.66,
+      "off_fin": -2.79,
+      "estado": "Finalizada",
+      "observaciones": ""
+    },
+    {
+      "seguimiento_id": 29,
+      "of_detalle_id": 310,
+      "etapa_id": 2,
+      "empleado_id": 4,
+      "off_inicio": -2.35,
+      "off_fin": -1.64,
+      "estado": "Finalizada",
+      "observaciones": ""
+    },
+    {
+      "seguimiento_id": 30,
+      "of_detalle_id": 310,
+      "etapa_id": 3,
+      "empleado_id": 2,
+      "off_inicio": -1.39,
+      "off_fin": -0.24,
+      "estado": "Finalizada",
+      "observaciones": "Mecanizado en torno CNC 3."
+    },
+    {
+      "seguimiento_id": 31,
+      "of_detalle_id": 310,
+      "etapa_id": 4,
+      "empleado_id": 5,
+      "off_inicio": 0.14,
+      "off_fin": null,
+      "estado": "En curso",
+      "observaciones": "Granallado terminado."
+    },
+    {
+      "seguimiento_id": 32,
+      "of_detalle_id": 311,
+      "etapa_id": 1,
+      "empleado_id": 3,
+      "off_inicio": -3.98,
+      "off_fin": -3.06,
+      "estado": "Finalizada",
+      "observaciones": "Documentacion entregada al sector."
+    },
+    {
+      "seguimiento_id": 33,
+      "of_detalle_id": 311,
+      "etapa_id": 2,
+      "empleado_id": 4,
+      "off_inicio": -2.61,
+      "off_fin": null,
+      "estado": "En curso",
+      "observaciones": "Despunte dentro de tolerancia."
+    },
+    {
+      "seguimiento_id": 34,
+      "of_detalle_id": 312,
+      "etapa_id": 1,
+      "empleado_id": 3,
+      "off_inicio": -3.78,
+      "off_fin": -2.87,
+      "estado": "Finalizada",
+      "observaciones": ""
+    },
+    {
+      "seguimiento_id": 35,
+      "of_detalle_id": 312,
+      "etapa_id": 2,
+      "empleado_id": 4,
+      "off_inicio": -2.84,
+      "off_fin": null,
+      "estado": "En curso",
+      "observaciones": ""
+    },
+    {
+      "seguimiento_id": 36,
+      "of_detalle_id": 313,
+      "etapa_id": 1,
+      "empleado_id": 3,
+      "off_inicio": -3.79,
+      "off_fin": -2.9,
+      "estado": "Finalizada",
+      "observaciones": "Documentacion entregada al sector."
+    },
+    {
+      "seguimiento_id": 37,
+      "of_detalle_id": 313,
+      "etapa_id": 2,
+      "empleado_id": 4,
+      "off_inicio": -2.61,
+      "off_fin": null,
+      "estado": "En curso",
+      "observaciones": ""
+    },
+    {
+      "seguimiento_id": 38,
+      "of_detalle_id": 314,
+      "etapa_id": 1,
+      "empleado_id": 3,
+      "off_inicio": -27.46,
+      "off_fin": -23.86,
+      "estado": "Finalizada",
+      "observaciones": "Documentacion entregada al sector."
+    },
+    {
+      "seguimiento_id": 39,
+      "of_detalle_id": 314,
+      "etapa_id": 2,
+      "empleado_id": 4,
+      "off_inicio": -22.99,
+      "off_fin": -18.8,
+      "estado": "Finalizada",
+      "observaciones": "Material cortado segun plano."
+    },
+    {
+      "seguimiento_id": 40,
+      "of_detalle_id": 314,
+      "etapa_id": 3,
+      "empleado_id": 2,
+      "off_inicio": -18.31,
+      "off_fin": -14.39,
+      "estado": "Finalizada",
+      "observaciones": "Cambio de herramienta por desgaste."
+    },
+    {
+      "seguimiento_id": 41,
+      "of_detalle_id": 314,
+      "etapa_id": 4,
+      "empleado_id": 5,
+      "off_inicio": -13.32,
+      "off_fin": -9.41,
+      "estado": "Finalizada",
+      "observaciones": ""
+    },
+    {
+      "seguimiento_id": 42,
+      "of_detalle_id": 314,
+      "etapa_id": 5,
+      "empleado_id": 6,
+      "off_inicio": -7.71,
+      "off_fin": null,
+      "estado": "En curso",
+      "observaciones": "Ensayo PT sin indicaciones."
+    },
+    {
+      "seguimiento_id": 43,
+      "of_detalle_id": 315,
+      "etapa_id": 1,
+      "empleado_id": 3,
+      "off_inicio": -27.4,
+      "off_fin": -24.07,
+      "estado": "Finalizada",
+      "observaciones": "OF liberada a planta."
+    },
+    {
+      "seguimiento_id": 44,
+      "of_detalle_id": 315,
+      "etapa_id": 2,
+      "empleado_id": 4,
+      "off_inicio": -22.92,
+      "off_fin": -20.42,
+      "estado": "Finalizada",
+      "observaciones": "Despunte dentro de tolerancia."
+    },
+    {
+      "seguimiento_id": 45,
+      "of_detalle_id": 315,
+      "etapa_id": 3,
+      "empleado_id": 2,
+      "off_inicio": -18.76,
+      "off_fin": -16.53,
+      "estado": "Finalizada",
+      "observaciones": "Cambio de herramienta por desgaste."
+    },
+    {
+      "seguimiento_id": 46,
+      "of_detalle_id": 315,
+      "etapa_id": 4,
+      "empleado_id": 5,
+      "off_inicio": -15.23,
+      "off_fin": -12.2,
+      "estado": "Finalizada",
+      "observaciones": "Granallado terminado."
+    },
+    {
+      "seguimiento_id": 47,
+      "of_detalle_id": 315,
+      "etapa_id": 5,
+      "empleado_id": 6,
+      "off_inicio": -11.17,
+      "off_fin": -7.86,
+      "estado": "Finalizada",
+      "observaciones": "Ensayo PT sin indicaciones."
+    },
+    {
+      "seguimiento_id": 48,
+      "of_detalle_id": 315,
+      "etapa_id": 6,
+      "empleado_id": 3,
+      "off_inicio": -7.04,
+      "off_fin": -3.99,
+      "estado": "Finalizada",
+      "observaciones": "Certificado emitido."
+    },
+    {
+      "seguimiento_id": 49,
+      "of_detalle_id": 316,
+      "etapa_id": 1,
+      "empleado_id": 3,
+      "off_inicio": -26.84,
+      "off_fin": -23.21,
+      "estado": "Finalizada",
+      "observaciones": "Documentacion entregada al sector."
+    },
+    {
+      "seguimiento_id": 50,
+      "of_detalle_id": 316,
+      "etapa_id": 2,
+      "empleado_id": 4,
+      "off_inicio": -23.13,
+      "off_fin": -18.9,
+      "estado": "Finalizada",
+      "observaciones": "Material cortado segun plano."
+    },
+    {
+      "seguimiento_id": 51,
+      "of_detalle_id": 316,
+      "etapa_id": 3,
+      "empleado_id": 2,
+      "off_inicio": -18.35,
+      "off_fin": -14.15,
+      "estado": "Finalizada",
+      "observaciones": "Mecanizado en torno CNC 3."
+    },
+    {
+      "seguimiento_id": 52,
+      "of_detalle_id": 316,
+      "etapa_id": 4,
+      "empleado_id": 5,
+      "off_inicio": -13.31,
+      "off_fin": -9.37,
+      "estado": "Finalizada",
+      "observaciones": "Granallado terminado."
+    },
+    {
+      "seguimiento_id": 53,
+      "of_detalle_id": 316,
+      "etapa_id": 5,
+      "empleado_id": 6,
+      "off_inicio": -8.07,
+      "off_fin": null,
+      "estado": "En curso",
+      "observaciones": ""
+    },
+    {
+      "seguimiento_id": 54,
+      "of_detalle_id": 317,
+      "etapa_id": 1,
+      "empleado_id": 3,
+      "off_inicio": -57.74,
+      "off_fin": -48.61,
+      "estado": "Finalizada",
+      "observaciones": ""
+    },
+    {
+      "seguimiento_id": 55,
+      "of_detalle_id": 317,
+      "etapa_id": 2,
+      "empleado_id": 4,
+      "off_inicio": -44.55,
+      "off_fin": -34.52,
+      "estado": "Finalizada",
+      "observaciones": "Despunte dentro de tolerancia."
+    },
+    {
+      "seguimiento_id": 56,
+      "of_detalle_id": 317,
+      "etapa_id": 3,
+      "empleado_id": 2,
+      "off_inicio": -33.1,
+      "off_fin": -23.39,
+      "estado": "Finalizada",
+      "observaciones": "Cambio de herramienta por desgaste."
+    },
+    {
+      "seguimiento_id": 57,
+      "of_detalle_id": 317,
+      "etapa_id": 4,
+      "empleado_id": 5,
+      "off_inicio": -18.52,
+      "off_fin": null,
+      "estado": "En curso",
+      "observaciones": "Tratamiento termico completo."
+    },
+    {
+      "seguimiento_id": 58,
+      "of_detalle_id": 318,
+      "etapa_id": 1,
+      "empleado_id": 3,
+      "off_inicio": -57.2,
+      "off_fin": -48.84,
+      "estado": "Finalizada",
+      "observaciones": "OF liberada a planta."
+    },
+    {
+      "seguimiento_id": 59,
+      "of_detalle_id": 318,
+      "etapa_id": 2,
+      "empleado_id": 4,
+      "off_inicio": -46.28,
+      "off_fin": -39.25,
+      "estado": "Finalizada",
+      "observaciones": "Despunte dentro de tolerancia."
+    },
+    {
+      "seguimiento_id": 60,
+      "of_detalle_id": 318,
+      "etapa_id": 3,
+      "empleado_id": 2,
+      "off_inicio": -37.3,
+      "off_fin": -29.37,
+      "estado": "Finalizada",
+      "observaciones": "Cambio de herramienta por desgaste."
+    },
+    {
+      "seguimiento_id": 61,
+      "of_detalle_id": 318,
+      "etapa_id": 4,
+      "empleado_id": 5,
+      "off_inicio": -26.45,
+      "off_fin": -18.65,
+      "estado": "Finalizada",
+      "observaciones": ""
+    },
+    {
+      "seguimiento_id": 62,
+      "of_detalle_id": 318,
+      "etapa_id": 5,
+      "empleado_id": 6,
+      "off_inicio": -14.48,
+      "off_fin": null,
+      "estado": "En curso",
+      "observaciones": "Inspeccion dimensional conforme."
+    },
+    {
+      "seguimiento_id": 63,
+      "of_detalle_id": 319,
+      "etapa_id": 1,
+      "empleado_id": 3,
+      "off_inicio": -27.58,
+      "off_fin": -20.81,
+      "estado": "Finalizada",
+      "observaciones": "OF liberada a planta."
+    },
+    {
+      "seguimiento_id": 64,
+      "of_detalle_id": 319,
+      "etapa_id": 2,
+      "empleado_id": 4,
+      "off_inicio": -17.94,
+      "off_fin": null,
+      "estado": "En curso",
+      "observaciones": "Material cortado segun plano."
+    },
+    {
+      "seguimiento_id": 65,
+      "of_detalle_id": 320,
+      "etapa_id": 1,
+      "empleado_id": 3,
+      "off_inicio": -29.25,
+      "off_fin": -20.87,
+      "estado": "Finalizada",
+      "observaciones": "OF liberada a planta."
+    },
+    {
+      "seguimiento_id": 66,
+      "of_detalle_id": 320,
+      "etapa_id": 2,
+      "empleado_id": 4,
+      "off_inicio": -18.72,
+      "off_fin": null,
+      "estado": "En curso",
+      "observaciones": ""
+    },
+    {
+      "seguimiento_id": 67,
+      "of_detalle_id": 321,
+      "etapa_id": 1,
+      "empleado_id": 3,
+      "off_inicio": -29.64,
+      "off_fin": -20.35,
+      "estado": "Finalizada",
+      "observaciones": "Documentacion entregada al sector."
+    },
+    {
+      "seguimiento_id": 68,
+      "of_detalle_id": 321,
+      "etapa_id": 2,
+      "empleado_id": 4,
+      "off_inicio": -18.38,
+      "off_fin": null,
+      "estado": "En curso",
+      "observaciones": "Material cortado segun plano."
+    },
+    {
+      "seguimiento_id": 69,
+      "of_detalle_id": 322,
+      "etapa_id": 1,
+      "empleado_id": 3,
+      "off_inicio": -10.43,
+      "off_fin": null,
+      "estado": "En curso",
+      "observaciones": ""
+    },
+    {
+      "seguimiento_id": 70,
+      "of_detalle_id": 323,
+      "etapa_id": 1,
+      "empleado_id": 3,
+      "off_inicio": -11.2,
+      "off_fin": null,
+      "estado": "En curso",
+      "observaciones": ""
+    },
+    {
+      "seguimiento_id": 71,
+      "of_detalle_id": 324,
+      "etapa_id": 1,
+      "empleado_id": 3,
+      "off_inicio": -11.57,
+      "off_fin": null,
+      "estado": "En curso",
+      "observaciones": "Documentacion entregada al sector."
+    },
+    {
+      "seguimiento_id": 72,
+      "of_detalle_id": 325,
+      "etapa_id": 1,
+      "empleado_id": 3,
+      "off_inicio": -11.25,
+      "off_fin": -7.94,
+      "estado": "Finalizada",
+      "observaciones": "OF liberada a planta."
+    },
+    {
+      "seguimiento_id": 73,
+      "of_detalle_id": 325,
+      "etapa_id": 2,
+      "empleado_id": 4,
+      "off_inicio": -7.69,
+      "off_fin": null,
+      "estado": "En curso",
+      "observaciones": "Despunte dentro de tolerancia."
+    },
+    {
+      "seguimiento_id": 74,
+      "of_detalle_id": 326,
+      "etapa_id": 1,
+      "empleado_id": 3,
+      "off_inicio": -3.46,
+      "off_fin": null,
+      "estado": "En curso",
+      "observaciones": ""
+    },
+    {
+      "seguimiento_id": 75,
+      "of_detalle_id": 327,
+      "etapa_id": 1,
+      "empleado_id": 3,
+      "off_inicio": -3.45,
+      "off_fin": null,
+      "estado": "En curso",
+      "observaciones": "Documentacion entregada al sector."
+    },
+    {
+      "seguimiento_id": 76,
+      "of_detalle_id": 328,
+      "etapa_id": 1,
+      "empleado_id": 3,
+      "off_inicio": -3.92,
+      "off_fin": -3.05,
+      "estado": "Finalizada",
+      "observaciones": ""
+    },
+    {
+      "seguimiento_id": 77,
+      "of_detalle_id": 328,
+      "etapa_id": 2,
+      "empleado_id": 4,
+      "off_inicio": -2.76,
+      "off_fin": null,
+      "estado": "En curso",
+      "observaciones": "Material cortado segun plano."
+    },
+    {
+      "seguimiento_id": 78,
+      "of_detalle_id": 329,
+      "etapa_id": 1,
+      "empleado_id": 3,
+      "off_inicio": -3.96,
+      "off_fin": -2.98,
+      "estado": "Finalizada",
+      "observaciones": "Documentacion entregada al sector."
+    },
+    {
+      "seguimiento_id": 79,
+      "of_detalle_id": 329,
+      "etapa_id": 2,
+      "empleado_id": 4,
+      "off_inicio": -2.42,
+      "off_fin": -1.51,
+      "estado": "Finalizada",
+      "observaciones": ""
+    },
+    {
+      "seguimiento_id": 80,
+      "of_detalle_id": 329,
+      "etapa_id": 3,
+      "empleado_id": 2,
+      "off_inicio": -1.24,
+      "off_fin": null,
+      "estado": "En curso",
+      "observaciones": "Cambio de herramienta por desgaste."
+    },
+    {
+      "seguimiento_id": 81,
+      "of_detalle_id": 330,
+      "etapa_id": 1,
+      "empleado_id": 3,
+      "off_inicio": -3.91,
+      "off_fin": -3.0,
+      "estado": "Finalizada",
+      "observaciones": "Documentacion entregada al sector."
+    },
+    {
+      "seguimiento_id": 82,
+      "of_detalle_id": 330,
+      "etapa_id": 2,
+      "empleado_id": 4,
+      "off_inicio": -2.65,
+      "off_fin": null,
+      "estado": "En curso",
+      "observaciones": ""
+    },
+    {
+      "seguimiento_id": 83,
+      "of_detalle_id": 331,
+      "etapa_id": 1,
+      "empleado_id": 3,
+      "off_inicio": -3.7,
+      "off_fin": -3.06,
+      "estado": "Finalizada",
+      "observaciones": "OF liberada a planta."
+    },
+    {
+      "seguimiento_id": 84,
+      "of_detalle_id": 331,
+      "etapa_id": 2,
+      "empleado_id": 4,
+      "off_inicio": -2.61,
+      "off_fin": null,
+      "estado": "En curso",
+      "observaciones": ""
+    },
+    {
+      "seguimiento_id": 85,
+      "of_detalle_id": 332,
+      "etapa_id": 1,
+      "empleado_id": 3,
+      "off_inicio": -47.44,
+      "off_fin": null,
+      "estado": "En curso",
+      "observaciones": "OF liberada a planta."
+    },
+    {
+      "seguimiento_id": 86,
+      "of_detalle_id": 333,
+      "etapa_id": 1,
+      "empleado_id": 3,
+      "off_inicio": -48.87,
+      "off_fin": -40.53,
+      "estado": "Finalizada",
+      "observaciones": ""
+    },
+    {
+      "seguimiento_id": 87,
+      "of_detalle_id": 333,
+      "etapa_id": 2,
+      "empleado_id": 4,
+      "off_inicio": -35.05,
+      "off_fin": -26.14,
+      "estado": "Finalizada",
+      "observaciones": "Material cortado segun plano."
+    },
+    {
+      "seguimiento_id": 88,
+      "of_detalle_id": 333,
+      "etapa_id": 3,
+      "empleado_id": 2,
+      "off_inicio": -21.84,
+      "off_fin": null,
+      "estado": "En curso",
+      "observaciones": "Primera pieza verificada."
+    },
+    {
+      "seguimiento_id": 89,
+      "of_detalle_id": 334,
+      "etapa_id": 1,
+      "empleado_id": 3,
+      "off_inicio": -44.45,
+      "off_fin": null,
+      "estado": "En curso",
+      "observaciones": "OF liberada a planta."
+    },
+    {
+      "seguimiento_id": 90,
+      "of_detalle_id": 335,
+      "etapa_id": 1,
+      "empleado_id": 3,
+      "off_inicio": -55.22,
+      "off_fin": -50.13,
+      "estado": "Finalizada",
+      "observaciones": ""
+    },
+    {
+      "seguimiento_id": 91,
+      "of_detalle_id": 335,
+      "etapa_id": 2,
+      "empleado_id": 4,
+      "off_inicio": -48.27,
+      "off_fin": -40.13,
+      "estado": "Finalizada",
+      "observaciones": "Material cortado segun plano."
+    },
+    {
+      "seguimiento_id": 92,
+      "of_detalle_id": 335,
+      "etapa_id": 3,
+      "empleado_id": 2,
+      "off_inicio": -39.31,
+      "off_fin": -31.83,
+      "estado": "Finalizada",
+      "observaciones": ""
+    },
+    {
+      "seguimiento_id": 93,
+      "of_detalle_id": 335,
+      "etapa_id": 4,
+      "empleado_id": 5,
+      "off_inicio": -29.06,
+      "off_fin": -24.51,
+      "estado": "Finalizada",
+      "observaciones": ""
+    },
+    {
+      "seguimiento_id": 94,
+      "of_detalle_id": 335,
+      "etapa_id": 5,
+      "empleado_id": 6,
+      "off_inicio": -22.5,
+      "off_fin": -14.79,
+      "estado": "Finalizada",
+      "observaciones": ""
+    },
+    {
+      "seguimiento_id": 95,
+      "of_detalle_id": 335,
+      "etapa_id": 6,
+      "empleado_id": 3,
+      "off_inicio": -12.91,
+      "off_fin": -7.14,
+      "estado": "Finalizada",
+      "observaciones": ""
+    },
+    {
+      "seguimiento_id": 96,
+      "of_detalle_id": 336,
+      "etapa_id": 1,
+      "empleado_id": 3,
+      "off_inicio": -56.97,
+      "off_fin": -49.98,
+      "estado": "Finalizada",
+      "observaciones": ""
+    },
+    {
+      "seguimiento_id": 97,
+      "of_detalle_id": 336,
+      "etapa_id": 2,
+      "empleado_id": 4,
+      "off_inicio": -47.7,
+      "off_fin": -40.32,
+      "estado": "Finalizada",
+      "observaciones": "Despunte dentro de tolerancia."
+    },
+    {
+      "seguimiento_id": 98,
+      "of_detalle_id": 336,
+      "etapa_id": 3,
+      "empleado_id": 2,
+      "off_inicio": -39.17,
+      "off_fin": -32.58,
+      "estado": "Finalizada",
+      "observaciones": "Primera pieza verificada."
+    },
+    {
+      "seguimiento_id": 99,
+      "of_detalle_id": 336,
+      "etapa_id": 4,
+      "empleado_id": 5,
+      "off_inicio": -31.25,
+      "off_fin": -23.6,
+      "estado": "Finalizada",
+      "observaciones": "Granallado terminado."
+    },
+    {
+      "seguimiento_id": 100,
+      "of_detalle_id": 336,
+      "etapa_id": 5,
+      "empleado_id": 6,
+      "off_inicio": -20.83,
+      "off_fin": -15.71,
+      "estado": "Finalizada",
+      "observaciones": "Ensayo PT sin indicaciones."
+    },
+    {
+      "seguimiento_id": 101,
+      "of_detalle_id": 336,
+      "etapa_id": 6,
+      "empleado_id": 3,
+      "off_inicio": -14.16,
+      "off_fin": -6.21,
+      "estado": "Finalizada",
+      "observaciones": "Pieza liberada para despacho."
+    },
+    {
+      "seguimiento_id": 102,
+      "of_detalle_id": 337,
+      "etapa_id": 1,
+      "empleado_id": 3,
+      "off_inicio": -46.89,
+      "off_fin": -42.35,
+      "estado": "Finalizada",
+      "observaciones": ""
+    },
+    {
+      "seguimiento_id": 103,
+      "of_detalle_id": 337,
+      "etapa_id": 2,
+      "empleado_id": 4,
+      "off_inicio": -39.75,
+      "off_fin": -35.31,
+      "estado": "Finalizada",
+      "observaciones": ""
+    },
+    {
+      "seguimiento_id": 104,
+      "of_detalle_id": 337,
+      "etapa_id": 3,
+      "empleado_id": 2,
+      "off_inicio": -33.18,
+      "off_fin": -27.91,
+      "estado": "Finalizada",
+      "observaciones": "Cambio de herramienta por desgaste."
+    },
+    {
+      "seguimiento_id": 105,
+      "of_detalle_id": 337,
+      "etapa_id": 4,
+      "empleado_id": 5,
+      "off_inicio": -26.96,
+      "off_fin": -20.45,
+      "estado": "Finalizada",
+      "observaciones": ""
+    },
+    {
+      "seguimiento_id": 106,
+      "of_detalle_id": 337,
+      "etapa_id": 5,
+      "empleado_id": 6,
+      "off_inicio": -17.92,
+      "off_fin": -13.43,
+      "estado": "Finalizada",
+      "observaciones": "Ensayo PT sin indicaciones."
+    },
+    {
+      "seguimiento_id": 107,
+      "of_detalle_id": 337,
+      "etapa_id": 6,
+      "empleado_id": 3,
+      "off_inicio": -11.81,
+      "off_fin": -6.03,
+      "estado": "Finalizada",
+      "observaciones": "Pieza liberada para despacho."
+    },
+    {
+      "seguimiento_id": 108,
+      "of_detalle_id": 338,
+      "etapa_id": 1,
+      "empleado_id": 3,
+      "off_inicio": -47.78,
+      "off_fin": -42.94,
+      "estado": "Finalizada",
+      "observaciones": "Documentacion entregada al sector."
+    },
+    {
+      "seguimiento_id": 109,
+      "of_detalle_id": 338,
+      "etapa_id": 2,
+      "empleado_id": 4,
+      "off_inicio": -40.81,
+      "off_fin": -35.82,
+      "estado": "Finalizada",
+      "observaciones": ""
+    },
+    {
+      "seguimiento_id": 110,
+      "of_detalle_id": 338,
+      "etapa_id": 3,
+      "empleado_id": 2,
+      "off_inicio": -33.63,
+      "off_fin": -27.59,
+      "estado": "Finalizada",
+      "observaciones": ""
+    },
+    {
+      "seguimiento_id": 111,
+      "of_detalle_id": 338,
+      "etapa_id": 4,
+      "empleado_id": 5,
+      "off_inicio": -26.85,
+      "off_fin": -20.2,
+      "estado": "Finalizada",
+      "observaciones": "Tratamiento termico completo."
+    },
+    {
+      "seguimiento_id": 112,
+      "of_detalle_id": 338,
+      "etapa_id": 5,
+      "empleado_id": 6,
+      "off_inicio": -18.54,
+      "off_fin": -12.8,
+      "estado": "Finalizada",
+      "observaciones": "Inspeccion dimensional conforme."
+    },
+    {
+      "seguimiento_id": 113,
+      "of_detalle_id": 338,
+      "etapa_id": 6,
+      "empleado_id": 3,
+      "off_inicio": -10.69,
+      "off_fin": -5.99,
+      "estado": "Finalizada",
+      "observaciones": "Pieza liberada para despacho."
+    },
+    {
+      "seguimiento_id": 114,
+      "of_detalle_id": 339,
+      "etapa_id": 1,
+      "empleado_id": 3,
+      "off_inicio": -46.94,
+      "off_fin": -42.8,
+      "estado": "Finalizada",
+      "observaciones": "OF liberada a planta."
+    },
+    {
+      "seguimiento_id": 115,
+      "of_detalle_id": 339,
+      "etapa_id": 2,
+      "empleado_id": 4,
+      "off_inicio": -41.11,
+      "off_fin": -35.36,
+      "estado": "Finalizada",
+      "observaciones": "Despunte dentro de tolerancia."
+    },
+    {
+      "seguimiento_id": 116,
+      "of_detalle_id": 339,
+      "etapa_id": 3,
+      "empleado_id": 2,
+      "off_inicio": -33.53,
+      "off_fin": -27.42,
+      "estado": "Finalizada",
+      "observaciones": "Mecanizado en torno CNC 3."
+    },
+    {
+      "seguimiento_id": 117,
+      "of_detalle_id": 339,
+      "etapa_id": 4,
+      "empleado_id": 5,
+      "off_inicio": -26.48,
+      "off_fin": -20.71,
+      "estado": "Finalizada",
+      "observaciones": "Tratamiento termico completo."
+    },
+    {
+      "seguimiento_id": 118,
+      "of_detalle_id": 339,
+      "etapa_id": 5,
+      "empleado_id": 6,
+      "off_inicio": -19.35,
+      "off_fin": -13.75,
+      "estado": "Finalizada",
+      "observaciones": "Pendiente de firma del responsable."
+    },
+    {
+      "seguimiento_id": 119,
+      "of_detalle_id": 339,
+      "etapa_id": 6,
+      "empleado_id": 3,
+      "off_inicio": -12.07,
+      "off_fin": -5.72,
+      "estado": "Finalizada",
+      "observaciones": "Certificado emitido."
+    },
+    {
+      "seguimiento_id": 120,
+      "of_detalle_id": 340,
+      "etapa_id": 1,
+      "empleado_id": 3,
+      "off_inicio": -3.65,
+      "off_fin": -2.93,
+      "estado": "Finalizada",
+      "observaciones": "Documentacion entregada al sector."
+    },
+    {
+      "seguimiento_id": 121,
+      "of_detalle_id": 340,
+      "etapa_id": 2,
+      "empleado_id": 4,
+      "off_inicio": -2.34,
+      "off_fin": -1.41,
+      "estado": "Finalizada",
+      "observaciones": "Material cortado segun plano."
+    },
+    {
+      "seguimiento_id": 122,
+      "of_detalle_id": 340,
+      "etapa_id": 3,
+      "empleado_id": 2,
+      "off_inicio": -1.12,
+      "off_fin": -0.33,
+      "estado": "Finalizada",
+      "observaciones": "Mecanizado en torno CNC 3."
+    },
+    {
+      "seguimiento_id": 123,
+      "of_detalle_id": 340,
+      "etapa_id": 4,
+      "empleado_id": 5,
+      "off_inicio": 0.08,
+      "off_fin": null,
+      "estado": "En curso",
+      "observaciones": "Tratamiento termico completo."
+    },
+    {
+      "seguimiento_id": 124,
+      "of_detalle_id": 341,
+      "etapa_id": 1,
+      "empleado_id": 3,
+      "off_inicio": -3.86,
+      "off_fin": -2.75,
+      "estado": "Finalizada",
+      "observaciones": ""
+    },
+    {
+      "seguimiento_id": 125,
+      "of_detalle_id": 341,
+      "etapa_id": 2,
+      "empleado_id": 4,
+      "off_inicio": -2.47,
+      "off_fin": -1.65,
+      "estado": "Finalizada",
+      "observaciones": "Material cortado segun plano."
+    },
+    {
+      "seguimiento_id": 126,
+      "of_detalle_id": 341,
+      "etapa_id": 3,
+      "empleado_id": 2,
+      "off_inicio": -1.25,
+      "off_fin": -0.23,
+      "estado": "Finalizada",
+      "observaciones": "Cambio de herramienta por desgaste."
+    },
+    {
+      "seguimiento_id": 127,
+      "of_detalle_id": 341,
+      "etapa_id": 4,
+      "empleado_id": 5,
+      "off_inicio": 0.01,
+      "off_fin": null,
+      "estado": "En curso",
+      "observaciones": "Tratamiento termico completo."
+    },
+    {
+      "seguimiento_id": 128,
+      "of_detalle_id": 342,
+      "etapa_id": 1,
+      "empleado_id": 3,
+      "off_inicio": -3.95,
+      "off_fin": -2.95,
+      "estado": "Finalizada",
+      "observaciones": "OF liberada a planta."
+    },
+    {
+      "seguimiento_id": 129,
+      "of_detalle_id": 342,
+      "etapa_id": 2,
+      "empleado_id": 4,
+      "off_inicio": -2.36,
+      "off_fin": -1.46,
+      "estado": "Finalizada",
+      "observaciones": "Material cortado segun plano."
+    },
+    {
+      "seguimiento_id": 130,
+      "of_detalle_id": 342,
+      "etapa_id": 3,
+      "empleado_id": 2,
+      "off_inicio": -1.23,
+      "off_fin": -0.09,
+      "estado": "Finalizada",
+      "observaciones": "Mecanizado en torno CNC 3."
+    },
+    {
+      "seguimiento_id": 131,
+      "of_detalle_id": 342,
+      "etapa_id": 4,
+      "empleado_id": 5,
+      "off_inicio": 0.24,
+      "off_fin": null,
+      "estado": "En curso",
+      "observaciones": "Tratamiento termico completo."
+    },
+    {
+      "seguimiento_id": 132,
+      "of_detalle_id": 343,
+      "etapa_id": 1,
+      "empleado_id": 3,
+      "off_inicio": -43.61,
+      "off_fin": -38.16,
+      "estado": "Finalizada",
+      "observaciones": "Documentacion entregada al sector."
+    },
+    {
+      "seguimiento_id": 133,
+      "of_detalle_id": 343,
+      "etapa_id": 2,
+      "empleado_id": 4,
+      "off_inicio": -36.55,
+      "off_fin": -30.26,
+      "estado": "Finalizada",
+      "observaciones": ""
+    },
+    {
+      "seguimiento_id": 134,
+      "of_detalle_id": 343,
+      "etapa_id": 3,
+      "empleado_id": 2,
+      "off_inicio": -27.89,
+      "off_fin": -21.98,
+      "estado": "Finalizada",
+      "observaciones": "Mecanizado en torno CNC 3."
+    },
+    {
+      "seguimiento_id": 135,
+      "of_detalle_id": 343,
+      "etapa_id": 4,
+      "empleado_id": 5,
+      "off_inicio": -19.53,
+      "off_fin": -14.01,
+      "estado": "Finalizada",
+      "observaciones": "Granallado terminado."
+    },
+    {
+      "seguimiento_id": 136,
+      "of_detalle_id": 343,
+      "etapa_id": 5,
+      "empleado_id": 6,
+      "off_inicio": -13.35,
+      "off_fin": null,
+      "estado": "En curso",
+      "observaciones": "Pendiente de firma del responsable."
+    },
+    {
+      "seguimiento_id": 137,
+      "of_detalle_id": 344,
+      "etapa_id": 1,
+      "empleado_id": 3,
+      "off_inicio": -43.73,
+      "off_fin": -38.18,
+      "estado": "Finalizada",
+      "observaciones": "OF liberada a planta."
+    },
+    {
+      "seguimiento_id": 138,
+      "of_detalle_id": 344,
+      "etapa_id": 2,
+      "empleado_id": 4,
+      "off_inicio": -35.64,
+      "off_fin": -30.03,
+      "estado": "Finalizada",
+      "observaciones": "Material cortado segun plano."
+    },
+    {
+      "seguimiento_id": 139,
+      "of_detalle_id": 344,
+      "etapa_id": 3,
+      "empleado_id": 2,
+      "off_inicio": -27.11,
+      "off_fin": -22.71,
+      "estado": "Finalizada",
+      "observaciones": "Primera pieza verificada."
+    },
+    {
+      "seguimiento_id": 140,
+      "of_detalle_id": 344,
+      "etapa_id": 4,
+      "empleado_id": 5,
+      "off_inicio": -20.99,
+      "off_fin": -14.7,
+      "estado": "Finalizada",
+      "observaciones": ""
+    },
+    {
+      "seguimiento_id": 141,
+      "of_detalle_id": 344,
+      "etapa_id": 5,
+      "empleado_id": 6,
+      "off_inicio": -12.9,
+      "off_fin": null,
+      "estado": "En curso",
+      "observaciones": "Pendiente de firma del responsable."
+    },
+    {
+      "seguimiento_id": 142,
+      "of_detalle_id": 345,
+      "etapa_id": 1,
+      "empleado_id": 3,
+      "off_inicio": -76.96,
+      "off_fin": -66.38,
+      "estado": "Finalizada",
+      "observaciones": "OF liberada a planta."
+    },
+    {
+      "seguimiento_id": 143,
+      "of_detalle_id": 345,
+      "etapa_id": 2,
+      "empleado_id": 4,
+      "off_inicio": -63.04,
+      "off_fin": -55.82,
+      "estado": "Finalizada",
+      "observaciones": ""
+    },
+    {
+      "seguimiento_id": 144,
+      "of_detalle_id": 345,
+      "etapa_id": 3,
+      "empleado_id": 2,
+      "off_inicio": -52.15,
+      "off_fin": -44.63,
+      "estado": "Finalizada",
+      "observaciones": "Cambio de herramienta por desgaste."
+    },
+    {
+      "seguimiento_id": 145,
+      "of_detalle_id": 345,
+      "etapa_id": 4,
+      "empleado_id": 5,
+      "off_inicio": -39.66,
+      "off_fin": -32.26,
+      "estado": "Finalizada",
+      "observaciones": "Granallado terminado."
+    },
+    {
+      "seguimiento_id": 146,
+      "of_detalle_id": 345,
+      "etapa_id": 5,
+      "empleado_id": 6,
+      "off_inicio": -28.03,
+      "off_fin": -21.29,
+      "estado": "Finalizada",
+      "observaciones": "Ensayo PT sin indicaciones."
+    },
+    {
+      "seguimiento_id": 147,
+      "of_detalle_id": 345,
+      "etapa_id": 6,
+      "empleado_id": 3,
+      "off_inicio": -17.32,
+      "off_fin": -10.17,
+      "estado": "Finalizada",
+      "observaciones": ""
+    },
+    {
+      "seguimiento_id": 148,
+      "of_detalle_id": 346,
+      "etapa_id": 1,
+      "empleado_id": 3,
+      "off_inicio": -75.73,
+      "off_fin": -65.68,
+      "estado": "Finalizada",
+      "observaciones": "OF liberada a planta."
+    },
+    {
+      "seguimiento_id": 149,
+      "of_detalle_id": 346,
+      "etapa_id": 2,
+      "empleado_id": 4,
+      "off_inicio": -62.35,
+      "off_fin": -54.21,
+      "estado": "Finalizada",
+      "observaciones": ""
+    },
+    {
+      "seguimiento_id": 150,
+      "of_detalle_id": 346,
+      "etapa_id": 3,
+      "empleado_id": 2,
+      "off_inicio": -51.85,
+      "off_fin": -44.05,
+      "estado": "Finalizada",
+      "observaciones": "Primera pieza verificada."
+    },
+    {
+      "seguimiento_id": 151,
+      "of_detalle_id": 346,
+      "etapa_id": 4,
+      "empleado_id": 5,
+      "off_inicio": -40.95,
+      "off_fin": -32.28,
+      "estado": "Finalizada",
+      "observaciones": "Tratamiento termico completo."
+    },
+    {
+      "seguimiento_id": 152,
+      "of_detalle_id": 346,
+      "etapa_id": 5,
+      "empleado_id": 6,
+      "off_inicio": -27.5,
+      "off_fin": -21.13,
+      "estado": "Finalizada",
+      "observaciones": "Ensayo PT sin indicaciones."
+    },
+    {
+      "seguimiento_id": 153,
+      "of_detalle_id": 346,
+      "etapa_id": 6,
+      "empleado_id": 3,
+      "off_inicio": -16.38,
+      "off_fin": -8.85,
+      "estado": "Finalizada",
+      "observaciones": "Certificado emitido."
+    },
+    {
+      "seguimiento_id": 154,
+      "of_detalle_id": 347,
+      "etapa_id": 1,
+      "empleado_id": 3,
+      "off_inicio": -3.87,
+      "off_fin": -2.89,
+      "estado": "Finalizada",
+      "observaciones": ""
+    },
+    {
+      "seguimiento_id": 155,
+      "of_detalle_id": 347,
+      "etapa_id": 2,
+      "empleado_id": 4,
+      "off_inicio": -2.72,
+      "off_fin": -1.61,
+      "estado": "Finalizada",
+      "observaciones": ""
+    },
+    {
+      "seguimiento_id": 156,
+      "of_detalle_id": 347,
+      "etapa_id": 3,
+      "empleado_id": 2,
+      "off_inicio": -1.47,
+      "off_fin": null,
+      "estado": "En curso",
+      "observaciones": ""
+    },
+    {
+      "seguimiento_id": 157,
+      "of_detalle_id": 348,
+      "etapa_id": 1,
+      "empleado_id": 3,
+      "off_inicio": -3.63,
+      "off_fin": -2.88,
+      "estado": "Finalizada",
+      "observaciones": "OF liberada a planta."
+    },
+    {
+      "seguimiento_id": 158,
+      "of_detalle_id": 348,
+      "etapa_id": 2,
+      "empleado_id": 4,
+      "off_inicio": -2.59,
+      "off_fin": -1.71,
+      "estado": "Finalizada",
+      "observaciones": "Material cortado segun plano."
+    },
+    {
+      "seguimiento_id": 159,
+      "of_detalle_id": 348,
+      "etapa_id": 3,
+      "empleado_id": 2,
+      "off_inicio": -1.31,
+      "off_fin": null,
+      "estado": "En curso",
+      "observaciones": "Mecanizado en torno CNC 3."
+    },
+    {
+      "seguimiento_id": 160,
+      "of_detalle_id": 349,
+      "etapa_id": 1,
+      "empleado_id": 3,
+      "off_inicio": -3.77,
+      "off_fin": -2.85,
+      "estado": "Finalizada",
+      "observaciones": "Documentacion entregada al sector."
+    },
+    {
+      "seguimiento_id": 161,
+      "of_detalle_id": 349,
+      "etapa_id": 2,
+      "empleado_id": 4,
+      "off_inicio": -2.63,
+      "off_fin": -1.52,
+      "estado": "Finalizada",
+      "observaciones": ""
+    },
+    {
+      "seguimiento_id": 162,
+      "of_detalle_id": 349,
+      "etapa_id": 3,
+      "empleado_id": 2,
+      "off_inicio": -1.32,
+      "off_fin": null,
+      "estado": "En curso",
+      "observaciones": "Cambio de herramienta por desgaste."
+    },
+    {
+      "seguimiento_id": 163,
+      "of_detalle_id": 350,
+      "etapa_id": 1,
+      "empleado_id": 3,
+      "off_inicio": -29.25,
+      "off_fin": null,
+      "estado": "En curso",
+      "observaciones": ""
+    },
+    {
+      "seguimiento_id": 164,
+      "of_detalle_id": 351,
+      "etapa_id": 1,
+      "empleado_id": 3,
+      "off_inicio": -32.57,
+      "off_fin": null,
+      "estado": "En curso",
+      "observaciones": ""
+    },
+    {
+      "seguimiento_id": 165,
+      "of_detalle_id": 352,
+      "etapa_id": 1,
+      "empleado_id": 3,
+      "off_inicio": -14.61,
+      "off_fin": -12.42,
+      "estado": "Finalizada",
+      "observaciones": "OF liberada a planta."
+    },
+    {
+      "seguimiento_id": 166,
+      "of_detalle_id": 352,
+      "etapa_id": 2,
+      "empleado_id": 4,
+      "off_inicio": -11.91,
+      "off_fin": -9.12,
+      "estado": "Finalizada",
+      "observaciones": "Despunte dentro de tolerancia."
+    },
+    {
+      "seguimiento_id": 167,
+      "of_detalle_id": 352,
+      "etapa_id": 3,
+      "empleado_id": 2,
+      "off_inicio": -8.37,
+      "off_fin": -6.43,
+      "estado": "Finalizada",
+      "observaciones": "Cambio de herramienta por desgaste."
+    },
+    {
+      "seguimiento_id": 168,
+      "of_detalle_id": 352,
+      "etapa_id": 4,
+      "empleado_id": 5,
+      "off_inicio": -5.03,
+      "off_fin": null,
+      "estado": "En curso",
+      "observaciones": "Granallado terminado."
+    },
+    {
+      "seguimiento_id": 169,
+      "of_detalle_id": 353,
+      "etapa_id": 1,
+      "empleado_id": 3,
+      "off_inicio": -14.79,
+      "off_fin": -11.43,
+      "estado": "Finalizada",
+      "observaciones": "OF liberada a planta."
+    },
+    {
+      "seguimiento_id": 170,
+      "of_detalle_id": 353,
+      "etapa_id": 2,
+      "empleado_id": 4,
+      "off_inicio": -10.19,
+      "off_fin": -7.33,
+      "estado": "Finalizada",
+      "observaciones": ""
+    },
+    {
+      "seguimiento_id": 171,
+      "of_detalle_id": 353,
+      "etapa_id": 3,
+      "empleado_id": 2,
+      "off_inicio": -6.8,
+      "off_fin": null,
+      "estado": "En curso",
+      "observaciones": "Primera pieza verificada."
+    },
+    {
+      "seguimiento_id": 172,
+      "of_detalle_id": 354,
+      "etapa_id": 1,
+      "empleado_id": 3,
+      "off_inicio": -57.27,
+      "off_fin": -46.8,
+      "estado": "Finalizada",
+      "observaciones": ""
+    },
+    {
+      "seguimiento_id": 173,
+      "of_detalle_id": 354,
+      "etapa_id": 2,
+      "empleado_id": 4,
+      "off_inicio": -42.13,
+      "off_fin": -29.55,
+      "estado": "Finalizada",
+      "observaciones": "Material cortado segun plano."
+    },
+    {
+      "seguimiento_id": 174,
+      "of_detalle_id": 354,
+      "etapa_id": 3,
+      "empleado_id": 2,
+      "off_inicio": -24.11,
+      "off_fin": null,
+      "estado": "En curso",
+      "observaciones": ""
+    },
+    {
+      "seguimiento_id": 175,
+      "of_detalle_id": 355,
+      "etapa_id": 1,
+      "empleado_id": 3,
+      "off_inicio": -56.17,
+      "off_fin": -46.56,
+      "estado": "Finalizada",
+      "observaciones": "Documentacion entregada al sector."
+    },
+    {
+      "seguimiento_id": 176,
+      "of_detalle_id": 355,
+      "etapa_id": 2,
+      "empleado_id": 4,
+      "off_inicio": -41.87,
+      "off_fin": -30.17,
+      "estado": "Finalizada",
+      "observaciones": "Material cortado segun plano."
+    },
+    {
+      "seguimiento_id": 177,
+      "of_detalle_id": 355,
+      "etapa_id": 3,
+      "empleado_id": 2,
+      "off_inicio": -27.49,
+      "off_fin": null,
+      "estado": "En curso",
+      "observaciones": "Cambio de herramienta por desgaste."
+    },
+    {
+      "seguimiento_id": 178,
+      "of_detalle_id": 356,
+      "etapa_id": 1,
+      "empleado_id": 3,
+      "off_inicio": -60.57,
+      "off_fin": -49.34,
+      "estado": "Finalizada",
+      "observaciones": ""
+    },
+    {
+      "seguimiento_id": 179,
+      "of_detalle_id": 356,
+      "etapa_id": 2,
+      "empleado_id": 4,
+      "off_inicio": -47.23,
+      "off_fin": -36.05,
+      "estado": "Finalizada",
+      "observaciones": "Material cortado segun plano."
+    },
+    {
+      "seguimiento_id": 180,
+      "of_detalle_id": 356,
+      "etapa_id": 3,
+      "empleado_id": 2,
+      "off_inicio": -33.02,
+      "off_fin": -22.49,
+      "estado": "Finalizada",
+      "observaciones": "Cambio de herramienta por desgaste."
+    },
+    {
+      "seguimiento_id": 181,
+      "of_detalle_id": 356,
+      "etapa_id": 4,
+      "empleado_id": 5,
+      "off_inicio": -19.95,
+      "off_fin": null,
+      "estado": "En curso",
+      "observaciones": "Tratamiento termico completo."
+    },
+    {
+      "seguimiento_id": 182,
+      "of_detalle_id": 357,
+      "etapa_id": 1,
+      "empleado_id": 3,
+      "off_inicio": -56.7,
+      "off_fin": -47.07,
+      "estado": "Finalizada",
+      "observaciones": "Documentacion entregada al sector."
+    },
+    {
+      "seguimiento_id": 183,
+      "of_detalle_id": 357,
+      "etapa_id": 2,
+      "empleado_id": 4,
+      "off_inicio": -43.51,
+      "off_fin": -29.98,
+      "estado": "Finalizada",
+      "observaciones": ""
+    },
+    {
+      "seguimiento_id": 184,
+      "of_detalle_id": 357,
+      "etapa_id": 3,
+      "empleado_id": 2,
+      "off_inicio": -23.92,
+      "off_fin": null,
+      "estado": "En curso",
+      "observaciones": "Cambio de herramienta por desgaste."
+    },
+    {
+      "seguimiento_id": 185,
+      "of_detalle_id": 358,
+      "etapa_id": 1,
+      "empleado_id": 3,
+      "off_inicio": -3.62,
+      "off_fin": -2.82,
+      "estado": "Finalizada",
+      "observaciones": "Documentacion entregada al sector."
+    },
+    {
+      "seguimiento_id": 186,
+      "of_detalle_id": 358,
+      "etapa_id": 2,
+      "empleado_id": 4,
+      "off_inicio": -2.39,
+      "off_fin": -1.47,
+      "estado": "Finalizada",
+      "observaciones": ""
+    },
+    {
+      "seguimiento_id": 187,
+      "of_detalle_id": 358,
+      "etapa_id": 3,
+      "empleado_id": 2,
+      "off_inicio": -1.16,
+      "off_fin": -0.2,
+      "estado": "Finalizada",
+      "observaciones": "Mecanizado en torno CNC 3."
+    },
+    {
+      "seguimiento_id": 188,
+      "of_detalle_id": 358,
+      "etapa_id": 4,
+      "empleado_id": 5,
+      "off_inicio": 0.29,
+      "off_fin": -0.05,
+      "estado": "Finalizada",
+      "observaciones": "Tratamiento termico completo."
+    },
+    {
+      "seguimiento_id": 189,
+      "of_detalle_id": 358,
+      "etapa_id": 5,
+      "empleado_id": 6,
+      "off_inicio": 1.42,
+      "off_fin": null,
+      "estado": "En curso",
+      "observaciones": "Inspeccion dimensional conforme."
+    },
+    {
+      "seguimiento_id": 190,
+      "of_detalle_id": 359,
+      "etapa_id": 1,
+      "empleado_id": 3,
+      "off_inicio": -3.7,
+      "off_fin": -2.74,
+      "estado": "Finalizada",
+      "observaciones": "OF liberada a planta."
+    },
+    {
+      "seguimiento_id": 191,
+      "of_detalle_id": 359,
+      "etapa_id": 2,
+      "empleado_id": 4,
+      "off_inicio": -2.29,
+      "off_fin": -1.58,
+      "estado": "Finalizada",
+      "observaciones": "Material cortado segun plano."
+    },
+    {
+      "seguimiento_id": 192,
+      "of_detalle_id": 359,
+      "etapa_id": 3,
+      "empleado_id": 2,
+      "off_inicio": -1.0,
+      "off_fin": -0.05,
+      "estado": "Finalizada",
+      "observaciones": ""
+    },
+    {
+      "seguimiento_id": 193,
+      "of_detalle_id": 359,
+      "etapa_id": 4,
+      "empleado_id": 5,
+      "off_inicio": 0.04,
+      "off_fin": -0.05,
+      "estado": "Finalizada",
+      "observaciones": "Granallado terminado."
+    },
+    {
+      "seguimiento_id": 194,
+      "of_detalle_id": 359,
+      "etapa_id": 5,
+      "empleado_id": 6,
+      "off_inicio": 1.66,
+      "off_fin": null,
+      "estado": "En curso",
+      "observaciones": ""
+    },
+    {
+      "seguimiento_id": 195,
+      "of_detalle_id": 360,
+      "etapa_id": 1,
+      "empleado_id": 3,
+      "off_inicio": -3.64,
+      "off_fin": -2.87,
+      "estado": "Finalizada",
+      "observaciones": "OF liberada a planta."
+    },
+    {
+      "seguimiento_id": 196,
+      "of_detalle_id": 360,
+      "etapa_id": 2,
+      "empleado_id": 4,
+      "off_inicio": -2.6,
+      "off_fin": -1.58,
+      "estado": "Finalizada",
+      "observaciones": ""
+    },
+    {
+      "seguimiento_id": 197,
+      "of_detalle_id": 360,
+      "etapa_id": 3,
+      "empleado_id": 2,
+      "off_inicio": -1.25,
+      "off_fin": -0.12,
+      "estado": "Finalizada",
+      "observaciones": "Cambio de herramienta por desgaste."
+    },
+    {
+      "seguimiento_id": 198,
+      "of_detalle_id": 360,
+      "etapa_id": 4,
+      "empleado_id": 5,
+      "off_inicio": 0.25,
+      "off_fin": -0.05,
+      "estado": "Finalizada",
+      "observaciones": "Granallado terminado."
+    },
+    {
+      "seguimiento_id": 199,
+      "of_detalle_id": 360,
+      "etapa_id": 5,
+      "empleado_id": 6,
+      "off_inicio": 1.65,
+      "off_fin": null,
+      "estado": "En curso",
+      "observaciones": "Inspeccion dimensional conforme."
+    },
+    {
+      "seguimiento_id": 200,
+      "of_detalle_id": 361,
+      "etapa_id": 1,
+      "empleado_id": 3,
+      "off_inicio": -3.96,
+      "off_fin": -2.72,
+      "estado": "Finalizada",
+      "observaciones": "Documentacion entregada al sector."
+    },
+    {
+      "seguimiento_id": 201,
+      "of_detalle_id": 361,
+      "etapa_id": 2,
+      "empleado_id": 4,
+      "off_inicio": -2.47,
+      "off_fin": -1.54,
+      "estado": "Finalizada",
+      "observaciones": "Material cortado segun plano."
+    },
+    {
+      "seguimiento_id": 202,
+      "of_detalle_id": 361,
+      "etapa_id": 3,
+      "empleado_id": 2,
+      "off_inicio": -0.97,
+      "off_fin": -0.05,
+      "estado": "Finalizada",
+      "observaciones": "Cambio de herramienta por desgaste."
+    },
+    {
+      "seguimiento_id": 203,
+      "of_detalle_id": 361,
+      "etapa_id": 4,
+      "empleado_id": 5,
+      "off_inicio": 0.41,
+      "off_fin": -0.05,
+      "estado": "Finalizada",
+      "observaciones": "Granallado terminado."
+    },
+    {
+      "seguimiento_id": 204,
+      "of_detalle_id": 361,
+      "etapa_id": 5,
+      "empleado_id": 6,
+      "off_inicio": 1.45,
+      "off_fin": null,
+      "estado": "En curso",
+      "observaciones": ""
+    },
+    {
+      "seguimiento_id": 205,
+      "of_detalle_id": 362,
+      "etapa_id": 1,
+      "empleado_id": 3,
+      "off_inicio": -51.93,
+      "off_fin": null,
+      "estado": "En curso",
+      "observaciones": "Documentacion entregada al sector."
+    },
+    {
+      "seguimiento_id": 206,
+      "of_detalle_id": 363,
+      "etapa_id": 1,
+      "empleado_id": 3,
+      "off_inicio": -53.97,
+      "off_fin": null,
+      "estado": "En curso",
+      "observaciones": "Documentacion entregada al sector."
+    },
+    {
+      "seguimiento_id": 207,
+      "of_detalle_id": 364,
+      "etapa_id": 1,
+      "empleado_id": 3,
+      "off_inicio": -80.14,
+      "off_fin": -67.11,
+      "estado": "Finalizada",
+      "observaciones": ""
+    },
+    {
+      "seguimiento_id": 208,
+      "of_detalle_id": 364,
+      "etapa_id": 2,
+      "empleado_id": 4,
+      "off_inicio": -62.24,
+      "off_fin": -49.15,
+      "estado": "Finalizada",
+      "observaciones": ""
+    },
+    {
+      "seguimiento_id": 209,
+      "of_detalle_id": 364,
+      "etapa_id": 3,
+      "empleado_id": 2,
+      "off_inicio": -41.85,
+      "off_fin": -30.03,
+      "estado": "Finalizada",
+      "observaciones": "Primera pieza verificada."
+    },
+    {
+      "seguimiento_id": 210,
+      "of_detalle_id": 364,
+      "etapa_id": 4,
+      "empleado_id": 5,
+      "off_inicio": -24.4,
+      "off_fin": null,
+      "estado": "En curso",
+      "observaciones": "Tratamiento termico completo."
+    },
+    {
+      "seguimiento_id": 211,
+      "of_detalle_id": 365,
+      "etapa_id": 1,
+      "empleado_id": 3,
+      "off_inicio": -80.69,
+      "off_fin": -68.74,
+      "estado": "Finalizada",
+      "observaciones": "Documentacion entregada al sector."
+    },
+    {
+      "seguimiento_id": 212,
+      "of_detalle_id": 365,
+      "etapa_id": 2,
+      "empleado_id": 4,
+      "off_inicio": -64.65,
+      "off_fin": -54.84,
+      "estado": "Finalizada",
+      "observaciones": "Despunte dentro de tolerancia."
+    },
+    {
+      "seguimiento_id": 213,
+      "of_detalle_id": 365,
+      "etapa_id": 3,
+      "empleado_id": 2,
+      "off_inicio": -52.69,
+      "off_fin": -41.37,
+      "estado": "Finalizada",
+      "observaciones": ""
+    },
+    {
+      "seguimiento_id": 214,
+      "of_detalle_id": 365,
+      "etapa_id": 4,
+      "empleado_id": 5,
+      "off_inicio": -35.73,
+      "off_fin": -24.5,
+      "estado": "Finalizada",
+      "observaciones": "Granallado terminado."
+    },
+    {
+      "seguimiento_id": 215,
+      "of_detalle_id": 365,
+      "etapa_id": 5,
+      "empleado_id": 6,
+      "off_inicio": -20.5,
+      "off_fin": null,
+      "estado": "En curso",
+      "observaciones": ""
+    },
+    {
+      "seguimiento_id": 216,
+      "of_detalle_id": 366,
+      "etapa_id": 1,
+      "empleado_id": 3,
+      "off_inicio": -76.75,
+      "off_fin": -66.04,
+      "estado": "Finalizada",
+      "observaciones": "OF liberada a planta."
+    },
+    {
+      "seguimiento_id": 217,
+      "of_detalle_id": 366,
+      "etapa_id": 2,
+      "empleado_id": 4,
+      "off_inicio": -60.7,
+      "off_fin": -48.49,
+      "estado": "Finalizada",
+      "observaciones": ""
+    },
+    {
+      "seguimiento_id": 218,
+      "of_detalle_id": 366,
+      "etapa_id": 3,
+      "empleado_id": 2,
+      "off_inicio": -42.06,
+      "off_fin": -30.02,
+      "estado": "Finalizada",
+      "observaciones": "Cambio de herramienta por desgaste."
+    },
+    {
+      "seguimiento_id": 219,
+      "of_detalle_id": 366,
+      "etapa_id": 4,
+      "empleado_id": 5,
+      "off_inicio": -27.35,
+      "off_fin": null,
+      "estado": "En curso",
+      "observaciones": "Granallado terminado."
+    },
+    {
+      "seguimiento_id": 220,
+      "of_detalle_id": 367,
+      "etapa_id": 1,
+      "empleado_id": 3,
+      "off_inicio": -78.81,
+      "off_fin": -65.93,
+      "estado": "Finalizada",
+      "observaciones": ""
+    },
+    {
+      "seguimiento_id": 221,
+      "of_detalle_id": 367,
+      "etapa_id": 2,
+      "empleado_id": 4,
+      "off_inicio": -60.42,
+      "off_fin": -49.94,
+      "estado": "Finalizada",
+      "observaciones": ""
+    },
+    {
+      "seguimiento_id": 222,
+      "of_detalle_id": 367,
+      "etapa_id": 3,
+      "empleado_id": 2,
+      "off_inicio": -43.29,
+      "off_fin": -32.08,
+      "estado": "Finalizada",
+      "observaciones": "Mecanizado en torno CNC 3."
+    },
+    {
+      "seguimiento_id": 223,
+      "of_detalle_id": 367,
+      "etapa_id": 4,
+      "empleado_id": 5,
+      "off_inicio": -26.81,
+      "off_fin": null,
+      "estado": "En curso",
+      "observaciones": "Granallado terminado."
+    },
+    {
+      "seguimiento_id": 224,
+      "of_detalle_id": 368,
+      "etapa_id": 1,
+      "empleado_id": 3,
+      "off_inicio": -17.25,
+      "off_fin": -11.92,
+      "estado": "Finalizada",
+      "observaciones": "Documentacion entregada al sector."
+    },
+    {
+      "seguimiento_id": 225,
+      "of_detalle_id": 368,
+      "etapa_id": 2,
+      "empleado_id": 4,
+      "off_inicio": -9.59,
+      "off_fin": null,
+      "estado": "En curso",
+      "observaciones": "Despunte dentro de tolerancia."
+    },
+    {
+      "seguimiento_id": 226,
+      "of_detalle_id": 369,
+      "etapa_id": 1,
+      "empleado_id": 3,
+      "off_inicio": -16.44,
+      "off_fin": -11.7,
+      "estado": "Finalizada",
+      "observaciones": "Documentacion entregada al sector."
+    },
+    {
+      "seguimiento_id": 227,
+      "of_detalle_id": 369,
+      "etapa_id": 2,
+      "empleado_id": 4,
+      "off_inicio": -10.61,
+      "off_fin": null,
+      "estado": "En curso",
+      "observaciones": "Material cortado segun plano."
+    },
+    {
+      "seguimiento_id": 228,
+      "of_detalle_id": 370,
+      "etapa_id": 1,
+      "empleado_id": 3,
+      "off_inicio": -16.42,
+      "off_fin": -12.12,
+      "estado": "Finalizada",
+      "observaciones": "OF liberada a planta."
+    },
+    {
+      "seguimiento_id": 229,
+      "of_detalle_id": 370,
+      "etapa_id": 2,
+      "empleado_id": 4,
+      "off_inicio": -11.46,
+      "off_fin": null,
+      "estado": "En curso",
+      "observaciones": ""
+    },
+    {
+      "seguimiento_id": 230,
+      "of_detalle_id": 371,
+      "etapa_id": 1,
+      "empleado_id": 3,
+      "off_inicio": -37.65,
+      "off_fin": -33.49,
+      "estado": "Finalizada",
+      "observaciones": "Documentacion entregada al sector."
+    },
+    {
+      "seguimiento_id": 231,
+      "of_detalle_id": 371,
+      "etapa_id": 2,
+      "empleado_id": 4,
+      "off_inicio": -32.24,
+      "off_fin": -27.71,
+      "estado": "Finalizada",
+      "observaciones": "Material cortado segun plano."
+    },
+    {
+      "seguimiento_id": 232,
+      "of_detalle_id": 371,
+      "etapa_id": 3,
+      "empleado_id": 2,
+      "off_inicio": -27.34,
+      "off_fin": -21.91,
+      "estado": "Finalizada",
+      "observaciones": "Mecanizado en torno CNC 3."
+    },
+    {
+      "seguimiento_id": 233,
+      "of_detalle_id": 371,
+      "etapa_id": 4,
+      "empleado_id": 5,
+      "off_inicio": -21.11,
+      "off_fin": -16.16,
+      "estado": "Finalizada",
+      "observaciones": "Granallado terminado."
+    },
+    {
+      "seguimiento_id": 234,
+      "of_detalle_id": 371,
+      "etapa_id": 5,
+      "empleado_id": 6,
+      "off_inicio": -14.52,
+      "off_fin": -11.12,
+      "estado": "Finalizada",
+      "observaciones": "Ensayo PT sin indicaciones."
+    },
+    {
+      "seguimiento_id": 235,
+      "of_detalle_id": 371,
+      "etapa_id": 6,
+      "empleado_id": 3,
+      "off_inicio": -8.89,
+      "off_fin": -5.48,
+      "estado": "Finalizada",
+      "observaciones": ""
+    },
+    {
+      "seguimiento_id": 236,
+      "of_detalle_id": 372,
+      "etapa_id": 1,
+      "empleado_id": 3,
+      "off_inicio": -37.37,
+      "off_fin": -33.09,
+      "estado": "Finalizada",
+      "observaciones": "OF liberada a planta."
+    },
+    {
+      "seguimiento_id": 237,
+      "of_detalle_id": 372,
+      "etapa_id": 2,
+      "empleado_id": 4,
+      "off_inicio": -30.95,
+      "off_fin": -26.44,
+      "estado": "Finalizada",
+      "observaciones": ""
+    },
+    {
+      "seguimiento_id": 238,
+      "of_detalle_id": 372,
+      "etapa_id": 3,
+      "empleado_id": 2,
+      "off_inicio": -25.15,
+      "off_fin": -18.77,
+      "estado": "Finalizada",
+      "observaciones": "Cambio de herramienta por desgaste."
+    },
+    {
+      "seguimiento_id": 239,
+      "of_detalle_id": 372,
+      "etapa_id": 4,
+      "empleado_id": 5,
+      "off_inicio": -17.96,
+      "off_fin": -13.01,
+      "estado": "Finalizada",
+      "observaciones": ""
+    },
+    {
+      "seguimiento_id": 240,
+      "of_detalle_id": 372,
+      "etapa_id": 5,
+      "empleado_id": 6,
+      "off_inicio": -11.36,
+      "off_fin": null,
+      "estado": "En curso",
+      "observaciones": ""
+    },
+    {
+      "seguimiento_id": 241,
+      "of_detalle_id": 373,
+      "etapa_id": 1,
+      "empleado_id": 3,
+      "off_inicio": -6.87,
+      "off_fin": -5.48,
+      "estado": "Finalizada",
+      "observaciones": "Documentacion entregada al sector."
+    },
+    {
+      "seguimiento_id": 242,
+      "of_detalle_id": 373,
+      "etapa_id": 2,
+      "empleado_id": 4,
+      "off_inicio": -5.08,
+      "off_fin": -3.96,
+      "estado": "Finalizada",
+      "observaciones": "Material cortado segun plano."
+    },
+    {
+      "seguimiento_id": 243,
+      "of_detalle_id": 373,
+      "etapa_id": 3,
+      "empleado_id": 2,
+      "off_inicio": -3.66,
+      "off_fin": null,
+      "estado": "En curso",
+      "observaciones": "Mecanizado en torno CNC 3."
+    },
+    {
+      "seguimiento_id": 244,
+      "of_detalle_id": 374,
+      "etapa_id": 1,
+      "empleado_id": 3,
+      "off_inicio": -6.69,
+      "off_fin": -5.39,
+      "estado": "Finalizada",
+      "observaciones": "Documentacion entregada al sector."
+    },
+    {
+      "seguimiento_id": 245,
+      "of_detalle_id": 374,
+      "etapa_id": 2,
+      "empleado_id": 4,
+      "off_inicio": -4.85,
+      "off_fin": -3.96,
+      "estado": "Finalizada",
+      "observaciones": "Despunte dentro de tolerancia."
+    },
+    {
+      "seguimiento_id": 246,
+      "of_detalle_id": 374,
+      "etapa_id": 3,
+      "empleado_id": 2,
+      "off_inicio": -3.3,
+      "off_fin": null,
+      "estado": "En curso",
+      "observaciones": ""
+    },
+    {
+      "seguimiento_id": 247,
+      "of_detalle_id": 375,
+      "etapa_id": 1,
+      "empleado_id": 3,
+      "off_inicio": -41.87,
+      "off_fin": -37.36,
+      "estado": "Finalizada",
+      "observaciones": "Documentacion entregada al sector."
+    },
+    {
+      "seguimiento_id": 248,
+      "of_detalle_id": 375,
+      "etapa_id": 2,
+      "empleado_id": 4,
+      "off_inicio": -35.33,
+      "off_fin": -31.28,
+      "estado": "Finalizada",
+      "observaciones": ""
+    },
+    {
+      "seguimiento_id": 249,
+      "of_detalle_id": 375,
+      "etapa_id": 3,
+      "empleado_id": 2,
+      "off_inicio": -28.47,
+      "off_fin": -25.03,
+      "estado": "Finalizada",
+      "observaciones": ""
+    },
+    {
+      "seguimiento_id": 250,
+      "of_detalle_id": 375,
+      "etapa_id": 4,
+      "empleado_id": 5,
+      "off_inicio": -23.37,
+      "off_fin": -18.31,
+      "estado": "Finalizada",
+      "observaciones": ""
+    },
+    {
+      "seguimiento_id": 251,
+      "of_detalle_id": 375,
+      "etapa_id": 5,
+      "empleado_id": 6,
+      "off_inicio": -16.91,
+      "off_fin": -11.76,
+      "estado": "Finalizada",
+      "observaciones": "Inspeccion dimensional conforme."
+    },
+    {
+      "seguimiento_id": 252,
+      "of_detalle_id": 375,
+      "etapa_id": 6,
+      "empleado_id": 3,
+      "off_inicio": -9.78,
+      "off_fin": -5.27,
+      "estado": "Finalizada",
+      "observaciones": "Pieza liberada para despacho."
+    },
+    {
+      "seguimiento_id": 253,
+      "of_detalle_id": 376,
+      "etapa_id": 1,
+      "empleado_id": 3,
+      "off_inicio": -42.57,
+      "off_fin": -37.16,
+      "estado": "Finalizada",
+      "observaciones": "OF liberada a planta."
+    },
+    {
+      "seguimiento_id": 254,
+      "of_detalle_id": 376,
+      "etapa_id": 2,
+      "empleado_id": 4,
+      "off_inicio": -35.45,
+      "off_fin": -31.18,
+      "estado": "Finalizada",
+      "observaciones": ""
+    },
+    {
+      "seguimiento_id": 255,
+      "of_detalle_id": 376,
+      "etapa_id": 3,
+      "empleado_id": 2,
+      "off_inicio": -28.84,
+      "off_fin": -24.01,
+      "estado": "Finalizada",
+      "observaciones": "Mecanizado en torno CNC 3."
+    },
+    {
+      "seguimiento_id": 256,
+      "of_detalle_id": 376,
+      "etapa_id": 4,
+      "empleado_id": 5,
+      "off_inicio": -23.28,
+      "off_fin": -18.7,
+      "estado": "Finalizada",
+      "observaciones": "Granallado terminado."
+    },
+    {
+      "seguimiento_id": 257,
+      "of_detalle_id": 376,
+      "etapa_id": 5,
+      "empleado_id": 6,
+      "off_inicio": -16.16,
+      "off_fin": -11.34,
+      "estado": "Finalizada",
+      "observaciones": ""
+    },
+    {
+      "seguimiento_id": 258,
+      "of_detalle_id": 376,
+      "etapa_id": 6,
+      "empleado_id": 3,
+      "off_inicio": -9.55,
+      "off_fin": -5.77,
+      "estado": "Finalizada",
+      "observaciones": "Certificado emitido."
+    },
+    {
+      "seguimiento_id": 259,
+      "of_detalle_id": 377,
+      "etapa_id": 1,
+      "empleado_id": 3,
+      "off_inicio": -42.93,
+      "off_fin": -37.39,
+      "estado": "Finalizada",
+      "observaciones": ""
+    },
+    {
+      "seguimiento_id": 260,
+      "of_detalle_id": 377,
+      "etapa_id": 2,
+      "empleado_id": 4,
+      "off_inicio": -35.38,
+      "off_fin": -31.35,
+      "estado": "Finalizada",
+      "observaciones": "Material cortado segun plano."
+    },
+    {
+      "seguimiento_id": 261,
+      "of_detalle_id": 377,
+      "etapa_id": 3,
+      "empleado_id": 2,
+      "off_inicio": -30.09,
+      "off_fin": -24.56,
+      "estado": "Finalizada",
+      "observaciones": ""
+    },
+    {
+      "seguimiento_id": 262,
+      "of_detalle_id": 377,
+      "etapa_id": 4,
+      "empleado_id": 5,
+      "off_inicio": -22.18,
+      "off_fin": -18.17,
+      "estado": "Finalizada",
+      "observaciones": "Tratamiento termico completo."
+    },
+    {
+      "seguimiento_id": 263,
+      "of_detalle_id": 377,
+      "etapa_id": 5,
+      "empleado_id": 6,
+      "off_inicio": -16.58,
+      "off_fin": -12.13,
+      "estado": "Finalizada",
+      "observaciones": "Ensayo PT sin indicaciones."
+    },
+    {
+      "seguimiento_id": 264,
+      "of_detalle_id": 377,
+      "etapa_id": 6,
+      "empleado_id": 3,
+      "off_inicio": -10.5,
+      "off_fin": -5.28,
+      "estado": "Finalizada",
+      "observaciones": "Certificado emitido."
+    },
+    {
+      "seguimiento_id": 265,
+      "of_detalle_id": 378,
+      "etapa_id": 1,
+      "empleado_id": 3,
+      "off_inicio": -42.79,
+      "off_fin": -37.34,
+      "estado": "Finalizada",
+      "observaciones": "OF liberada a planta."
+    },
+    {
+      "seguimiento_id": 266,
+      "of_detalle_id": 378,
+      "etapa_id": 2,
+      "empleado_id": 4,
+      "off_inicio": -35.9,
+      "off_fin": -31.41,
+      "estado": "Finalizada",
+      "observaciones": "Material cortado segun plano."
+    },
+    {
+      "seguimiento_id": 267,
+      "of_detalle_id": 378,
+      "etapa_id": 3,
+      "empleado_id": 2,
+      "off_inicio": -28.88,
+      "off_fin": -24.0,
+      "estado": "Finalizada",
+      "observaciones": "Primera pieza verificada."
+    },
+    {
+      "seguimiento_id": 268,
+      "of_detalle_id": 378,
+      "etapa_id": 4,
+      "empleado_id": 5,
+      "off_inicio": -22.54,
+      "off_fin": -18.27,
+      "estado": "Finalizada",
+      "observaciones": "Tratamiento termico completo."
+    },
+    {
+      "seguimiento_id": 269,
+      "of_detalle_id": 378,
+      "etapa_id": 5,
+      "empleado_id": 6,
+      "off_inicio": -16.82,
+      "off_fin": -11.63,
+      "estado": "Finalizada",
+      "observaciones": "Inspeccion dimensional conforme."
+    },
+    {
+      "seguimiento_id": 270,
+      "of_detalle_id": 378,
+      "etapa_id": 6,
+      "empleado_id": 3,
+      "off_inicio": -10.79,
+      "off_fin": -6.05,
+      "estado": "Finalizada",
+      "observaciones": "Pieza liberada para despacho."
+    },
+    {
+      "seguimiento_id": 271,
+      "of_detalle_id": 379,
+      "etapa_id": 1,
+      "empleado_id": 3,
+      "off_inicio": -3.87,
+      "off_fin": -2.82,
+      "estado": "Finalizada",
+      "observaciones": "Documentacion entregada al sector."
+    },
+    {
+      "seguimiento_id": 272,
+      "of_detalle_id": 379,
+      "etapa_id": 2,
+      "empleado_id": 4,
+      "off_inicio": -2.47,
+      "off_fin": -1.51,
+      "estado": "Finalizada",
+      "observaciones": "Material cortado segun plano."
+    },
+    {
+      "seguimiento_id": 273,
+      "of_detalle_id": 379,
+      "etapa_id": 3,
+      "empleado_id": 2,
+      "off_inicio": -1.27,
+      "off_fin": null,
+      "estado": "En curso",
+      "observaciones": "Primera pieza verificada."
+    },
+    {
+      "seguimiento_id": 274,
+      "of_detalle_id": 380,
+      "etapa_id": 1,
+      "empleado_id": 3,
+      "off_inicio": -3.83,
+      "off_fin": -2.89,
+      "estado": "Finalizada",
+      "observaciones": "OF liberada a planta."
+    },
+    {
+      "seguimiento_id": 275,
+      "of_detalle_id": 380,
+      "etapa_id": 2,
+      "empleado_id": 4,
+      "off_inicio": -2.58,
+      "off_fin": -1.62,
+      "estado": "Finalizada",
+      "observaciones": "Despunte dentro de tolerancia."
+    },
+    {
+      "seguimiento_id": 276,
+      "of_detalle_id": 380,
+      "etapa_id": 3,
+      "empleado_id": 2,
+      "off_inicio": -1.19,
+      "off_fin": -0.09,
+      "estado": "Finalizada",
+      "observaciones": "Cambio de herramienta por desgaste."
+    },
+    {
+      "seguimiento_id": 277,
+      "of_detalle_id": 380,
+      "etapa_id": 4,
+      "empleado_id": 5,
+      "off_inicio": -0.04,
+      "off_fin": null,
+      "estado": "En curso",
+      "observaciones": "Tratamiento termico completo."
+    },
+    {
+      "seguimiento_id": 278,
+      "of_detalle_id": 381,
+      "etapa_id": 1,
+      "empleado_id": 3,
+      "off_inicio": -3.81,
+      "off_fin": -2.8,
+      "estado": "Finalizada",
+      "observaciones": ""
+    },
+    {
+      "seguimiento_id": 279,
+      "of_detalle_id": 381,
+      "etapa_id": 2,
+      "empleado_id": 4,
+      "off_inicio": -2.55,
+      "off_fin": -1.5,
+      "estado": "Finalizada",
+      "observaciones": "Despunte dentro de tolerancia."
+    },
+    {
+      "seguimiento_id": 280,
+      "of_detalle_id": 381,
+      "etapa_id": 3,
+      "empleado_id": 2,
+      "off_inicio": -1.11,
+      "off_fin": -0.18,
+      "estado": "Finalizada",
+      "observaciones": "Mecanizado en torno CNC 3."
+    },
+    {
+      "seguimiento_id": 281,
+      "of_detalle_id": 381,
+      "etapa_id": 4,
+      "empleado_id": 5,
+      "off_inicio": 0.23,
+      "off_fin": null,
+      "estado": "En curso",
+      "observaciones": "Tratamiento termico completo."
+    },
+    {
+      "seguimiento_id": 282,
+      "of_detalle_id": 382,
+      "etapa_id": 1,
+      "empleado_id": 3,
+      "off_inicio": -71.87,
+      "off_fin": -65.71,
+      "estado": "Finalizada",
+      "observaciones": "Documentacion entregada al sector."
+    },
+    {
+      "seguimiento_id": 283,
+      "of_detalle_id": 382,
+      "etapa_id": 2,
+      "empleado_id": 4,
+      "off_inicio": -60.45,
+      "off_fin": -54.7,
+      "estado": "Finalizada",
+      "observaciones": ""
+    },
+    {
+      "seguimiento_id": 284,
+      "of_detalle_id": 382,
+      "etapa_id": 3,
+      "empleado_id": 2,
+      "off_inicio": -52.2,
+      "off_fin": -42.35,
+      "estado": "Finalizada",
+      "observaciones": "Mecanizado en torno CNC 3."
+    },
+    {
+      "seguimiento_id": 285,
+      "of_detalle_id": 382,
+      "etapa_id": 4,
+      "empleado_id": 5,
+      "off_inicio": -41.2,
+      "off_fin": -32.38,
+      "estado": "Finalizada",
+      "observaciones": ""
+    },
+    {
+      "seguimiento_id": 286,
+      "of_detalle_id": 382,
+      "etapa_id": 5,
+      "empleado_id": 6,
+      "off_inicio": -28.03,
+      "off_fin": -20.69,
+      "estado": "Finalizada",
+      "observaciones": "Ensayo PT sin indicaciones."
+    },
+    {
+      "seguimiento_id": 287,
+      "of_detalle_id": 382,
+      "etapa_id": 6,
+      "empleado_id": 3,
+      "off_inicio": -17.4,
+      "off_fin": -8.81,
+      "estado": "Finalizada",
+      "observaciones": ""
+    },
+    {
+      "seguimiento_id": 288,
+      "of_detalle_id": 383,
+      "etapa_id": 1,
+      "empleado_id": 3,
+      "off_inicio": -73.64,
+      "off_fin": -64.8,
+      "estado": "Finalizada",
+      "observaciones": "OF liberada a planta."
+    },
+    {
+      "seguimiento_id": 289,
+      "of_detalle_id": 383,
+      "etapa_id": 2,
+      "empleado_id": 4,
+      "off_inicio": -61.2,
+      "off_fin": -53.39,
+      "estado": "Finalizada",
+      "observaciones": "Material cortado segun plano."
+    },
+    {
+      "seguimiento_id": 290,
+      "of_detalle_id": 383,
+      "etapa_id": 3,
+      "empleado_id": 2,
+      "off_inicio": -50.3,
+      "off_fin": -42.8,
+      "estado": "Finalizada",
+      "observaciones": ""
+    },
+    {
+      "seguimiento_id": 291,
+      "of_detalle_id": 383,
+      "etapa_id": 4,
+      "empleado_id": 5,
+      "off_inicio": -40.22,
+      "off_fin": -30.7,
+      "estado": "Finalizada",
+      "observaciones": "Tratamiento termico completo."
+    },
+    {
+      "seguimiento_id": 292,
+      "of_detalle_id": 383,
+      "etapa_id": 5,
+      "empleado_id": 6,
+      "off_inicio": -28.84,
+      "off_fin": -20.23,
+      "estado": "Finalizada",
+      "observaciones": "Ensayo PT sin indicaciones."
+    },
+    {
+      "seguimiento_id": 293,
+      "of_detalle_id": 383,
+      "etapa_id": 6,
+      "empleado_id": 3,
+      "off_inicio": -15.86,
+      "off_fin": -9.19,
+      "estado": "Finalizada",
+      "observaciones": "Pieza liberada para despacho."
+    },
+    {
+      "seguimiento_id": 294,
+      "of_detalle_id": 384,
+      "etapa_id": 1,
+      "empleado_id": 3,
+      "off_inicio": -12.15,
+      "off_fin": -10.04,
+      "estado": "Finalizada",
+      "observaciones": "Documentacion entregada al sector."
+    },
+    {
+      "seguimiento_id": 295,
+      "of_detalle_id": 384,
+      "etapa_id": 2,
+      "empleado_id": 4,
+      "off_inicio": -9.41,
+      "off_fin": -6.49,
+      "estado": "Finalizada",
+      "observaciones": "Material cortado segun plano."
+    },
+    {
+      "seguimiento_id": 296,
+      "of_detalle_id": 384,
+      "etapa_id": 3,
+      "empleado_id": 2,
+      "off_inicio": -6.15,
+      "off_fin": null,
+      "estado": "En curso",
+      "observaciones": "Cambio de herramienta por desgaste."
+    },
+    {
+      "seguimiento_id": 297,
+      "of_detalle_id": 385,
+      "etapa_id": 1,
+      "empleado_id": 3,
+      "off_inicio": -12.44,
+      "off_fin": -9.05,
+      "estado": "Finalizada",
+      "observaciones": "Documentacion entregada al sector."
+    },
+    {
+      "seguimiento_id": 298,
+      "of_detalle_id": 385,
+      "etapa_id": 2,
+      "empleado_id": 4,
+      "off_inicio": -7.99,
+      "off_fin": null,
+      "estado": "En curso",
+      "observaciones": ""
+    },
+    {
+      "seguimiento_id": 299,
+      "of_detalle_id": 386,
+      "etapa_id": 1,
+      "empleado_id": 3,
+      "off_inicio": -12.05,
+      "off_fin": -9.78,
+      "estado": "Finalizada",
+      "observaciones": ""
+    },
+    {
+      "seguimiento_id": 300,
+      "of_detalle_id": 386,
+      "etapa_id": 2,
+      "empleado_id": 4,
+      "off_inicio": -9.17,
+      "off_fin": -6.75,
+      "estado": "Finalizada",
+      "observaciones": ""
+    },
+    {
+      "seguimiento_id": 301,
+      "of_detalle_id": 386,
+      "etapa_id": 3,
+      "empleado_id": 2,
+      "off_inicio": -6.2,
+      "off_fin": null,
+      "estado": "En curso",
+      "observaciones": "Primera pieza verificada."
+    },
+    {
+      "seguimiento_id": 302,
+      "of_detalle_id": 387,
+      "etapa_id": 1,
+      "empleado_id": 3,
+      "off_inicio": -12.29,
+      "off_fin": -9.3,
+      "estado": "Finalizada",
+      "observaciones": "Documentacion entregada al sector."
+    },
+    {
+      "seguimiento_id": 303,
+      "of_detalle_id": 387,
+      "etapa_id": 2,
+      "empleado_id": 4,
+      "off_inicio": -7.21,
+      "off_fin": null,
+      "estado": "En curso",
+      "observaciones": ""
+    }
+  ]
+}

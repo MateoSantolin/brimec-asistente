@@ -1,0 +1,881 @@
+{
+  "_tabla": "PEDIDO + PEDIDO_DETALLE",
+  "_nota": "Datos SINTETICOS. Los campos con prefijo 'off_' son OFFSETS EN DIAS respecto del momento de ejecucion (0 = ahora, negativo = pasado). Se convierten a fechas reales en src/data/seed.ts para que la demo no envejezca. cotizacion_id es null: COTIZACION esta fuera del alcance del MVP.",
+  "pedidos": [
+    {
+      "pedido_id": 1001,
+      "cliente_id": 1,
+      "cotizacion_id": null,
+      "numero_orden_cliente": "OC-23261",
+      "off_fecha_confirmacion": -51,
+      "off_fecha_entrega_pactada": 19,
+      "estado": "En produccion"
+    },
+    {
+      "pedido_id": 1002,
+      "cliente_id": 2,
+      "cotizacion_id": null,
+      "numero_orden_cliente": "OC-58310",
+      "off_fecha_confirmacion": -20,
+      "off_fecha_entrega_pactada": 82,
+      "estado": "En produccion"
+    },
+    {
+      "pedido_id": 1003,
+      "cliente_id": 1,
+      "cotizacion_id": null,
+      "numero_orden_cliente": "OC-63388",
+      "off_fecha_confirmacion": -66,
+      "off_fecha_entrega_pactada": 4,
+      "estado": "En produccion"
+    },
+    {
+      "pedido_id": 1004,
+      "cliente_id": 3,
+      "cotizacion_id": null,
+      "numero_orden_cliente": "OC-86979",
+      "off_fecha_confirmacion": -44,
+      "off_fecha_entrega_pactada": 41,
+      "estado": "En produccion"
+    },
+    {
+      "pedido_id": 1005,
+      "cliente_id": 4,
+      "cotizacion_id": null,
+      "numero_orden_cliente": "OC-68207",
+      "off_fecha_confirmacion": -21,
+      "off_fecha_entrega_pactada": 92,
+      "estado": "En produccion"
+    },
+    {
+      "pedido_id": 1006,
+      "cliente_id": 1,
+      "cotizacion_id": null,
+      "numero_orden_cliente": "OC-61802",
+      "off_fecha_confirmacion": -65,
+      "off_fecha_entrega_pactada": 15,
+      "estado": "En produccion"
+    },
+    {
+      "pedido_id": 1007,
+      "cliente_id": 2,
+      "cotizacion_id": null,
+      "numero_orden_cliente": "OC-68906",
+      "off_fecha_confirmacion": -59,
+      "off_fecha_entrega_pactada": 52,
+      "estado": "En produccion"
+    },
+    {
+      "pedido_id": 1008,
+      "cliente_id": 6,
+      "cotizacion_id": null,
+      "numero_orden_cliente": "OC-77514",
+      "off_fecha_confirmacion": -88,
+      "off_fecha_entrega_pactada": 6,
+      "estado": "En produccion"
+    },
+    {
+      "pedido_id": 1009,
+      "cliente_id": 7,
+      "cotizacion_id": null,
+      "numero_orden_cliente": "OC-52512",
+      "off_fecha_confirmacion": -44,
+      "off_fecha_entrega_pactada": 83,
+      "estado": "En produccion"
+    },
+    {
+      "pedido_id": 1010,
+      "cliente_id": 1,
+      "cotizacion_id": null,
+      "numero_orden_cliente": "OC-99253",
+      "off_fecha_confirmacion": -73,
+      "off_fecha_entrega_pactada": 63,
+      "estado": "En produccion"
+    },
+    {
+      "pedido_id": 1011,
+      "cliente_id": 8,
+      "cotizacion_id": null,
+      "numero_orden_cliente": "OC-59749",
+      "off_fecha_confirmacion": -9,
+      "off_fecha_entrega_pactada": 52,
+      "estado": "En produccion"
+    },
+    {
+      "pedido_id": 1012,
+      "cliente_id": 4,
+      "cotizacion_id": null,
+      "numero_orden_cliente": "OC-52382",
+      "off_fecha_confirmacion": -73,
+      "off_fecha_entrega_pactada": 11,
+      "estado": "Abierto"
+    },
+    {
+      "pedido_id": 1013,
+      "cliente_id": 9,
+      "cotizacion_id": null,
+      "numero_orden_cliente": "OC-66967",
+      "off_fecha_confirmacion": -97,
+      "off_fecha_entrega_pactada": -5,
+      "estado": "En produccion"
+    },
+    {
+      "pedido_id": 1014,
+      "cliente_id": 2,
+      "cotizacion_id": null,
+      "numero_orden_cliente": "OC-83361",
+      "off_fecha_confirmacion": -22,
+      "off_fecha_entrega_pactada": 37,
+      "estado": "En produccion"
+    },
+    {
+      "pedido_id": 1015,
+      "cliente_id": 10,
+      "cotizacion_id": null,
+      "numero_orden_cliente": "OC-58880",
+      "off_fecha_confirmacion": -49,
+      "off_fecha_entrega_pactada": 34,
+      "estado": "En produccion"
+    },
+    {
+      "pedido_id": 1016,
+      "cliente_id": 3,
+      "cotizacion_id": null,
+      "numero_orden_cliente": "OC-65280",
+      "off_fecha_confirmacion": -11,
+      "off_fecha_entrega_pactada": 39,
+      "estado": "En produccion"
+    },
+    {
+      "pedido_id": 1017,
+      "cliente_id": 7,
+      "cotizacion_id": null,
+      "numero_orden_cliente": "OC-93038",
+      "off_fecha_confirmacion": -54,
+      "off_fecha_entrega_pactada": -4,
+      "estado": "Cerrado"
+    },
+    {
+      "pedido_id": 1018,
+      "cliente_id": 5,
+      "cotizacion_id": null,
+      "numero_orden_cliente": "OC-38084",
+      "off_fecha_confirmacion": -9,
+      "off_fecha_entrega_pactada": 47,
+      "estado": "En produccion"
+    },
+    {
+      "pedido_id": 1019,
+      "cliente_id": 10,
+      "cotizacion_id": null,
+      "numero_orden_cliente": "OC-48880",
+      "off_fecha_confirmacion": -79,
+      "off_fecha_entrega_pactada": -16,
+      "estado": "Entregado"
+    },
+    {
+      "pedido_id": 1020,
+      "cliente_id": 6,
+      "cotizacion_id": null,
+      "numero_orden_cliente": "OC-71949",
+      "off_fecha_confirmacion": -20,
+      "off_fecha_entrega_pactada": 21,
+      "estado": "En produccion"
+    }
+  ],
+  "pedido_detalle": [
+    {
+      "pedido_detalle_id": 5001,
+      "pedido_id": 1001,
+      "articulo_id": 3,
+      "cantidad": 4,
+      "especificacion_tecnica": "Identificacion por bajo relieve con numero de colada.",
+      "unidad_medida": "un",
+      "precio_unitario": 1329000
+    },
+    {
+      "pedido_detalle_id": 5002,
+      "pedido_id": 1001,
+      "articulo_id": 5,
+      "cantidad": 24,
+      "especificacion_tecnica": "Certificado de colada EN 10204 3.1 obligatorio.",
+      "unidad_medida": "un",
+      "precio_unitario": 1027000
+    },
+    {
+      "pedido_detalle_id": 5003,
+      "pedido_id": 1001,
+      "articulo_id": 6,
+      "cantidad": 12,
+      "especificacion_tecnica": "",
+      "unidad_medida": "un",
+      "precio_unitario": 1086000
+    },
+    {
+      "pedido_detalle_id": 5004,
+      "pedido_id": 1001,
+      "articulo_id": 8,
+      "cantidad": 2,
+      "especificacion_tecnica": "",
+      "unidad_medida": "un",
+      "precio_unitario": 1423000
+    },
+    {
+      "pedido_detalle_id": 5005,
+      "pedido_id": 1002,
+      "articulo_id": 13,
+      "cantidad": 1,
+      "especificacion_tecnica": "Pintura epoxi segun esquema del cliente.",
+      "unidad_medida": "un",
+      "precio_unitario": 1657000
+    },
+    {
+      "pedido_detalle_id": 5006,
+      "pedido_id": 1002,
+      "articulo_id": 14,
+      "cantidad": 8,
+      "especificacion_tecnica": "",
+      "unidad_medida": "un",
+      "precio_unitario": 1250000
+    },
+    {
+      "pedido_detalle_id": 5007,
+      "pedido_id": 1002,
+      "articulo_id": 15,
+      "cantidad": 24,
+      "especificacion_tecnica": "Tolerancia dimensional segun plano rev. B.",
+      "unidad_medida": "un",
+      "precio_unitario": 810000
+    },
+    {
+      "pedido_detalle_id": 5008,
+      "pedido_id": 1002,
+      "articulo_id": 16,
+      "cantidad": 20,
+      "especificacion_tecnica": "Radiografiado 100% de costuras.",
+      "unidad_medida": "un",
+      "precio_unitario": 1871000
+    },
+    {
+      "pedido_detalle_id": 5009,
+      "pedido_id": 1002,
+      "articulo_id": 17,
+      "cantidad": 9,
+      "especificacion_tecnica": "Tolerancia dimensional segun plano rev. B.",
+      "unidad_medida": "un",
+      "precio_unitario": 591000
+    },
+    {
+      "pedido_detalle_id": 5010,
+      "pedido_id": 1003,
+      "articulo_id": 1,
+      "cantidad": 1,
+      "especificacion_tecnica": "",
+      "unidad_medida": "un",
+      "precio_unitario": 1498000
+    },
+    {
+      "pedido_detalle_id": 5011,
+      "pedido_id": 1003,
+      "articulo_id": 4,
+      "cantidad": 6,
+      "especificacion_tecnica": "",
+      "unidad_medida": "un",
+      "precio_unitario": 2030000
+    },
+    {
+      "pedido_detalle_id": 5012,
+      "pedido_id": 1003,
+      "articulo_id": 5,
+      "cantidad": 24,
+      "especificacion_tecnica": "Identificacion por bajo relieve con numero de colada.",
+      "unidad_medida": "un",
+      "precio_unitario": 1677000
+    },
+    {
+      "pedido_detalle_id": 5013,
+      "pedido_id": 1003,
+      "articulo_id": 6,
+      "cantidad": 20,
+      "especificacion_tecnica": "Certificado de colada EN 10204 3.1 obligatorio.",
+      "unidad_medida": "un",
+      "precio_unitario": 2131000
+    },
+    {
+      "pedido_detalle_id": 5014,
+      "pedido_id": 1003,
+      "articulo_id": 8,
+      "cantidad": 4,
+      "especificacion_tecnica": "Acabado superficial Ra 3.2 um.",
+      "unidad_medida": "un",
+      "precio_unitario": 1939000
+    },
+    {
+      "pedido_detalle_id": 5015,
+      "pedido_id": 1004,
+      "articulo_id": 1,
+      "cantidad": 30,
+      "especificacion_tecnica": "Radiografiado 100% de costuras.",
+      "unidad_medida": "un",
+      "precio_unitario": 1563000
+    },
+    {
+      "pedido_detalle_id": 5016,
+      "pedido_id": 1004,
+      "articulo_id": 2,
+      "cantidad": 20,
+      "especificacion_tecnica": "Identificacion por bajo relieve con numero de colada.",
+      "unidad_medida": "un",
+      "precio_unitario": 406000
+    },
+    {
+      "pedido_detalle_id": 5017,
+      "pedido_id": 1004,
+      "articulo_id": 3,
+      "cantidad": 6,
+      "especificacion_tecnica": "Tolerancia dimensional segun plano rev. B.",
+      "unidad_medida": "un",
+      "precio_unitario": 2397000
+    },
+    {
+      "pedido_detalle_id": 5018,
+      "pedido_id": 1004,
+      "articulo_id": 4,
+      "cantidad": 4,
+      "especificacion_tecnica": "Pintura epoxi segun esquema del cliente.",
+      "unidad_medida": "un",
+      "precio_unitario": 1305000
+    },
+    {
+      "pedido_detalle_id": 5019,
+      "pedido_id": 1004,
+      "articulo_id": 8,
+      "cantidad": 12,
+      "especificacion_tecnica": "",
+      "unidad_medida": "un",
+      "precio_unitario": 110000
+    },
+    {
+      "pedido_detalle_id": 5020,
+      "pedido_id": 1004,
+      "articulo_id": 10,
+      "cantidad": 24,
+      "especificacion_tecnica": "Pintura epoxi segun esquema del cliente.",
+      "unidad_medida": "un",
+      "precio_unitario": 704000
+    },
+    {
+      "pedido_detalle_id": 5021,
+      "pedido_id": 1005,
+      "articulo_id": 11,
+      "cantidad": 2,
+      "especificacion_tecnica": "Tolerancia dimensional segun plano rev. B.",
+      "unidad_medida": "un",
+      "precio_unitario": 696000
+    },
+    {
+      "pedido_detalle_id": 5022,
+      "pedido_id": 1005,
+      "articulo_id": 12,
+      "cantidad": 1,
+      "especificacion_tecnica": "Ensayo de liquidos penetrantes segun pliego del cliente.",
+      "unidad_medida": "un",
+      "precio_unitario": 1971000
+    },
+    {
+      "pedido_detalle_id": 5023,
+      "pedido_id": 1005,
+      "articulo_id": 13,
+      "cantidad": 8,
+      "especificacion_tecnica": "Pintura epoxi segun esquema del cliente.",
+      "unidad_medida": "un",
+      "precio_unitario": 606000
+    },
+    {
+      "pedido_detalle_id": 5024,
+      "pedido_id": 1005,
+      "articulo_id": 16,
+      "cantidad": 32,
+      "especificacion_tecnica": "Radiografiado 100% de costuras.",
+      "unidad_medida": "un",
+      "precio_unitario": 264000
+    },
+    {
+      "pedido_detalle_id": 5025,
+      "pedido_id": 1005,
+      "articulo_id": 20,
+      "cantidad": 6,
+      "especificacion_tecnica": "Acabado superficial Ra 3.2 um.",
+      "unidad_medida": "un",
+      "precio_unitario": 445000
+    },
+    {
+      "pedido_detalle_id": 5026,
+      "pedido_id": 1006,
+      "articulo_id": 1,
+      "cantidad": 12,
+      "especificacion_tecnica": "Certificado de colada EN 10204 3.1 obligatorio.",
+      "unidad_medida": "un",
+      "precio_unitario": 933000
+    },
+    {
+      "pedido_detalle_id": 5027,
+      "pedido_id": 1006,
+      "articulo_id": 2,
+      "cantidad": 20,
+      "especificacion_tecnica": "",
+      "unidad_medida": "un",
+      "precio_unitario": 391000
+    },
+    {
+      "pedido_detalle_id": 5028,
+      "pedido_id": 1006,
+      "articulo_id": 4,
+      "cantidad": 4,
+      "especificacion_tecnica": "Tolerancia dimensional segun plano rev. B.",
+      "unidad_medida": "un",
+      "precio_unitario": 2251000
+    },
+    {
+      "pedido_detalle_id": 5029,
+      "pedido_id": 1006,
+      "articulo_id": 5,
+      "cantidad": 1,
+      "especificacion_tecnica": "Acabado superficial Ra 3.2 um.",
+      "unidad_medida": "un",
+      "precio_unitario": 889000
+    },
+    {
+      "pedido_detalle_id": 5030,
+      "pedido_id": 1006,
+      "articulo_id": 19,
+      "cantidad": 12,
+      "especificacion_tecnica": "",
+      "unidad_medida": "un",
+      "precio_unitario": 2133000
+    },
+    {
+      "pedido_detalle_id": 5031,
+      "pedido_id": 1007,
+      "articulo_id": 11,
+      "cantidad": 6,
+      "especificacion_tecnica": "Pintura epoxi segun esquema del cliente.",
+      "unidad_medida": "un",
+      "precio_unitario": 880000
+    },
+    {
+      "pedido_detalle_id": 5032,
+      "pedido_id": 1007,
+      "articulo_id": 12,
+      "cantidad": 24,
+      "especificacion_tecnica": "",
+      "unidad_medida": "un",
+      "precio_unitario": 1794000
+    },
+    {
+      "pedido_detalle_id": 5033,
+      "pedido_id": 1007,
+      "articulo_id": 13,
+      "cantidad": 12,
+      "especificacion_tecnica": "",
+      "unidad_medida": "un",
+      "precio_unitario": 421000
+    },
+    {
+      "pedido_detalle_id": 5034,
+      "pedido_id": 1007,
+      "articulo_id": 14,
+      "cantidad": 20,
+      "especificacion_tecnica": "Radiografiado 100% de costuras.",
+      "unidad_medida": "un",
+      "precio_unitario": 1218000
+    },
+    {
+      "pedido_detalle_id": 5035,
+      "pedido_id": 1007,
+      "articulo_id": 16,
+      "cantidad": 26,
+      "especificacion_tecnica": "Radiografiado 100% de costuras.",
+      "unidad_medida": "un",
+      "precio_unitario": 1822000
+    },
+    {
+      "pedido_detalle_id": 5036,
+      "pedido_id": 1008,
+      "articulo_id": 7,
+      "cantidad": 32,
+      "especificacion_tecnica": "Identificacion por bajo relieve con numero de colada.",
+      "unidad_medida": "un",
+      "precio_unitario": 1956000
+    },
+    {
+      "pedido_detalle_id": 5037,
+      "pedido_id": 1008,
+      "articulo_id": 9,
+      "cantidad": 30,
+      "especificacion_tecnica": "Certificado de colada EN 10204 3.1 obligatorio.",
+      "unidad_medida": "un",
+      "precio_unitario": 138000
+    },
+    {
+      "pedido_detalle_id": 5038,
+      "pedido_id": 1009,
+      "articulo_id": 1,
+      "cantidad": 8,
+      "especificacion_tecnica": "Identificacion por bajo relieve con numero de colada.",
+      "unidad_medida": "un",
+      "precio_unitario": 1482000
+    },
+    {
+      "pedido_detalle_id": 5039,
+      "pedido_id": 1009,
+      "articulo_id": 9,
+      "cantidad": 2,
+      "especificacion_tecnica": "",
+      "unidad_medida": "un",
+      "precio_unitario": 681000
+    },
+    {
+      "pedido_detalle_id": 5040,
+      "pedido_id": 1009,
+      "articulo_id": 10,
+      "cantidad": 1,
+      "especificacion_tecnica": "Ensayo de liquidos penetrantes segun pliego del cliente.",
+      "unidad_medida": "un",
+      "precio_unitario": 1323000
+    },
+    {
+      "pedido_detalle_id": 5041,
+      "pedido_id": 1009,
+      "articulo_id": 17,
+      "cantidad": 6,
+      "especificacion_tecnica": "Ensayo de liquidos penetrantes segun pliego del cliente.",
+      "unidad_medida": "un",
+      "precio_unitario": 1768000
+    },
+    {
+      "pedido_detalle_id": 5042,
+      "pedido_id": 1010,
+      "articulo_id": 2,
+      "cantidad": 24,
+      "especificacion_tecnica": "",
+      "unidad_medida": "un",
+      "precio_unitario": 169000
+    },
+    {
+      "pedido_detalle_id": 5043,
+      "pedido_id": 1010,
+      "articulo_id": 6,
+      "cantidad": 24,
+      "especificacion_tecnica": "Acabado superficial Ra 3.2 um.",
+      "unidad_medida": "un",
+      "precio_unitario": 2287000
+    },
+    {
+      "pedido_detalle_id": 5044,
+      "pedido_id": 1010,
+      "articulo_id": 7,
+      "cantidad": 2,
+      "especificacion_tecnica": "Radiografiado 100% de costuras.",
+      "unidad_medida": "un",
+      "precio_unitario": 2228000
+    },
+    {
+      "pedido_detalle_id": 5045,
+      "pedido_id": 1010,
+      "articulo_id": 8,
+      "cantidad": 12,
+      "especificacion_tecnica": "",
+      "unidad_medida": "un",
+      "precio_unitario": 2154000
+    },
+    {
+      "pedido_detalle_id": 5046,
+      "pedido_id": 1010,
+      "articulo_id": 9,
+      "cantidad": 8,
+      "especificacion_tecnica": "Ensayo de liquidos penetrantes segun pliego del cliente.",
+      "unidad_medida": "un",
+      "precio_unitario": 2151000
+    },
+    {
+      "pedido_detalle_id": 5047,
+      "pedido_id": 1010,
+      "articulo_id": 10,
+      "cantidad": 20,
+      "especificacion_tecnica": "Ensayo de liquidos penetrantes segun pliego del cliente.",
+      "unidad_medida": "un",
+      "precio_unitario": 1002000
+    },
+    {
+      "pedido_detalle_id": 5048,
+      "pedido_id": 1011,
+      "articulo_id": 7,
+      "cantidad": 8,
+      "especificacion_tecnica": "Pintura epoxi segun esquema del cliente.",
+      "unidad_medida": "un",
+      "precio_unitario": 1498000
+    },
+    {
+      "pedido_detalle_id": 5049,
+      "pedido_id": 1011,
+      "articulo_id": 12,
+      "cantidad": 12,
+      "especificacion_tecnica": "Tolerancia dimensional segun plano rev. B.",
+      "unidad_medida": "un",
+      "precio_unitario": 876000
+    },
+    {
+      "pedido_detalle_id": 5050,
+      "pedido_id": 1011,
+      "articulo_id": 13,
+      "cantidad": 20,
+      "especificacion_tecnica": "Ensayo de liquidos penetrantes segun pliego del cliente.",
+      "unidad_medida": "un",
+      "precio_unitario": 1349000
+    },
+    {
+      "pedido_detalle_id": 5051,
+      "pedido_id": 1011,
+      "articulo_id": 17,
+      "cantidad": 8,
+      "especificacion_tecnica": "Certificado de colada EN 10204 3.1 obligatorio.",
+      "unidad_medida": "un",
+      "precio_unitario": 1168000
+    },
+    {
+      "pedido_detalle_id": 5052,
+      "pedido_id": 1012,
+      "articulo_id": 11,
+      "cantidad": 6,
+      "especificacion_tecnica": "",
+      "unidad_medida": "un",
+      "precio_unitario": 917000
+    },
+    {
+      "pedido_detalle_id": 5053,
+      "pedido_id": 1012,
+      "articulo_id": 13,
+      "cantidad": 12,
+      "especificacion_tecnica": "Tolerancia dimensional segun plano rev. B.",
+      "unidad_medida": "un",
+      "precio_unitario": 1104000
+    },
+    {
+      "pedido_detalle_id": 5054,
+      "pedido_id": 1013,
+      "articulo_id": 5,
+      "cantidad": 12,
+      "especificacion_tecnica": "Identificacion por bajo relieve con numero de colada.",
+      "unidad_medida": "un",
+      "precio_unitario": 1737000
+    },
+    {
+      "pedido_detalle_id": 5055,
+      "pedido_id": 1013,
+      "articulo_id": 11,
+      "cantidad": 1,
+      "especificacion_tecnica": "Acabado superficial Ra 3.2 um.",
+      "unidad_medida": "un",
+      "precio_unitario": 2248000
+    },
+    {
+      "pedido_detalle_id": 5056,
+      "pedido_id": 1013,
+      "articulo_id": 12,
+      "cantidad": 6,
+      "especificacion_tecnica": "Certificado de colada EN 10204 3.1 obligatorio.",
+      "unidad_medida": "un",
+      "precio_unitario": 1849000
+    },
+    {
+      "pedido_detalle_id": 5057,
+      "pedido_id": 1013,
+      "articulo_id": 16,
+      "cantidad": 1,
+      "especificacion_tecnica": "Tolerancia dimensional segun plano rev. B.",
+      "unidad_medida": "un",
+      "precio_unitario": 419000
+    },
+    {
+      "pedido_detalle_id": 5058,
+      "pedido_id": 1014,
+      "articulo_id": 11,
+      "cantidad": 4,
+      "especificacion_tecnica": "",
+      "unidad_medida": "un",
+      "precio_unitario": 2293000
+    },
+    {
+      "pedido_detalle_id": 5059,
+      "pedido_id": 1014,
+      "articulo_id": 15,
+      "cantidad": 8,
+      "especificacion_tecnica": "Tolerancia dimensional segun plano rev. B.",
+      "unidad_medida": "un",
+      "precio_unitario": 262000
+    },
+    {
+      "pedido_detalle_id": 5060,
+      "pedido_id": 1014,
+      "articulo_id": 17,
+      "cantidad": 24,
+      "especificacion_tecnica": "",
+      "unidad_medida": "un",
+      "precio_unitario": 1733000
+    },
+    {
+      "pedido_detalle_id": 5061,
+      "pedido_id": 1015,
+      "articulo_id": 3,
+      "cantidad": 1,
+      "especificacion_tecnica": "Ensayo de liquidos penetrantes segun pliego del cliente.",
+      "unidad_medida": "un",
+      "precio_unitario": 1101000
+    },
+    {
+      "pedido_detalle_id": 5062,
+      "pedido_id": 1015,
+      "articulo_id": 6,
+      "cantidad": 2,
+      "especificacion_tecnica": "Certificado de colada EN 10204 3.1 obligatorio.",
+      "unidad_medida": "un",
+      "precio_unitario": 361000
+    },
+    {
+      "pedido_detalle_id": 5063,
+      "pedido_id": 1016,
+      "articulo_id": 2,
+      "cantidad": 12,
+      "especificacion_tecnica": "Tolerancia dimensional segun plano rev. B.",
+      "unidad_medida": "un",
+      "precio_unitario": 2393000
+    },
+    {
+      "pedido_detalle_id": 5064,
+      "pedido_id": 1016,
+      "articulo_id": 4,
+      "cantidad": 6,
+      "especificacion_tecnica": "",
+      "unidad_medida": "un",
+      "precio_unitario": 831000
+    },
+    {
+      "pedido_detalle_id": 5065,
+      "pedido_id": 1017,
+      "articulo_id": 2,
+      "cantidad": 6,
+      "especificacion_tecnica": "Radiografiado 100% de costuras.",
+      "unidad_medida": "un",
+      "precio_unitario": 636000
+    },
+    {
+      "pedido_detalle_id": 5066,
+      "pedido_id": 1017,
+      "articulo_id": 3,
+      "cantidad": 6,
+      "especificacion_tecnica": "Acabado superficial Ra 3.2 um.",
+      "unidad_medida": "un",
+      "precio_unitario": 1472000
+    },
+    {
+      "pedido_detalle_id": 5067,
+      "pedido_id": 1017,
+      "articulo_id": 10,
+      "cantidad": 8,
+      "especificacion_tecnica": "Acabado superficial Ra 3.2 um.",
+      "unidad_medida": "un",
+      "precio_unitario": 2059000
+    },
+    {
+      "pedido_detalle_id": 5068,
+      "pedido_id": 1017,
+      "articulo_id": 17,
+      "cantidad": 8,
+      "especificacion_tecnica": "Certificado de colada EN 10204 3.1 obligatorio.",
+      "unidad_medida": "un",
+      "precio_unitario": 542000
+    },
+    {
+      "pedido_detalle_id": 5069,
+      "pedido_id": 1018,
+      "articulo_id": 3,
+      "cantidad": 20,
+      "especificacion_tecnica": "Tolerancia dimensional segun plano rev. B.",
+      "unidad_medida": "un",
+      "precio_unitario": 1735000
+    },
+    {
+      "pedido_detalle_id": 5070,
+      "pedido_id": 1018,
+      "articulo_id": 18,
+      "cantidad": 1,
+      "especificacion_tecnica": "",
+      "unidad_medida": "un",
+      "precio_unitario": 102000
+    },
+    {
+      "pedido_detalle_id": 5071,
+      "pedido_id": 1018,
+      "articulo_id": 19,
+      "cantidad": 8,
+      "especificacion_tecnica": "Pintura epoxi segun esquema del cliente.",
+      "unidad_medida": "un",
+      "precio_unitario": 883000
+    },
+    {
+      "pedido_detalle_id": 5072,
+      "pedido_id": 1019,
+      "articulo_id": 2,
+      "cantidad": 20,
+      "especificacion_tecnica": "Identificacion por bajo relieve con numero de colada.",
+      "unidad_medida": "un",
+      "precio_unitario": 2147000
+    },
+    {
+      "pedido_detalle_id": 5073,
+      "pedido_id": 1019,
+      "articulo_id": 9,
+      "cantidad": 8,
+      "especificacion_tecnica": "Identificacion por bajo relieve con numero de colada.",
+      "unidad_medida": "un",
+      "precio_unitario": 1802000
+    },
+    {
+      "pedido_detalle_id": 5074,
+      "pedido_id": 1020,
+      "articulo_id": 7,
+      "cantidad": 2,
+      "especificacion_tecnica": "Ensayo de liquidos penetrantes segun pliego del cliente.",
+      "unidad_medida": "un",
+      "precio_unitario": 1866000
+    },
+    {
+      "pedido_detalle_id": 5075,
+      "pedido_id": 1020,
+      "articulo_id": 8,
+      "cantidad": 1,
+      "especificacion_tecnica": "Identificacion por bajo relieve con numero de colada.",
+      "unidad_medida": "un",
+      "precio_unitario": 2064000
+    },
+    {
+      "pedido_detalle_id": 5076,
+      "pedido_id": 1020,
+      "articulo_id": 9,
+      "cantidad": 12,
+      "especificacion_tecnica": "Tolerancia dimensional segun plano rev. B.",
+      "unidad_medida": "un",
+      "precio_unitario": 624000
+    },
+    {
+      "pedido_detalle_id": 5077,
+      "pedido_id": 1020,
+      "articulo_id": 10,
+      "cantidad": 24,
+      "especificacion_tecnica": "Identificacion por bajo relieve con numero de colada.",
+      "unidad_medida": "un",
+      "precio_unitario": 495000
+    }
+  ]
+}

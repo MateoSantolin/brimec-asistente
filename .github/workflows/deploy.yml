@@ -1,0 +1,68 @@
+# Publica la demo en GitHub Pages en cada push a main.
+#
+# IMPORTANTE: este archivo tiene que quedar en  <raiz-del-repo>/.github/workflows/deploy.yml
+#
+#   - Si creaste el repositorio DESDE la carpeta brimec-asistente, ya esta en su lugar
+#     y no hay que tocar nada.
+#   - Si el repositorio abarca todo el TP, movelo a la raiz del repo y cambia APP_DIR
+#     por la ruta de la app, por ejemplo:  templates/ia/brimec-asistente
+#
+# En Settings -> Pages, elegir Source: "GitHub Actions".
+
+name: Publicar demo en GitHub Pages
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch: # permite lanzarlo a mano desde la pestaña Actions
+
+env:
+  APP_DIR: .
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+# Si se empujan dos commits seguidos, cancela el despliegue viejo.
+concurrency:
+  group: pages
+  cancel-in-progress: true
+
+jobs:
+  construir:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: npm
+          cache-dependency-path: ${{ env.APP_DIR }}/package-lock.json
+
+      - name: Instalar dependencias
+        working-directory: ${{ env.APP_DIR }}
+        run: npm ci
+
+      - name: Correr el banco de pruebas
+        working-directory: ${{ env.APP_DIR }}
+        run: npm run probar
+
+      - name: Compilar
+        working-directory: ${{ env.APP_DIR }}
+        run: npm run build
+
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: ${{ env.APP_DIR }}/dist
+
+  publicar:
+    needs: construir
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.despliegue.outputs.page_url }}
+    steps:
+      - id: despliegue
+        uses: actions/deploy-pages@v4

@@ -1,0 +1,126 @@
+{
+  "_tabla": "CLIENTE",
+  "_nota": "Datos SINTETICOS. Razones sociales ficticias. Los sectores y provincias replican los mercados que BRIMEC atiende segun brimec.com.ar (Oil & Gas, Mineria, Nuclear, Petroquimica, Alimenticia, Siderurgia). Ninguna corresponde a un cliente real.",
+  "clientes": [
+    {
+      "cliente_id": 1,
+      "razon_social": "Petrosur Energia S.A.",
+      "cuit": "30-71045821-4",
+      "domicilio": "Ruta 7 Km 12, Parque Industrial",
+      "localidad": "Neuquen",
+      "provincia": "Neuquen",
+      "telefono": "+54 299 441-2200",
+      "email": "compras@petrosur.example",
+      "condicion_iva": "Responsable Inscripto",
+      "estado": "Activo"
+    },
+    {
+      "cliente_id": 2,
+      "razon_social": "Minera Cerro Blanco S.A.",
+      "cuit": "30-70988412-7",
+      "domicilio": "Av. Libertador 3450",
+      "localidad": "San Juan",
+      "provincia": "San Juan",
+      "telefono": "+54 264 422-8810",
+      "email": "abastecimiento@cerroblanco.example",
+      "condicion_iva": "Responsable Inscripto",
+      "estado": "Activo"
+    },
+    {
+      "cliente_id": 3,
+      "razon_social": "Austral Petroquimica S.R.L.",
+      "cuit": "33-71120334-9",
+      "domicilio": "Camino La Carrindanga Km 7",
+      "localidad": "Bahia Blanca",
+      "provincia": "Buenos Aires",
+      "telefono": "+54 291 455-1270",
+      "email": "srobledo@australpq.example",
+      "condicion_iva": "Responsable Inscripto",
+      "estado": "Activo"
+    },
+    {
+      "cliente_id": 4,
+      "razon_social": "Siderar del Plata S.A.",
+      "cuit": "30-70551203-1",
+      "domicilio": "Av. Savio 2000",
+      "localidad": "San Nicolas",
+      "provincia": "Buenos Aires",
+      "telefono": "+54 336 442-0099",
+      "email": "mantenimiento@siderardelplata.example",
+      "condicion_iva": "Responsable Inscripto",
+      "estado": "Activo"
+    },
+    {
+      "cliente_id": 5,
+      "razon_social": "Nucleoar Ingenieria S.A.",
+      "cuit": "30-71233875-2",
+      "domicilio": "Presbitero Gonzalez y Aragon 15",
+      "localidad": "Ezeiza",
+      "provincia": "Buenos Aires",
+      "telefono": "+54 11 4480-7700",
+      "email": "proveedores@nucleoar.example",
+      "condicion_iva": "Responsable Inscripto",
+      "estado": "Activo"
+    },
+    {
+      "cliente_id": 6,
+      "razon_social": "Alimentos del Litoral S.A.",
+      "cuit": "30-70811265-5",
+      "domicilio": "Ruta 11 Km 475",
+      "localidad": "Santa Fe",
+      "provincia": "Santa Fe",
+      "telefono": "+54 342 455-6611",
+      "email": "compras@aldelitoral.example",
+      "condicion_iva": "Responsable Inscripto",
+      "estado": "Activo"
+    },
+    {
+      "cliente_id": 7,
+      "razon_social": "Vaca Muerta Servicios S.A.",
+      "cuit": "30-71402118-6",
+      "domicilio": "Parque Industrial Anelo, Lote 42",
+      "localidad": "Anelo",
+      "provincia": "Neuquen",
+      "telefono": "+54 299 490-3344",
+      "email": "logistica@vmservicios.example",
+      "condicion_iva": "Responsable Inscripto",
+      "estado": "Activo"
+    },
+    {
+      "cliente_id": 8,
+      "razon_social": "Termo Industrial Andina S.R.L.",
+      "cuit": "33-71088907-8",
+      "domicilio": "Acceso Este 2800",
+      "localidad": "Guaymallen",
+      "provincia": "Mendoza",
+      "telefono": "+54 261 423-5590",
+      "email": "cferreyra@termoandina.example",
+      "condicion_iva": "Responsable Inscripto",
+      "estado": "Activo"
+    },
+    {
+      "cliente_id": 9,
+      "razon_social": "Metalurgica Pampeana S.A.",
+      "cuit": "30-70667432-0",
+      "domicilio": "Circunvalacion y Ruta 9",
+      "localidad": "Rosario",
+      "provincia": "Santa Fe",
+      "telefono": "+54 341 426-1180",
+      "email": "compras@pampeana.example",
+      "condicion_iva": "Responsable Inscripto",
+      "estado": "Activo"
+    },
+    {
+      "cliente_id": 10,
+      "razon_social": "Hidrocarburos Patagonia S.A.",
+      "cuit": "30-71315604-3",
+      "domicilio": "Km 8 Norte, Zona Franca",
+      "localidad": "Comodoro Rivadavia",
+      "provincia": "Chubut",
+      "telefono": "+54 297 446-9120",
+      "email": "smaidana@hpatagonia.example",
+      "condicion_iva": "Responsable Inscripto",
+      "estado": "Activo"
+    }
+  ]
+}
