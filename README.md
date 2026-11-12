@@ -1,5 +1,7 @@
 # BRIMEC · Asistente conversacional del ERP — MVP navegable
 
+### ▶ Demo en vivo: **https://MateoSantolin.github.io/brimec-asistente/**
+
 Prototipo académico de la **Oportunidad 3** de T-09: *Asistente Conversacional para Operaciones de
 Producción y Taller*. Representa la solución diseñada en T-10 como una aplicación web navegable.
 
@@ -30,7 +32,10 @@ Sin backend.
 
 ---
 
-## Publicarlo en una URL
+## Publicación
+
+La demo se publica sola: `.github/workflows/deploy.yml` corre en cada push a `main`, ejecuta el
+banco de pruebas, compila y despliega en GitHub Pages. Si algún caso falla, **no publica**.
 
 `npm run build` deja todo en `dist/`. Ese build es **estático y autocontenido**: rutas relativas
 (`base: './'`), enrutado por hash (`#/dashboard`, sin reglas de reescritura en el servidor) y las
