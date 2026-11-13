@@ -38,20 +38,18 @@ Asistente conversacional integrado al ERP · BRIMEC · T-09 / T-10
 **Subtítulo:** Consultar y actualizar la producción por voz, sin frenar la planta
 **Pie:** El modelo entiende · El middleware decide · El ERP ejecuta
 
-**El diagrama listo para pegar** está en esta misma carpeta, en 16:9:
+**El diagrama ya está armado con la estética de tu plantilla**, en esta misma carpeta:
 
-| Archivo | Para qué |
+| Archivo | Qué es |
 |---|---|
-| `diagrama-arquitectura-diapositiva.png` | 4267 × 2400 px. Pegalo y listo. Sirve en PowerPoint, Google Slides, Keynote y Canva |
-| `diagrama-arquitectura-diapositiva.svg` | Vectorial, escala sin pixelarse. PowerPoint lo importa nativo; Google Slides no |
+| **`diapositiva-arquitectura.pptx`** ✅ | La diapositiva completa como **formas nativas de PowerPoint**. Usa Montserrat, la paleta del equipo y tus propios íconos. Abrila, copiá la diapositiva y pegala en tu presentación |
+| `diagrama-arquitectura-diapositiva.png` | La misma, exportada como imagen, por si preferís pegarla así |
 
-Cada caja ya trae su función escrita adentro, el número de paso, y a la derecha si **funciona hoy**,
-está **simulado** o **no implementado**. A la izquierda, el lema atado a la pieza que lo cumple:
-ENTIENDE en el modelo, DECIDE en el middleware, EJECUTA en el ERP. Y a la derecha, las flechas de
-**ida y vuelta**.
+El `.pptx` es la opción buena: al ser formas, escala sin pixelarse y podés editar cualquier
+texto. Se generó **a partir de tu propia plantilla**, así que hereda el tema.
 
-> **No leas las siete cajas.** El diagrama se lee solo. Señalá y nombrá: en 25 segundos recorrés
-> todo. Si alguien quiere el detalle, está escrito ahí para que lo lea mientras hablás.
+> **No leas las siete tarjetas.** El diagrama se lee solo. Señalá y nombrá: en 25 segundos
+> recorrés todo. Si alguien quiere el detalle, está escrito ahí para que lo lea mientras hablás.
 
 ---
 
