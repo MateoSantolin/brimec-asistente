@@ -115,12 +115,51 @@ Si tuvieras que salvar **tres frases**, son estas:
 
 | Pregunta | Respuesta en una línea |
 |---|---|
+| *¿Qué quiere decir que no ejecuta SQL?* | El modelo no escribe consultas. Elige una herramienta de un catálogo cerrado y la devuelve como JSON. Quien valida y ejecuta es el middleware, y quien toca la base es el ERP. |
+| *¿Y qué hace exactamente cuando interpreta?* | Traduce la frase a una llamada: identifica la intención y extrae los parámetros. Si falta un dato, repregunta en vez de inventarlo. Después, con el resultado, redacta la respuesta. |
 | *¿Y si el modelo se equivoca?* | No puede escribir. Propone; el middleware valida permisos y reglas, y la persona confirma. Confirmar, cancelar y rechazar quedan los tres auditados. |
 | *¿Por qué no un menú o un formulario?* | Es el complemento, no el canal principal: obliga al operario a detener la máquina. La voz existe para no interrumpir la cadencia de trabajo. |
 | *¿Y si hay mucho ruido en planta?* | Es un riesgo identificado en T-09. Por eso la alternativa por texto está siempre disponible, y el servicio de transcripción definitivo todavía hay que elegirlo y probarlo en planta. |
 | *¿Qué pasa con los datos que se mandan al proveedor del modelo?* | Se envía el contexto mínimo. Credenciales, datos bancarios y salariales están excluidos del alcance. Las condiciones contractuales se revisan antes de producción. |
 | *¿Está funcionando de verdad?* | La interfaz sí, con datos sintéticos. El modelo, el middleware y el ERP están simulados. La integración real es la fase siguiente. |
 | *¿Cuánto cuesta?* | No está validado. Depende del modelo, del proveedor de transcripción y del volumen. Estimarlo es parte de los próximos pasos. |
+
+---
+
+## 🔍 Si te piden detalle: qué hace el modelo, paso a paso
+
+Existe una arquitectura, **text-to-SQL**, donde el modelo escribe la consulta directamente. **La
+descartamos a propósito**: ahí la superficie de lo que puede pedir es *todo lo expresable en SQL*, y
+los permisos terminan dependiendo de que el modelo se porte bien. Eso no es un control.
+
+En cambio, el modelo recibe un **catálogo cerrado de herramientas** y su único trabajo es traducir
+la frase a una de esas llamadas.
+
+Ante *«Pasá el ítem 333 a tratamiento»*, el modelo produce **texto**:
+
+```json
+{
+  "herramienta": "actualizar_estado_item",
+  "parametros": { "of_detalle_id": 333, "etapa": "Tratamiento" }
+}
+```
+
+Y ahí **termina su trabajo**. Todavía no pasó nada.
+
+Después, el **middleware** decide: ¿este rol puede llamar esa herramienta? ¿el ítem existe? ¿la
+etapa está en el catálogo del ERP? ¿la transición está permitida? ¿la persona confirmó? Recién
+entonces llama a la **API REST** del ERP — tampoco escribe SQL. Y el ERP es el único que toca la
+base, dentro de su propia lógica de negocio.
+
+> **La analogía:** el modelo es el que **completa el formulario**, no el que tiene la llave del
+> depósito. Si se equivoca, llenó mal un formulario. No rompió nada.
+
+Un detalle que conviene mencionar: el modelo se usa **dos veces**. A la entrada, para entender. A la
+salida, para redactar la respuesta con lo que devolvió el ERP. En el medio no participa.
+
+**En el prototipo:** `src/lib/nlu.ts` → `analizar()` devuelve `{ intencion, herramienta, slots }` —
+ese es el tool call simulado. `src/store/AppContext.tsx` → `ejecutar()` es el middleware. En el chat
+se ve debajo de cada respuesta: *«herramienta invocada: `actualizar_estado_item()`»*.
 
 ---
 
