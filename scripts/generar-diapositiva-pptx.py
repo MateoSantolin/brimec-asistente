@@ -191,7 +191,7 @@ texto(MARGEN, 0.67, 11.9, 0.26, "Selección de la solución con IA Generativa", 
       negrita=True, espaciado=1.2, mayusculas=True)
 texto(MARGEN, 0.94, 11.9, 0.46, "Asistente de taller", 28, TINTA, negrita=True)
 texto(MARGEN, 1.47, 11.9, 0.26,
-      "Consultar y actualizar la producción por voz, sin frenar la planta.", 13, TINTA_2)
+      "Un asistente que ayuda a Administración a seguir los pedidos y al taller a registrar novedades, sin interrumpirse.", 13, TINTA_2)
 
 # ---------------------------------------------------------------- columna principal
 y = Y0

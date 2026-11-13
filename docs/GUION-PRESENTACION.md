@@ -19,9 +19,10 @@ Asistente conversacional integrado al ERP · BRIMEC · T-09 / T-10
 ┌──────────────────────────────────────────────────────────────┐
 │  SELECCIÓN DE LA SOLUCIÓN CON IA GENERATIVA      ← volanta   │
 │                                                              │
-│  Asistente conversacional integrado al ERP       ← título    │
-│  Consultar y actualizar la producción por voz,   ← subtítulo │
-│  sin frenar la planta                                        │
+│  Asistente de taller                             ← título    │
+│  Un asistente que ayuda a Administración a       ← subtítulo │
+│  seguir los pedidos y al taller a registrar                  │
+│  novedades, sin interrumpirse.                               │
 │                                                              │
 │  ┌────────────────────────────────────────────┐              │
 │  │   [ diagrama de arquitectura con la         │              │
@@ -35,7 +36,7 @@ Asistente conversacional integrado al ERP · BRIMEC · T-09 / T-10
 
 **Volanta:** Selección de la solución con IA Generativa
 **Título:** Asistente de taller
-**Subtítulo:** Consultar y actualizar la producción por voz, sin frenar la planta.
+**Subtítulo:** Un asistente que ayuda a Administración a seguir los pedidos y al taller a registrar novedades, sin interrumpirse.
 
 > El lema *«el modelo entiende, el middleware decide, el ERP ejecuta»* ya **no está escrito**
 > en la diapositiva: lo decís vos al cerrar el recorrido del diagrama. Dicho en voz alta pesa
