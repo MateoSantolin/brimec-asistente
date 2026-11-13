@@ -37,10 +37,13 @@ VERDE      = RGBColor(0x3F, 0x7D, 0x0A)   # accent2
 LAVANDA    = RGBColor(0xA9, 0xA9, 0xD6)   # accent3
 BLANCO     = RGBColor(0xFF, 0xFF, 0xFF)
 
+# Sin etiqueta de estado en la diapositiva: el color agrupa (quien usa / quien
+# interpreta / quien ejecuta). Que el modelo, el middleware y el ERP estan simulados
+# se dice en voz alta y se ve en la diapositiva del video.
 ESTADOS = {
-    "ok":   (RGBColor(0xEA, 0xF4, 0xDC), VERDE,      "FUNCIONA HOY"),
-    "sim":  (RGBColor(0xE8, 0xE8, 0xF4), TINTA_2,    "SIMULADO"),
-    "prop": (RGBColor(0xF3, 0xF3, 0xF8), GRIS_CLARO, "NO IMPLEMENTADO"),
+    "ok":   (RGBColor(0xEA, 0xF4, 0xDC), VERDE,      ""),
+    "sim":  (RGBColor(0xE8, 0xE8, 0xF4), TINTA_2,    ""),
+    "prop": (RGBColor(0xF3, 0xF3, 0xF8), GRIS_CLARO, ""),
 }
 
 FUENTE = "Montserrat"
@@ -69,8 +72,8 @@ COLUMNA = [
 LATERALES = [
     ("stt",    3, "Speech-to-Text", "Transcribe lo que se dicta. Si hay ruido, queda la alternativa escrita.", "sim", 1),
     ("modelo", 5, "Modelo de IA",
-     "El middleware lo consulta dos veces: para entender qué se pidió y para redactar la respuesta. "
-     "No accede a la base ni ejecuta SQL.", "sim", 2),
+     "El middleware lo consulta dos veces: para entender qué se pidió y para redactar la respuesta.",
+     "sim", 2),
 ]
 
 # ---------------------------------------------------------------- plantilla
@@ -157,10 +160,11 @@ def tarjeta(x, y, w, h, icono, numero, titulo, bajada, estado, destacado=False):
                                  Inches(0.20), Inches(0.20))
         tx += 0.30
 
-    texto(tx, y + 0.11, w - (tx - x) - 1.75, 0.24, titulo, 13, TINTA, negrita=True)
+    texto(tx, y + 0.11, w - (tx - x) - 0.22, 0.24, titulo, 13, TINTA, negrita=True)
     texto(x + 0.52, y + 0.38, w - 0.72, h - 0.46, bajada, 10, TINTA_2)
-    texto(x + w - 1.68, y + 0.13, 1.52, 0.18, etiqueta, 7.5, borde, negrita=True,
-          alineacion=PP_ALIGN.RIGHT, espaciado=0.6, ajustar=False)
+    if etiqueta:
+        texto(x + w - 1.68, y + 0.13, 1.52, 0.18, etiqueta, 7.5, borde, negrita=True,
+              alineacion=PP_ALIGN.RIGHT, espaciado=0.6, ajustar=False)
     return caja
 
 
@@ -185,9 +189,9 @@ def flecha_doble(x, cy, ancho):
 # ---------------------------------------------------------------- encabezado
 texto(MARGEN, 0.67, 11.9, 0.26, "Selección de la solución con IA Generativa", 12, GRIS,
       negrita=True, espaciado=1.2, mayusculas=True)
-texto(MARGEN, 0.94, 11.9, 0.46, "Arquitectura del asistente de taller", 28, TINTA, negrita=True)
-texto(MARGEN, 1.45, 11.9, 0.26, "El modelo entiende  ·  El middleware decide  ·  El ERP ejecuta",
-      11.5, VERDE, negrita=True)
+texto(MARGEN, 0.94, 11.9, 0.46, "Asistente de taller", 28, TINTA, negrita=True)
+texto(MARGEN, 1.47, 11.9, 0.26,
+      "Consultar y actualizar la producción por voz, sin frenar la planta.", 13, TINTA_2)
 
 # ---------------------------------------------------------------- columna principal
 y = Y0
