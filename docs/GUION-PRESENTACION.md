@@ -90,22 +90,60 @@ En una frase: **el modelo entiende, el middleware decide, el ERP ejecuta.**
 
 # 🎬 DIAPOSITIVA 2 · La solución funcionando
 
-## Plan de grabación · ~1:40 de video
+## Antes de grabar · 4 cosas
 
-Grabá en **pestaña propia**, no embebida — el micrófono se bloquea dentro de un iframe.
-Perfil recomendado para arrancar: **Jefe de Producción**.
+1. **Reiniciá los datos.** Barra lateral → *«Reiniciar datos de la demo»*. Si estuviste probando,
+   la auditoría arrastra tus clics anteriores y en el video se nota.
+2. **Pestaña propia, no embebida.** El micrófono se bloquea dentro de un iframe.
+3. **Zoom del navegador al 110–125 %** y pantalla completa. Lo que se lee cómodo en tu monitor
+   queda chico proyectado.
+4. **Cuarto en silencio.** El dictado es el diferencial de la propuesta: tiene que funcionar en el
+   video. Y ahora podés repetir la toma las veces que quieras.
 
-| ⏱️ | Qué mostrás | Por qué importa |
+---
+
+## Plan de grabación · ~1:40
+
+| ⏱️ | Qué hacés exactamente | Por qué está |
 |---|---|---|
-| 0:00–0:12 | Login → selección de perfil | Se ve la matriz de permisos por rol |
-| 0:12–0:25 | Dashboard | Administración ve el avance sin ir a planta |
-| 0:25–0:45 | Chat: *«Mostrame las OF atrasadas»* | Lenguaje natural → tabla. Se ve **"herramienta invocada"** |
-| 0:45–1:10 | Dictar: *«Pasá el ítem 333 a tratamiento»* | **El momento clave:** aparece el panel de confirmación |
-| 1:10–1:25 | Cambiar a **Operario** e intentar lo mismo | Se rechaza por permisos. **Esto es lo que más suma** |
-| 1:25–1:40 | Auditoría | Lo ejecutado, lo cancelado **y lo rechazado** |
+| 0:00–0:12 | Login → entrás como **Jefe de Producción** | Se ve la matriz de permisos antes de entrar |
+| 0:12–0:22 | Dashboard, una pasada | Administración ve el avance sin ir a planta |
+| 0:22–0:40 | Chat → escribí *«Mostrame las OF atrasadas»* | Lenguaje natural → tabla. Se ve **«herramienta invocada»** |
+| 0:40–1:08 | 🎙️ **Dictá** *«Pasá el ítem 333 a tratamiento»* | **El momento clave.** Aparece el panel de confirmación. Dejalo en pantalla 3 segundos antes de confirmar |
+| 1:08–1:28 | Cambiar de perfil → **Operario** → dictá lo mismo | Se rechaza por permisos. **Es la escena que más suma** |
+| 1:28–1:40 | Auditoría | Ejecutado, cancelado **y rechazado**, con usuario, fecha y canal |
 
-> 💡 Si el dictado te falla en la grabación, escribí la frase. No lo repitas tres veces: perdés
-> tiempo y transmite fragilidad.
+> 🎙️ **La toma del dictado es la única que no se puede reemplazar por texto.** Si no sale, repetila.
+> Es lo que demuestra que el canal de voz existe.
+
+### Al editar
+
+- **Cortá los tiempos muertos**: la carga del login, la pausa entre que terminás de dictar y
+  aparece la respuesta. En un video de 1:40 cada segundo vacío pesa.
+- **No aceleres** la escena de la confirmación ni la del rechazo: son las dos que hay que leer.
+- Si podés, poné un **rótulo corto** en la escena del rechazo (*«El operario no tiene permiso»*).
+  Sobrevive aunque el audio falle.
+
+### ¿Voz grabada o narrás en vivo?
+
+| | Ventaja | Riesgo |
+|---|---|---|
+| **Voz grabada en el video** | Sale siempre igual, lo ensayás una vez | Si el proyector no da audio, te quedás sin nada |
+| **Video mudo + narrás en vivo** ✅ | Controlás el ritmo, podés pausar, no dependés del audio del aula | Tenés que sincronizar |
+
+Para un aula, **video mudo y narrás vos** suele ser más seguro — salvo el dictado, que conviene que
+se escuche. Solución intermedia: dejá el audio **solo** en la escena del dictado y narrá el resto.
+
+### 🆘 Si el video no reproduce
+
+Sin demo en vivo, el video es punto único de falla. Dos minutos de seguro:
+
+- Exportá en **MP4 / H.264**, que abre en cualquier lado. Dejalo también **incrustado** en el
+  archivo de la presentación, no solo enlazado.
+- Llevá una **diapositiva de respaldo oculta** con 3 capturas: el panel de confirmación, el rechazo
+  por permisos y la auditoría. Con esas tres contás la historia igual.
+- Última red: la demo está publicada en
+  `https://MateoSantolin.github.io/brimec-asistente/` y abre desde cualquier navegador.
 
 ---
 
@@ -201,7 +239,7 @@ Lo más citable de ahí:
 
 ## ✅ Antes de salir a presentar
 
-- [ ] Video grabado y probado **con sonido**.
+- [ ] Video probado **en la máquina y el proyector donde vas a presentar**.
 - [ ] Diapositiva 1 con el diagrama legible desde el fondo del aula.
-- [ ] Tené la demo abierta en otra pestaña por si piden verla en vivo.
+- [ ] Diapositiva de respaldo con 3 capturas, por si el video no reproduce.
 - [ ] No prometas lo que está simulado. Decí *"está simulado"* y seguí: resta cero y suma criterio.
