@@ -9,7 +9,8 @@ Producción y Taller*. Representa la solución diseñada en T-10 como una aplica
 |---|---|
 | [`docs/ARQUITECTURA.md`](docs/ARQUITECTURA.md) | 6 diagramas Mermaid: arquitectura conceptual, flujo de una escritura, matriz de permisos, modelo de datos, estado de construcción y límites del analizador |
 | [`docs/GUION-PRESENTACION.md`](docs/GUION-PRESENTACION.md) | Guion de 3 minutos: problema, beneficios y arquitectura, con versión de 60 segundos y preguntas probables |
-| [`docs/GUION-ARQUITECTURA-CON-EJEMPLO.md`](docs/GUION-ARQUITECTURA-CON-EJEMPLO.md) | Variante del tramo de arquitectura: en vez de describir las piezas, sigue una frase mientras atraviesa el diagrama. Tres duraciones |
+| [`docs/GUION-MATEO`](docs/GUION-MATEO) | El guion del equipo, tal como se escribió |
+| [`docs/GUION-MATEO-mejorado.md`](docs/GUION-MATEO-mejorado.md) | La misma estructura con otra redacción, un error de arquitectura corregido y el paso de confirmación |
 | [`docs/FLUJO-IDA-Y-VUELTA.md`](docs/FLUJO-IDA-Y-VUELTA.md) | Los 12 pasos de ida y vuelta, las 4 barreras de validación y en qué archivo del prototipo vive cada paso |
 | [`docs/STACK.md`](docs/STACK.md) | Las herramientas con sus logotipos, separando lo construido de lo propuesto |
 

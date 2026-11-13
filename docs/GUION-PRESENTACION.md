@@ -88,8 +88,7 @@ Y el **ERP** ejecuta y persiste.
 En una frase: **el modelo entiende, el middleware decide, el ERP ejecuta.**
 
 > 💡 **Variante:** hay otra forma de contar este tramo — seguir una sola frase mientras atraviesa
-> el diagrama, en vez de describir las piezas. Está en [`GUION-ARQUITECTURA-CON-EJEMPLO.md`](GUION-ARQUITECTURA-CON-EJEMPLO.md),
-> en tres duraciones.
+> el diagrama, en vez de describir las piezas. Está en [`GUION-MATEO-mejorado.md`](GUION-MATEO-mejorado.md).
 
 ---
 ---
