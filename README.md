@@ -8,6 +8,7 @@ Producción y Taller*. Representa la solución diseñada en T-10 como una aplica
 | Documento | Contenido |
 |---|---|
 | [`docs/ARQUITECTURA.md`](docs/ARQUITECTURA.md) | 6 diagramas Mermaid: arquitectura conceptual, flujo de una escritura, matriz de permisos, modelo de datos, estado de construcción y límites del analizador |
+| [`docs/GUION-PRESENTACION.md`](docs/GUION-PRESENTACION.md) | Guion de 3 minutos: problema, beneficios y arquitectura, con versión de 60 segundos y preguntas probables |
 | [`docs/STACK.md`](docs/STACK.md) | Las herramientas con sus logotipos, separando lo construido de lo propuesto |
 
 > **No es un producto.** No hay LLM, ni middleware, ni ERP, ni base de datos conectados.
