@@ -1,0 +1,26 @@
+Una pregunta que no hicimos antes de plantear y elelgir una solucion que incorporara inteligencia artifical generativa fue 
+Cual es el dolor mas grande que vimos y nos mencionaron en nuestro relevamiento.
+
+Todos estuvimos de acuerdo que la falta de un medio de comunicacion enttre el taller de produccion y administracion? 
+
+Pero ademas de eso que, como ya explicaron mis compenieros el erp y los datos centralizados venia a solucionar. Nos acordamos
+de una inquietud que nos marco nuestro sponsor:
+Necesito que los chicos de la planta no pierdan tiempo completando formularios ni listas desplegables tiene que ser algo rapido 
+e intuitivo.
+De este pedido nacio asistente de taller, una solucion que incorpora inteligencia artificial para interpretar la solicitud 
+del usuario en lenguaje natural, iterpte su peticion y pueda crear, acutalizar y consultar ordenes de fbricacion, items y pedidos.
+
+Dentro de la solucion planteamos la siguiente arquitectura y flujo.
+
+El usuario escribe una peticion en lenguaje natural en una interfaz como si fuera un chat -> ejemplo "quiero actualizar el estado del pedido 303 a finalizado"
+el middleware recibe esta peticion, valida credenciales y rol del usuario y estructura la request que va enviar al modelo de inteligencia artifical
+el llm recibe la peticion interpreta el mensaie y elige la herramienta (funcion) que mas se adecua a la solicitud, tambien puede solictiar mas informacion de ser necesario
+luego de elegir la herramienta el midleware es capaz de enviar una request a la base de datos del ERP (donde viven los datos)
+Este devuelve los datos el modelo estructura una respuesta y esta es reflejada al usuario.
+
+
+Ademas de plantear la solucion trabajamos en prototipo de solucion donde nos enfocamos en que sea una interfaz sencilla, facil de navegar 
+y prebicible.
+Como tambirn incorporar normas de minimos privilegios segun el rol del usuario que ingresa.
+Esto facilitara enormemente la acutalizacion y consulta de ordenes de fabricacion, mejoara la expreriencia del suaurio y ayudara a 
+incorporar el cambio digital mas naturalmente
