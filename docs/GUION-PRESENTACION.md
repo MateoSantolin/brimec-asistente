@@ -1,91 +1,147 @@
-# Guion de presentación — 3 minutos
+# Guion de presentación — 2 diapositivas, 3 minutos
 
 Asistente conversacional integrado al ERP · BRIMEC · T-09 / T-10
 
-> Escrito para **decir en voz alta**. Frases cortas, una idea por frase.
-> ~410 palabras ≈ **2:50** a ritmo normal. Si hablás rápido, te sobran 20 segundos.
+> Escrito para **decir en voz alta**. Una idea por frase.
+> ~375 palabras ≈ **2:50** a ritmo normal.
+> El recorrido completo, paso a paso, está en [`FLUJO-IDA-Y-VUELTA.md`](FLUJO-IDA-Y-VUELTA.md).
+
+**Reparto del tiempo:** diapositiva 1 ≈ **1:10** · diapositiva 2 ≈ **1:40**
+
+---
+---
+
+# 🖼️ DIAPOSITIVA 1 · Selección de la solución
+
+## Qué va en la diapositiva
+
+```
+┌──────────────────────────────────────────────────────────────┐
+│  SELECCIÓN DE LA SOLUCIÓN CON IA GENERATIVA      ← volanta   │
+│                                                              │
+│  Asistente conversacional integrado al ERP       ← título    │
+│  Consultar y actualizar la producción por voz,   ← subtítulo │
+│  sin frenar la planta                                        │
+│                                                              │
+│  ┌────────────────────────────────────────────┐              │
+│  │   [ diagrama de arquitectura con la         │              │
+│  │     función de cada componente ]            │              │
+│  └────────────────────────────────────────────┘              │
+│                                                              │
+│  El modelo entiende · El middleware decide ·     ← pie       │
+│  El ERP ejecuta                                              │
+└──────────────────────────────────────────────────────────────┘
+```
+
+**Volanta:** Selección de la solución con IA Generativa
+**Título:** Asistente conversacional integrado al ERP
+**Subtítulo:** Consultar y actualizar la producción por voz, sin frenar la planta
+**Pie:** El modelo entiende · El middleware decide · El ERP ejecuta
+
+**El diagrama listo para pegar** está en esta misma carpeta, en 16:9:
+
+| Archivo | Para qué |
+|---|---|
+| `diagrama-arquitectura-diapositiva.png` | 4267 × 2400 px. Pegalo y listo. Sirve en PowerPoint, Google Slides, Keynote y Canva |
+| `diagrama-arquitectura-diapositiva.svg` | Vectorial, escala sin pixelarse. PowerPoint lo importa nativo; Google Slides no |
+
+Cada caja ya trae su función escrita adentro, el número de paso, y a la derecha si **funciona hoy**,
+está **simulado** o **no implementado**. A la izquierda, el lema atado a la pieza que lo cumple:
+ENTIENDE en el modelo, DECIDE en el middleware, EJECUTA en el ERP. Y a la derecha, las flechas de
+**ida y vuelta**.
+
+> **No leas las siete cajas.** El diagrama se lee solo. Señalá y nombrá: en 25 segundos recorrés
+> todo. Si alguien quiere el detalle, está escrito ahí para que lo lea mientras hablás.
 
 ---
 
-## ⏱️ 0:00 — 0:40 · El problema
+## Lo que decís · ≈ 1:10
 
-> 🖥️ **En pantalla:** el diagrama de arquitectura, o nada. Mirá a la gente, no a la pantalla.
+> 🗣️ *Mirá a la gente en el problema. Recién en la arquitectura girá hacia la pantalla.*
 
-Hoy en BRIMEC, Administración genera las órdenes de fabricación, **las imprime** y las entrega en
-papel al jefe de planta.
+Hoy Administración genera las órdenes de fabricación, **las imprime** y las entrega en papel al jefe
+de planta. Desde ahí pierde visibilidad.
 
-Desde ese momento, pierde visibilidad.
+Cuando un cliente pregunta por su pedido, hay que ir hasta planta, interrumpir al jefe y esperar a
+que lo busque entre sus papeles. Pasa **todos los días**.
 
-Cuando un cliente llama para preguntar por su pedido, alguien de Administración tiene que ir hasta
-planta, interrumpir al jefe, y esperar a que busque la orden entre sus papeles.
+El ERP que están poniendo en marcha resuelve **dónde viven los datos**. Pero no resuelve el
+**canal**: un operario con guantes y la máquina andando no va a frenar para completar formularios.
 
-Eso pasa **todos los días**.
+Por eso elegimos un **asistente conversacional, principalmente por voz**, como una capa sobre el
+ERP.
 
-El costo son demoras con el cliente, interrupciones en producción, y cero trazabilidad entre las
-dos áreas.
+> 👉 *Ahora sí, señalá el diagrama. Una pasada de arriba hacia abajo.*
 
----
+El **widget** captura la consulta, hablada o escrita. La **transcripción** la pasa a texto.
 
-## ⏱️ 0:40 — 1:30 · Por qué esta solución
+El **modelo de IA** solo entiende qué se pidió y elige la herramienta. No accede a la base. No
+ejecuta SQL.
 
-> 🖥️ **En pantalla:** la demo, perfil Operario. No la toques todavía.
+El **middleware** es el que decide: valida identidad, permisos y reglas de negocio, exige
+confirmación y deja todo auditado. Es la **única vía de escritura**.
 
-El ERP que BRIMEC está poniendo en marcha resuelve **dónde viven los datos**. Pero no resuelve el
-**canal**.
-
-Un operario con guantes, con el torno andando y con ruido de planta, no va a parar la máquina para
-navegar menús y completar formularios.
-
-Y una solución por comandos fijos tampoco sirve: lo obligaría a decir la frase exacta, siempre
-igual.
-
-Por eso proponemos una **capa conversacional, principalmente por voz**.
-
-Administración consulta el avance sin interrumpir a nadie. El taller registra novedades dictando,
-sin soltar la herramienta. Y la trazabilidad queda registrada sola, como subproducto del trabajo,
-no como una tarea extra.
-
-No reemplazamos al ERP ni a sus controles. **Facilitamos el acceso.**
-
----
-
-## ⏱️ 1:30 — 2:40 · La arquitectura
-
-> 🖥️ **En pantalla:** el diagrama de arquitectura. Señalá cada bloque mientras lo nombrás.
-
-La arquitectura tiene **tres bloques**.
-
-**Primero, la puerta de entrada**: el widget conversacional dentro del ERP, y el servicio de
-transcripción, que convierte la voz en texto.
-
-**Segundo, el modelo de inteligencia artificial.** Y acá está la decisión más importante del
-diseño: el modelo **solo** interpreta lo que la persona quiso decir, y elige qué herramienta
-invocar. No accede a la base de datos. No ejecuta SQL.
-
-**Tercero, el middleware.** Es el que realmente decide. Verifica la identidad. Valida los permisos
-según el rol. Aplica las reglas de negocio. Exige confirmación antes de escribir. Y deja todo
-registrado en auditoría. Es la **única vía de escritura**.
-
-Recién ahí el conector llama a la API del ERP, que ejecuta y persiste.
+Y el **ERP** ejecuta y persiste.
 
 En una frase: **el modelo entiende, el middleware decide, el ERP ejecuta.**
 
 ---
+---
 
-## ⏱️ 2:40 — 3:00 · Cierre
+# 🎬 DIAPOSITIVA 2 · La solución funcionando
 
-> 🖥️ **En pantalla:** quedate en el diagrama.
+## Plan de grabación · ~1:40 de video
 
-Esa separación es lo que hace que la solución sea **gobernable**: si el modelo se equivoca, no
-puede romper nada, porque no tiene permiso para escribir.
+Grabá en **pestaña propia**, no embebida — el micrófono se bloquea dentro de un iframe.
+Perfil recomendado para arrancar: **Jefe de Producción**.
 
-Lo que ven en pantalla es un prototipo navegable con datos sintéticos. El modelo y el ERP todavía
-**no están conectados**.
+| ⏱️ | Qué mostrás | Por qué importa |
+|---|---|---|
+| 0:00–0:12 | Login → selección de perfil | Se ve la matriz de permisos por rol |
+| 0:12–0:25 | Dashboard | Administración ve el avance sin ir a planta |
+| 0:25–0:45 | Chat: *«Mostrame las OF atrasadas»* | Lenguaje natural → tabla. Se ve **"herramienta invocada"** |
+| 0:45–1:10 | Dictar: *«Pasá el ítem 333 a tratamiento»* | **El momento clave:** aparece el panel de confirmación |
+| 1:10–1:25 | Cambiar a **Operario** e intentar lo mismo | Se rechaza por permisos. **Esto es lo que más suma** |
+| 1:25–1:40 | Auditoría | Lo ejecutado, lo cancelado **y lo rechazado** |
+
+> 💡 Si el dictado te falla en la grabación, escribí la frase. No lo repitas tres veces: perdés
+> tiempo y transmite fragilidad.
+
+---
+
+## Lo que decís sobre el video · ≈ 1:40
+
+> 🗣️ *El video corre solo. Vos narrás encima, un poco por delante de lo que se ve.*
+
+Acá se ve funcionando.
+
+Primero el perfil. La identidad y el rol vienen del ERP, y de eso dependen las operaciones
+habilitadas.
+
+Hago una consulta en lenguaje natural. Abajo de la respuesta se ve **qué herramienta se invocó**:
+eso es lo que devolvió el modelo. Una llamada a una función, no una consulta a la base.
+
+Ahora una escritura. Dicto *«pasá el ítem 333 a tratamiento»*.
+
+El asistente **no ejecuta**. Muestra el estado actual, el cambio propuesto, y espera. Hasta que no
+confirmo, **no se escribió nada**.
+
+Y acá lo importante. Si entro como **Operario** e intento la misma operación, se rechaza: ese perfil
+no tiene el permiso. **Y el rechazo también queda auditado.**
+
+En la auditoría se ve todo: quién, cuándo, qué operación, con qué resultado y por qué canal. Lo
+ejecutado, lo cancelado y lo rechazado.
+
+Esa separación es lo que hace la solución **gobernable**: si el modelo se equivoca, no puede romper
+nada, porque no tiene permiso para escribir.
+
+Una aclaración: esto es un **prototipo con datos sintéticos**. La interfaz y el flujo son reales; el
+modelo, el middleware y el ERP están **simulados**. La integración es la fase siguiente.
 
 ---
 ---
 
-## 🆘 Si te cortan el tiempo — versión 60 segundos
+## 🆘 Si te cortan el tiempo — 60 segundos
 
 Administración imprime las órdenes y las entrega en papel. Desde ahí pierde visibilidad: para saber
 cómo viene un pedido hay que ir a planta e interrumpir al jefe.
@@ -93,21 +149,19 @@ cómo viene un pedido hay que ir a planta e interrumpir al jefe.
 El ERP resuelve dónde viven los datos, pero no el canal: un operario con guantes y la máquina
 andando no va a completar formularios.
 
-Proponemos una capa conversacional por voz sobre el ERP. Tres bloques: el widget y la transcripción
-reciben; el modelo de IA **solo interpreta** y elige la herramienta; el middleware **decide** —
-permisos, reglas, confirmación y auditoría— y es la única vía de escritura. El ERP ejecuta.
+Proponemos una capa conversacional por voz sobre el ERP. El widget y la transcripción reciben. El
+modelo **solo interpreta** y elige la herramienta. El middleware **decide** —permisos, reglas,
+confirmación y auditoría— y es la única vía de escritura. El ERP ejecuta.
 
-El modelo entiende, el middleware decide, el ERP ejecuta. Si el modelo se equivoca, no rompe nada.
+Si el modelo se equivoca, no rompe nada: no tiene permiso para escribir.
 
 ---
 
-## 🎯 Lo que no podés dejar de decir
+## 🎯 Las tres frases que no podés perder
 
-Si tuvieras que salvar **tres frases**, son estas:
-
-1. *"Administración imprime la OF y desde ahí pierde visibilidad."* → el problema, concreto.
-2. *"El ERP resuelve dónde viven los datos, pero no el canal."* → por qué hace falta esto.
-3. *"El modelo entiende, el middleware decide, el ERP ejecuta."* → la arquitectura entera.
+1. *«Administración imprime la OF y desde ahí pierde visibilidad.»* → el problema, concreto
+2. *«El ERP resuelve dónde viven los datos, pero no el canal.»* → por qué hace falta esto
+3. *«El modelo entiende, el middleware decide, el ERP ejecuta.»* → la arquitectura entera
 
 ---
 
@@ -115,59 +169,39 @@ Si tuvieras que salvar **tres frases**, son estas:
 
 | Pregunta | Respuesta en una línea |
 |---|---|
-| *¿Qué quiere decir que no ejecuta SQL?* | El modelo no escribe consultas. Elige una herramienta de un catálogo cerrado y la devuelve como JSON. Quien valida y ejecuta es el middleware, y quien toca la base es el ERP. |
+| *¿Qué quiere decir que no ejecuta SQL?* | El modelo no escribe consultas. Elige una herramienta de un catálogo cerrado y la devuelve como JSON. Quien valida es el middleware; quien toca la base es el ERP. |
 | *¿Y qué hace exactamente cuando interpreta?* | Traduce la frase a una llamada: identifica la intención y extrae los parámetros. Si falta un dato, repregunta en vez de inventarlo. Después, con el resultado, redacta la respuesta. |
-| *¿Y si el modelo se equivoca?* | No puede escribir. Propone; el middleware valida permisos y reglas, y la persona confirma. Confirmar, cancelar y rechazar quedan los tres auditados. |
-| *¿Por qué no un menú o un formulario?* | Es el complemento, no el canal principal: obliga al operario a detener la máquina. La voz existe para no interrumpir la cadencia de trabajo. |
-| *¿Y si hay mucho ruido en planta?* | Es un riesgo identificado en T-09. Por eso la alternativa por texto está siempre disponible, y el servicio de transcripción definitivo todavía hay que elegirlo y probarlo en planta. |
-| *¿Qué pasa con los datos que se mandan al proveedor del modelo?* | Se envía el contexto mínimo. Credenciales, datos bancarios y salariales están excluidos del alcance. Las condiciones contractuales se revisan antes de producción. |
-| *¿Está funcionando de verdad?* | La interfaz sí, con datos sintéticos. El modelo, el middleware y el ERP están simulados. La integración real es la fase siguiente. |
-| *¿Cuánto cuesta?* | No está validado. Depende del modelo, del proveedor de transcripción y del volumen. Estimarlo es parte de los próximos pasos. |
+| *¿Las funciones viven en FastAPI?* | Sí, pero son delgadas: validan y delegan. La lógica de negocio y los datos quedan en el ERP. |
+| *¿Por qué no que el modelo llame directo a la API de Odoo?* | Porque esa API es genérica: expone CRUD sobre casi todo. El middleware estrecha la superficie a ocho funciones y es donde viven la confirmación y la auditoría. |
+| *¿Y si el modelo se equivoca?* | No puede escribir. Propone; el middleware valida y la persona confirma. Confirmar, cancelar y rechazar quedan los tres auditados. |
+| *¿Por qué no un menú o un formulario?* | Es el complemento, no el canal principal: obliga al operario a detener la máquina. |
+| *¿Y si hay mucho ruido en planta?* | Riesgo identificado en T-09. Por eso la alternativa por texto está siempre disponible, y el servicio de transcripción hay que elegirlo y probarlo en planta. |
+| *¿Qué datos se le mandan al proveedor del modelo?* | El contexto mínimo. Credenciales, datos bancarios y salariales están excluidos del alcance. |
+| *¿Está funcionando de verdad?* | La interfaz sí, con datos sintéticos. El modelo, el middleware y el ERP están simulados. |
+| *¿Cuánto cuesta?* | No está validado. Depende del modelo, del proveedor de transcripción y del volumen. Es parte de los próximos pasos. |
 
 ---
 
-## 🔍 Si te piden detalle: qué hace el modelo, paso a paso
+## 🔍 Si te piden el detalle del flujo
 
-Existe una arquitectura, **text-to-SQL**, donde el modelo escribe la consulta directamente. **La
-descartamos a propósito**: ahí la superficie de lo que puede pedir es *todo lo expresable en SQL*, y
-los permisos terminan dependiendo de que el modelo se porte bien. Eso no es un control.
+Está completo en [`FLUJO-IDA-Y-VUELTA.md`](FLUJO-IDA-Y-VUELTA.md): los 12 pasos de ida y vuelta, las
+cuatro barreras de validación, los tres atajos donde el flujo se corta antes, y en qué archivo del
+prototipo está cada paso.
 
-En cambio, el modelo recibe un **catálogo cerrado de herramientas** y su único trabajo es traducir
-la frase a una de esas llamadas.
+Lo más citable de ahí:
 
-Ante *«Pasá el ítem 333 a tratamiento»*, el modelo produce **texto**:
-
-```json
-{
-  "herramienta": "actualizar_estado_item",
-  "parametros": { "of_detalle_id": 333, "etapa": "Tratamiento" }
-}
-```
-
-Y ahí **termina su trabajo**. Todavía no pasó nada.
-
-Después, el **middleware** decide: ¿este rol puede llamar esa herramienta? ¿el ítem existe? ¿la
-etapa está en el catálogo del ERP? ¿la transición está permitida? ¿la persona confirmó? Recién
-entonces llama a la **API REST** del ERP — tampoco escribe SQL. Y el ERP es el único que toca la
-base, dentro de su propia lógica de negocio.
-
-> **La analogía:** el modelo es el que **completa el formulario**, no el que tiene la llave del
-> depósito. Si se equivoca, llenó mal un formulario. No rompió nada.
-
-Un detalle que conviene mencionar: el modelo se usa **dos veces**. A la entrada, para entender. A la
-salida, para redactar la respuesta con lo que devolvió el ERP. En el medio no participa.
-
-**En el prototipo:** `src/lib/nlu.ts` → `analizar()` devuelve `{ intencion, herramienta, slots }` —
-ese es el tool call simulado. `src/store/AppContext.tsx` → `ejecutar()` es el middleware. En el chat
-se ve debajo de cada respuesta: *«herramienta invocada: `actualizar_estado_item()`»*.
+- **El modelo se usa dos veces**: a la entrada para entender, a la salida para redactar. En el medio
+  no participa.
+- **El catálogo de herramientas se filtra por rol antes de mandárselo al modelo.** A un operario ni
+  siquiera se le ofrece `actualizar_estado_item`: el modelo no sabe que existe.
+- **El ERP valida de nuevo**, con sus propias reglas. No es redundancia: el middleware valida la
+  política del asistente, el ERP valida las suyas.
 
 ---
 
 ## ✅ Antes de salir a presentar
 
-- [ ] Abrí la demo **en una pestaña propia**, no embebida — el micrófono se bloquea dentro de un iframe.
-- [ ] Probá el dictado una vez. Chrome o Edge.
-- [ ] Dejá el diagrama de arquitectura abierto en otra pestaña.
-- [ ] Si vas a mostrar una operación, usá **"Pasá el ítem 333 a tratamiento"** con el perfil Jefe de
-      Producción: muestra el panel de confirmación, que es el corazón del diseño.
-- [ ] No prometas lo que está simulado. Decí "está simulado" y seguí: resta cero y suma criterio.
+- [ ] Video grabado y probado **con sonido**.
+- [ ] Diapositiva 1 con el diagrama legible desde el fondo del aula.
+- [ ] Tené la demo abierta en otra pestaña por si piden verla en vivo.
+- [ ] No prometas lo que está simulado. Decí *"está simulado"* y seguí: resta cero y suma criterio.
