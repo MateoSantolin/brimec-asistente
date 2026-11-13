@@ -26,7 +26,7 @@ flowchart TD
     U["👤 Usuarios<br/>Administración · Operarios · Jefe de Producción"]
     W["💬 Widget conversacional del ERP<br/>texto y voz"]
     S["🎙️ Speech-to-Text<br/>transcripción del dictado"]
-    L["✨ Modelo de IA generativa<br/>interpreta la intención<br/>y elige la herramienta"]
+    L["✨ Modelo de IA generativa<br/>① entiende qué se pidió y elige la herramienta<br/>② redacta la respuesta con el resultado"]
 
     subgraph MW["🛡️ API agente / Middleware · FastAPI"]
         direction LR
@@ -40,7 +40,11 @@ flowchart TD
     E["🗄️ ERP SaaS · Odoo"]
     D[("Base de datos<br/>del ERP")]
 
-    U --> W --> S --> L --> MW --> C --> E --> D
+    U <--> W
+    W <--> S
+    W <--> MW
+    MW <--> L
+    MW --> C --> E --> D
 
     classDef ok fill:#D1FAE5,stroke:#059669,stroke-width:2px,color:#065F46
     classDef sim fill:#FEF3C7,stroke:#D97706,stroke-width:2px,color:#92400E
@@ -57,6 +61,22 @@ flowchart TD
 **El punto central:** el LLM se usa *solo* para comprender lenguaje natural y redactar respuestas.
 La autorización, la ejecución de transacciones y el acceso a los datos quedan bajo control del
 middleware y del ERP. Esa separación es la que acota el riesgo de modificaciones indebidas.
+
+> ### ⚠️ Por qué el modelo NO va «delante» del middleware
+>
+> Es tentador dibujar esto como una cadena lineal —widget → transcripción → modelo → middleware → ERP—
+> y así figura en el diagrama original de T-10. **Pero describe mal la topología.**
+>
+> El widget le habla **al middleware**, no al modelo. Es el middleware el que consulta al modelo, y lo
+> hace **dos veces**: a la entrada para entender, a la salida para redactar.
+>
+> La diferencia no es cosmética. Si el modelo estuviera delante, sería él quien recibe al usuario y
+> decide qué pasarle al backend — que es exactamente la arquitectura que este diseño descarta. El
+> middleware es un **hub**, no un eslabón: por eso las flechas hacia el modelo y hacia la
+> transcripción son de **doble punta**, y las del camino de la operación son simples.
+>
+> Consecuencia práctica: la credencial del proveedor del modelo vive en el servidor, nunca en el
+> navegador.
 
 ---
 

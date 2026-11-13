@@ -1,78 +1,77 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 900" width="1600" height="900" font-family="Segoe UI, Inter, Helvetica Neue, Arial, sans-serif">
 <rect width="1600" height="900" fill="#FFFFFF"/>
 <defs>
-  <marker id="fl" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#0084D6"/></marker>
-  <marker id="flg" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#94A3B8"/></marker>
-  <filter id="sombra" x="-20%" y="-20%" width="140%" height="160%">
+  <marker id="fa" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#0084D6"/></marker>
+  <marker id="fg" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6"   orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#94A3B8"/></marker>
+  <filter id="s" x="-20%" y="-20%" width="140%" height="170%">
     <feDropShadow dx="0" dy="3" stdDeviation="5" flood-color="#243673" flood-opacity="0.13"/>
   </filter>
 </defs>
-<rect x="150" y="24" width="1230" height="96" rx="16" fill="#D1FAE5" stroke="#059669" stroke-width="2" filter="url(#sombra)"/>
-<circle cx="196" cy="70" r="23" fill="#059669"/>
-<text x="196" y="79" text-anchor="middle" font-size="25" font-weight="700" fill="#FFFFFF">1</text>
-<text x="238" y="64" font-size="27" font-weight="700" fill="#243673" letter-spacing="0.4">USUARIOS</text>
-<text x="238" y="98" font-size="21" fill="#1D2433">Administración, operarios y jefe de producción. Piden lo que necesitan en su propio idioma, hablando o escribiendo.</text>
-<text x="1360" y="56" text-anchor="end" font-size="17" font-weight="700" fill="#059669" letter-spacing="1.1">FUNCIONA HOY</text>
-<path d="M765.0,122 L765.0,134" stroke="#94A3B8" stroke-width="3" marker-end="url(#fl)"/>
-<rect x="150" y="136" width="1230" height="96" rx="16" fill="#D1FAE5" stroke="#059669" stroke-width="2" filter="url(#sombra)"/>
-<circle cx="196" cy="182" r="23" fill="#059669"/>
-<text x="196" y="191" text-anchor="middle" font-size="25" font-weight="700" fill="#FFFFFF">2</text>
-<text x="238" y="176" font-size="27" font-weight="700" fill="#243673" letter-spacing="0.4">WIDGET CONVERSACIONAL</text>
-<text x="238" y="210" font-size="21" fill="#1D2433">Vive dentro del ERP. Captura la consulta, muestra la confirmación y devuelve la respuesta.</text>
-<text x="1360" y="168" text-anchor="end" font-size="17" font-weight="700" fill="#059669" letter-spacing="1.1">FUNCIONA HOY</text>
-<path d="M765.0,234 L765.0,246" stroke="#94A3B8" stroke-width="3" marker-end="url(#fl)"/>
-<rect x="150" y="248" width="1230" height="96" rx="16" fill="#FEF3C7" stroke="#B45309" stroke-width="2" filter="url(#sombra)"/>
-<circle cx="196" cy="294" r="23" fill="#B45309"/>
-<text x="196" y="303" text-anchor="middle" font-size="25" font-weight="700" fill="#FFFFFF">3</text>
-<text x="238" y="288" font-size="27" font-weight="700" fill="#243673" letter-spacing="0.4">SPEECH-TO-TEXT</text>
-<text x="238" y="322" font-size="21" fill="#1D2433">Convierte el audio en texto. Si el ruido de planta lo impide, queda la alternativa escrita.</text>
-<text x="1360" y="280" text-anchor="end" font-size="17" font-weight="700" fill="#B45309" letter-spacing="1.1">SIMULADO</text>
-<path d="M765.0,346 L765.0,358" stroke="#94A3B8" stroke-width="3" marker-end="url(#fl)"/>
-<rect x="150" y="360" width="1230" height="96" rx="16" fill="#FEF3C7" stroke="#B45309" stroke-width="2" filter="url(#sombra)"/>
-<circle cx="196" cy="406" r="23" fill="#B45309"/>
-<text x="196" y="415" text-anchor="middle" font-size="25" font-weight="700" fill="#FFFFFF">4</text>
-<text x="238" y="400" font-size="27" font-weight="700" fill="#243673" letter-spacing="0.4">MODELO DE IA GENERATIVA</text>
-<text x="238" y="434" font-size="21" fill="#1D2433">Entiende qué se pidió y elige la herramienta. No accede a la base ni ejecuta SQL.</text>
-<text x="1360" y="392" text-anchor="end" font-size="17" font-weight="700" fill="#B45309" letter-spacing="1.1">SIMULADO</text>
-<path d="M765.0,458 L765.0,470" stroke="#94A3B8" stroke-width="3" marker-end="url(#fl)"/>
-<rect x="150" y="472" width="1230" height="180" rx="16" fill="#FEF3C7" stroke="#0084D6" stroke-width="4" filter="url(#sombra)"/>
-<circle cx="196" cy="518" r="23" fill="#243673"/>
-<text x="196" y="527" text-anchor="middle" font-size="25" font-weight="700" fill="#FFFFFF">5</text>
-<text x="238" y="512" font-size="30" font-weight="700" fill="#243673" letter-spacing="0.4">MIDDLEWARE · FastAPI</text>
-<text x="238" y="546" font-size="21" fill="#1D2433">DECIDE. Es la única vía de escritura: nada se guarda sin pasar por acá.</text>
-<rect x="238" y="576" width="121" height="44" rx="22" fill="#FFFFFF" stroke="#0084D6" stroke-width="1.6"/>
-<text x="298" y="605" text-anchor="middle" font-size="19" font-weight="600" fill="#243673">Identidad</text>
-<rect x="371" y="576" width="199" height="44" rx="22" fill="#FFFFFF" stroke="#0084D6" stroke-width="1.6"/>
-<text x="470" y="605" text-anchor="middle" font-size="19" font-weight="600" fill="#243673">Permisos por rol</text>
-<rect x="582" y="576" width="210" height="44" rx="22" fill="#FFFFFF" stroke="#0084D6" stroke-width="1.6"/>
-<text x="687" y="605" text-anchor="middle" font-size="19" font-weight="600" fill="#243673">Reglas de negocio</text>
-<rect x="804" y="576" width="154" height="44" rx="22" fill="#FFFFFF" stroke="#0084D6" stroke-width="1.6"/>
-<text x="882" y="605" text-anchor="middle" font-size="19" font-weight="600" fill="#243673">Confirmación</text>
-<rect x="971" y="576" width="121" height="44" rx="22" fill="#FFFFFF" stroke="#0084D6" stroke-width="1.6"/>
-<text x="1031" y="605" text-anchor="middle" font-size="19" font-weight="600" fill="#243673">Auditoría</text>
-<text x="1360" y="504" text-anchor="end" font-size="17" font-weight="700" fill="#B45309" letter-spacing="1.1">SIMULADO</text>
-<path d="M765.0,654 L765.0,666" stroke="#94A3B8" stroke-width="3" marker-end="url(#fl)"/>
-<rect x="150" y="668" width="1230" height="96" rx="16" fill="#E8EDF5" stroke="#64748B" stroke-width="2" filter="url(#sombra)"/>
-<circle cx="196" cy="714" r="23" fill="#64748B"/>
-<text x="196" y="723" text-anchor="middle" font-size="25" font-weight="700" fill="#FFFFFF">6</text>
-<text x="238" y="708" font-size="27" font-weight="700" fill="#243673" letter-spacing="0.4">CONECTOR REST</text>
-<text x="238" y="742" font-size="21" fill="#1D2433">Traduce la herramienta elegida en una llamada a la API del ERP.</text>
-<text x="1360" y="700" text-anchor="end" font-size="17" font-weight="700" fill="#64748B" letter-spacing="1.1">NO IMPLEMENTADO</text>
-<path d="M765.0,766 L765.0,778" stroke="#94A3B8" stroke-width="3" marker-end="url(#fl)"/>
-<rect x="150" y="780" width="1230" height="96" rx="16" fill="#E8EDF5" stroke="#64748B" stroke-width="2" filter="url(#sombra)"/>
-<circle cx="196" cy="826" r="23" fill="#64748B"/>
-<text x="196" y="835" text-anchor="middle" font-size="25" font-weight="700" fill="#FFFFFF">7</text>
-<text x="238" y="820" font-size="27" font-weight="700" fill="#243673" letter-spacing="0.4">ERP SaaS · Odoo</text>
-<text x="238" y="854" font-size="21" fill="#1D2433">EJECUTA y persiste. Dueño de los datos, de sus reglas y del catálogo de etapas.</text>
-<text x="1360" y="812" text-anchor="end" font-size="17" font-weight="700" fill="#64748B" letter-spacing="1.1">NO IMPLEMENTADO</text>
-<path d="M1438,72.0 L1438,828.0" stroke="#0084D6" stroke-width="4" marker-end="url(#fl)"/>
-<path d="M1484,828.0 L1484,72.0" stroke="#94A3B8" stroke-width="4" stroke-dasharray="9 7" marker-end="url(#flg)"/>
-<text x="1426" y="450.0" text-anchor="middle" font-size="20" font-weight="700" fill="#0084D6" letter-spacing="2.5" transform="rotate(-90 1426 450.0)">IDA</text>
-<text x="1508" y="450.0" text-anchor="middle" font-size="20" font-weight="700" fill="#64748B" letter-spacing="2.5" transform="rotate(90 1508 450.0)">VUELTA</text>
-<text x="76" y="408.0" text-anchor="middle" font-size="27" font-weight="700" fill="#0084D6" letter-spacing="2" transform="rotate(-90 76 408.0)">ENTIENDE</text>
-<path d="M106,366.0 L106,450.0" stroke="#0084D6" stroke-width="3" stroke-linecap="round" opacity="0.35"/>
-<text x="76" y="562.0" text-anchor="middle" font-size="27" font-weight="700" fill="#0084D6" letter-spacing="2" transform="rotate(-90 76 562.0)">DECIDE</text>
-<path d="M106,520.0 L106,604.0" stroke="#0084D6" stroke-width="3" stroke-linecap="round" opacity="0.35"/>
-<text x="76" y="828.0" text-anchor="middle" font-size="27" font-weight="700" fill="#0084D6" letter-spacing="2" transform="rotate(-90 76 828.0)">EJECUTA</text>
-<path d="M106,786.0 L106,870.0" stroke="#0084D6" stroke-width="3" stroke-linecap="round" opacity="0.35"/>
+<rect x="90" y="44.0" width="740" height="113" rx="16" fill="#D1FAE5" stroke="#059669" stroke-width="2" filter="url(#s)"/>
+<circle cx="134" cy="90.0" r="22" fill="#059669"/>
+<text x="134" y="98.0" text-anchor="middle" font-size="24" font-weight="700" fill="#FFFFFF">1</text>
+<text x="174" y="84.0" font-size="25" font-weight="700" fill="#243673" letter-spacing="0.4">USUARIOS</text>
+<text x="806" y="74.0" text-anchor="end" font-size="16" font-weight="700" fill="#059669" letter-spacing="1.1">FUNCIONA HOY</text>
+<text x="174" y="114.0" font-size="20" fill="#1D2433">Administración, operarios y jefe de producción.</text>
+<rect x="90" y="181.0" width="740" height="113" rx="16" fill="#D1FAE5" stroke="#059669" stroke-width="2" filter="url(#s)"/>
+<circle cx="134" cy="227.0" r="22" fill="#059669"/>
+<text x="134" y="235.0" text-anchor="middle" font-size="24" font-weight="700" fill="#FFFFFF">2</text>
+<text x="174" y="221.0" font-size="25" font-weight="700" fill="#243673" letter-spacing="0.4">WIDGET CONVERSACIONAL</text>
+<text x="806" y="211.0" text-anchor="end" font-size="16" font-weight="700" fill="#059669" letter-spacing="1.1">FUNCIONA HOY</text>
+<text x="174" y="251.0" font-size="20" fill="#1D2433">Dentro del ERP. Captura la consulta y muestra la respuesta.</text>
+<rect x="90" y="318.0" width="740" height="194" rx="16" fill="#FEF3C7" stroke="#0084D6" stroke-width="4" filter="url(#s)"/>
+<circle cx="134" cy="364.0" r="22" fill="#243673"/>
+<text x="134" y="372.0" text-anchor="middle" font-size="24" font-weight="700" fill="#FFFFFF">4</text>
+<text x="174" y="358.0" font-size="28" font-weight="700" fill="#243673" letter-spacing="0.4">MIDDLEWARE · FastAPI</text>
+<text x="806" y="348.0" text-anchor="end" font-size="16" font-weight="700" fill="#B45309" letter-spacing="1.1">SIMULADO</text>
+<text x="174" y="388.0" font-size="20" fill="#1D2433">RECIBE Y DECIDE. Es el único que le habla al modelo y el</text>
+<text x="174" y="415.0" font-size="20" fill="#1D2433">único que escribe en el ERP.</text>
+<rect x="174" y="424.0" width="104" height="42" rx="21" fill="#FFFFFF" stroke="#0084D6" stroke-width="1.6"/>
+<text x="226" y="451.0" text-anchor="middle" font-size="18" font-weight="600" fill="#243673">Identidad</text>
+<rect x="289" y="424.0" width="170" height="42" rx="21" fill="#FFFFFF" stroke="#0084D6" stroke-width="1.6"/>
+<text x="374" y="451.0" text-anchor="middle" font-size="18" font-weight="600" fill="#243673">Permisos por rol</text>
+<rect x="470" y="424.0" width="76" height="42" rx="21" fill="#FFFFFF" stroke="#0084D6" stroke-width="1.6"/>
+<text x="508" y="451.0" text-anchor="middle" font-size="18" font-weight="600" fill="#243673">Reglas</text>
+<rect x="557" y="424.0" width="132" height="42" rx="21" fill="#FFFFFF" stroke="#0084D6" stroke-width="1.6"/>
+<text x="623" y="451.0" text-anchor="middle" font-size="18" font-weight="600" fill="#243673">Confirmación</text>
+<rect x="700" y="424.0" width="104" height="42" rx="21" fill="#FFFFFF" stroke="#0084D6" stroke-width="1.6"/>
+<text x="753" y="451.0" text-anchor="middle" font-size="18" font-weight="600" fill="#243673">Auditoría</text>
+<rect x="90" y="536.0" width="740" height="113" rx="16" fill="#E8EDF5" stroke="#64748B" stroke-width="2" filter="url(#s)"/>
+<circle cx="134" cy="582.0" r="22" fill="#64748B"/>
+<text x="134" y="590.0" text-anchor="middle" font-size="24" font-weight="700" fill="#FFFFFF">6</text>
+<text x="174" y="576.0" font-size="25" font-weight="700" fill="#243673" letter-spacing="0.4">CONECTOR REST</text>
+<text x="806" y="566.0" text-anchor="end" font-size="16" font-weight="700" fill="#64748B" letter-spacing="1.1">NO IMPLEMENTADO</text>
+<text x="174" y="606.0" font-size="20" fill="#1D2433">Traduce la herramienta en una llamada a la API del ERP.</text>
+<rect x="90" y="673.0" width="740" height="113" rx="16" fill="#E8EDF5" stroke="#64748B" stroke-width="2" filter="url(#s)"/>
+<circle cx="134" cy="719.0" r="22" fill="#64748B"/>
+<text x="134" y="727.0" text-anchor="middle" font-size="24" font-weight="700" fill="#FFFFFF">7</text>
+<text x="174" y="713.0" font-size="25" font-weight="700" fill="#243673" letter-spacing="0.4">ERP SaaS · Odoo</text>
+<text x="806" y="703.0" text-anchor="end" font-size="16" font-weight="700" fill="#64748B" letter-spacing="1.1">NO IMPLEMENTADO</text>
+<text x="174" y="743.0" font-size="20" fill="#1D2433">EJECUTA y persiste. Dueño de los datos y de sus reglas.</text>
+<path d="M460.0,159.0 L460.0,179.0" stroke="#94A3B8" stroke-width="3" marker-end="url(#fa)"/>
+<path d="M460.0,296.0 L460.0,316.0" stroke="#94A3B8" stroke-width="3" marker-end="url(#fa)"/>
+<path d="M460.0,514.0 L460.0,534.0" stroke="#94A3B8" stroke-width="3" marker-end="url(#fa)"/>
+<path d="M460.0,651.0 L460.0,671.0" stroke="#94A3B8" stroke-width="3" marker-end="url(#fa)"/>
+<rect x="930" y="167.5" width="614" height="140" rx="16" fill="#FEF3C7" stroke="#B45309" stroke-width="2" filter="url(#s)"/>
+<circle cx="974" cy="213.5" r="22" fill="#B45309"/>
+<text x="974" y="221.5" text-anchor="middle" font-size="24" font-weight="700" fill="#FFFFFF">3</text>
+<text x="1014" y="207.5" font-size="25" font-weight="700" fill="#243673" letter-spacing="0.4">SPEECH-TO-TEXT</text>
+<text x="1520" y="197.5" text-anchor="end" font-size="16" font-weight="700" fill="#B45309" letter-spacing="1.1">SIMULADO</text>
+<text x="1014" y="237.5" font-size="19" fill="#1D2433">Convierte el audio en texto. Si el ruido de planta</text>
+<text x="1014" y="264.5" font-size="19" fill="#1D2433">lo impide, queda la alternativa escrita.</text>
+<path d="M838,237.5 L922,237.5" stroke="#0084D6" stroke-width="3" marker-start="url(#fa)" marker-end="url(#fa)"/>
+<rect x="930" y="331.5" width="614" height="167" rx="16" fill="#FEF3C7" stroke="#B45309" stroke-width="2" filter="url(#s)"/>
+<circle cx="974" cy="377.5" r="22" fill="#B45309"/>
+<text x="974" y="385.5" text-anchor="middle" font-size="24" font-weight="700" fill="#FFFFFF">5</text>
+<text x="1014" y="371.5" font-size="25" font-weight="700" fill="#243673" letter-spacing="0.4">MODELO DE IA GENERATIVA</text>
+<text x="1520" y="361.5" text-anchor="end" font-size="16" font-weight="700" fill="#B45309" letter-spacing="1.1">SIMULADO</text>
+<text x="1014" y="401.5" font-size="19" fill="#1D2433">El middleware lo consulta dos veces: ① para</text>
+<text x="1014" y="428.5" font-size="19" fill="#1D2433">entender qué se pidió, ② para redactar la</text>
+<text x="1014" y="455.5" font-size="19" fill="#1D2433">respuesta. No accede a la base ni ejecuta SQL.</text>
+<path d="M838,415.0 L922,415.0" stroke="#0084D6" stroke-width="3" marker-start="url(#fa)" marker-end="url(#fa)"/>
+<path d="M46,100.5 L46,729.5" stroke="#0084D6" stroke-width="4" marker-end="url(#fa)"/>
+<path d="M20,729.5 L20,100.5" stroke="#94A3B8" stroke-width="4" stroke-dasharray="9 7" marker-end="url(#fg)"/>
+<text x="64" y="415.0" text-anchor="middle" font-size="19" font-weight="700" fill="#0084D6" letter-spacing="2.5" transform="rotate(-90 64 415.0)">IDA</text>
+<text x="2" y="415.0" text-anchor="middle" font-size="19" font-weight="700" fill="#64748B" letter-spacing="2.5" transform="rotate(90 2 415.0)">VUELTA</text>
+<text x="90" y="876" font-size="19" fill="#5A6478">Los números indican el orden de llamada; la posición, la topología: <tspan font-weight="700" fill="#243673">el middleware es el centro, no un eslabón.</tspan></text>
 </svg>

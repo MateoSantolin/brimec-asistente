@@ -211,7 +211,7 @@
     U[&quot;👤 Usuarios&lt;br/&gt;Administración · Operarios · Jefe de Producción&quot;]
     W[&quot;💬 Widget conversacional del ERP&lt;br/&gt;texto y voz&quot;]
     S[&quot;🎙️ Speech-to-Text&lt;br/&gt;transcripción del dictado&quot;]
-    L[&quot;✨ Modelo de IA generativa&lt;br/&gt;interpreta la intención&lt;br/&gt;y elige la herramienta&quot;]
+    L[&quot;✨ Modelo de IA generativa&lt;br/&gt;① entiende qué se pidió y elige la herramienta&lt;br/&gt;② redacta la respuesta con el resultado&quot;]
 
     subgraph MW[&quot;🛡️ API agente / Middleware · FastAPI&quot;]
         direction LR
@@ -225,7 +225,11 @@
     E[&quot;🗄️ ERP SaaS · Odoo&quot;]
     D[(&quot;Base de datos&lt;br/&gt;del ERP&quot;)]
 
-    U --&gt; W --&gt; S --&gt; L --&gt; MW --&gt; C --&gt; E --&gt; D
+    U &lt;--&gt; W
+    W &lt;--&gt; S
+    W &lt;--&gt; MW
+    MW &lt;--&gt; L
+    MW --&gt; C --&gt; E --&gt; D
 
     classDef ok fill:#D1FAE5,stroke:#059669,stroke-width:2px,color:#065F46
     classDef sim fill:#FEF3C7,stroke:#D97706,stroke-width:2px,color:#92400E

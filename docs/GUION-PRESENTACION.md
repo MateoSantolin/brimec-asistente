@@ -73,13 +73,13 @@ ERP.
 
 > 👉 *Ahora sí, señalá el diagrama. Una pasada de arriba hacia abajo.*
 
-El **widget** captura la consulta, hablada o escrita. La **transcripción** la pasa a texto.
-
-El **modelo de IA** solo entiende qué se pidió y elige la herramienta. No accede a la base. No
-ejecuta SQL.
+El **widget** captura la consulta, hablada o escrita, y la manda **al middleware**.
 
 El **middleware** es el que decide: valida identidad, permisos y reglas de negocio, exige
 confirmación y deja todo auditado. Es la **única vía de escritura**.
+
+Y es él quien consulta al **modelo de IA** —ahí, al costado— **dos veces**: primero para entender
+qué se pidió, después para redactar la respuesta. El modelo no accede a la base. No ejecuta SQL.
 
 Y el **ERP** ejecuta y persiste.
 
@@ -211,6 +211,7 @@ Si el modelo se equivoca, no rompe nada: no tiene permiso para escribir.
 | *¿Y qué hace exactamente cuando interpreta?* | Traduce la frase a una llamada: identifica la intención y extrae los parámetros. Si falta un dato, repregunta en vez de inventarlo. Después, con el resultado, redacta la respuesta. |
 | *¿Las funciones viven en FastAPI?* | Sí, pero son delgadas: validan y delegan. La lógica de negocio y los datos quedan en el ERP. |
 | *¿Por qué no que el modelo llame directo a la API de Odoo?* | Porque esa API es genérica: expone CRUD sobre casi todo. El middleware estrecha la superficie a ocho funciones y es donde viven la confirmación y la auditoría. |
+| *¿Por qué el modelo está al costado y no en la cadena?* | Porque el widget le habla al middleware, no al modelo. El middleware es quien lo consulta, y dos veces: para entender y para redactar. Si estuviera delante, sería él quien recibe al usuario y decide qué pasar al backend — justo lo que evitamos. |
 | *¿Y si el modelo se equivoca?* | No puede escribir. Propone; el middleware valida y la persona confirma. Confirmar, cancelar y rechazar quedan los tres auditados. |
 | *¿Por qué no un menú o un formulario?* | Es el complemento, no el canal principal: obliga al operario a detener la máquina. |
 | *¿Y si hay mucho ruido en planta?* | Riesgo identificado en T-09. Por eso la alternativa por texto está siempre disponible, y el servicio de transcripción hay que elegirlo y probarlo en planta. |
